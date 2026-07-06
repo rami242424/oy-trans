@@ -1,15 +1,15 @@
-type Langs = "en" | "zh-Hans" | "ja";
-interface ILanguageSelectProps {
-    language: string;
+import type { Langs } from "../App";
+
+interface ILanguageSelectProps{
+    nextPageWithLang: (lang:Langs) => void;
 }
-function LanguageSelect({language}:ILanguageSelectProps){
-    
+
+function LanguageSelect({nextPageWithLang}:ILanguageSelectProps){
     return(
         <>
             <h5>LanguageSelect</h5>
-            <button onClick={() => language === "en"}>영어</button>
-            <button onClick={() => language === "zh-Hans"}>중어</button>
-            <button onClick={() => language === "ja"}>일어</button>
+            <button onClick={() => nextPageWithLang("en")}>영어</button>
+            <button onClick={() => nextPageWithLang("ja")}>일본어</button>
         </>
     );
 }
