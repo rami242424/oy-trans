@@ -15,7 +15,6 @@ function App(){
   }
   return(
     <>
-      <h2>App</h2>
       {screen === "lang" && <LanguageSelect nextPageWithLang={nextPageWithLang}/>}
       {screen === "phrases" && <PhraseHome language={language} /> }
       <p>선택된 언어: {language}</p>
