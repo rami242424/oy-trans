@@ -1,7 +1,7 @@
 
 function PhraseHome(){
     return(
-       <></>
+       <>PhraseHome</>
     );
 }
 
