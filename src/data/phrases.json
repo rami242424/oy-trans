@@ -1,0 +1,122 @@
+{
+  "payment": [
+    {
+      "id": "pay-1",
+      "kr": "결제는 카드로 하시겠어요, 현금으로 하시겠어요?",
+      "translations": {
+        "en": "Would you like to pay by card or cash?",
+        "zh-Hans": "请问您用卡还是现金支付？",
+        "ja": "お支払いはカードと現金のどちらになさいますか？"
+      }
+    },
+    {
+      "id": "pay-2",
+      "kr": "봉투 필요하세요? (유료예요)",
+      "translations": {
+        "en": "Would you like a bag? (There is a small charge)",
+        "zh-Hans": "请问您需要袋子吗？（需付费）",
+        "ja": "袋はご入り用ですか？（有料です）"
+      }
+    }
+  ],
+  "tax-refund": [
+    {
+      "id": "tax-1",
+      "kr": "여권을 보여주시겠어요?",
+      "translations": {
+        "en": "May I see your passport, please?",
+        "zh-Hans": "可以出示一下您的护照吗？",
+        "ja": "パスポートを見せていただけますか？"
+      }
+    },
+    {
+      "id": "tax-2",
+      "kr": "면세는 15,000원 이상 구매 시 가능해요",
+      "translations": {
+        "en": "Tax refund is available for purchases of 15,000 KRW or more",
+        "zh-Hans": "购买满15,000韩元即可办理退税",
+        "ja": "免税は15,000ウォン以上のお買い上げで可能です"
+      }
+    }
+  ],
+  "exchange-carryIn": [
+    {
+      "id": "ex-1",
+      "kr": "액체류는 100ml 이하만 기내 반입 가능해요",
+      "translations": {
+        "en": "Only liquids under 100ml are allowed in carry-on baggage",
+        "zh-Hans": "液体类只有100毫升以下才能带上飞机",
+        "ja": "液体類は100ml以下のみ機内持ち込み可能です"
+      }
+    },
+    {
+      "id": "ex-2",
+      "kr": "교환·환불은 영수증이 있어야 가능해요",
+      "translations": {
+        "en": "Exchanges and refunds require a receipt",
+        "zh-Hans": "换货和退款需要出示收据",
+        "ja": "交換・返品にはレシートが必要です"
+      }
+    }
+  ],
+  "stock": [
+    {
+      "id": "stock-1",
+      "kr": "찾으시는 제품 코너로 안내해드릴게요",
+      "translations": {
+        "en": "Let me take you to that section",
+        "zh-Hans": "我带您去您要找的产品区",
+        "ja": "お探しの商品コーナーへご案内いたします"
+      }
+    },
+    {
+      "id": "stock-2",
+      "kr": "죄송해요, 이 제품은 현재 품절이에요",
+      "translations": {
+        "en": "I'm sorry, this item is currently sold out",
+        "zh-Hans": "非常抱歉，这款产品目前缺货了",
+        "ja": "申し訳ございません、こちらは現在品切れです"
+      }
+    }
+  ],
+  "recommendation": [
+    {
+      "id": "rec-1",
+      "kr": "비슷한 제품을 보여드릴까요?",
+      "translations": {
+        "en": "Would you like to see a similar product?",
+        "zh-Hans": "您想看看类似的产品吗？",
+        "ja": "似ている商品をご覧になりますか？"
+      }
+    },
+    {
+      "id": "rec-2",
+      "kr": "이 제품이 요즘 제일 인기 있어요",
+      "translations": {
+        "en": "This is our most popular item these days",
+        "zh-Hans": "这款产品最近最受欢迎",
+        "ja": "こちらは最近一番人気の商品です"
+      }
+    }
+  ],
+  "etc": [
+    {
+      "id": "etc-1",
+      "kr": "캐리어는 매장 밖에 두고 들어와 주세요",
+      "translations": {
+        "en": "Please leave your suitcase outside the store",
+        "zh-Hans": "请将行李箱放在店外再进来",
+        "ja": "スーツケースは店外に置いてお入りください"
+      }
+    },
+    {
+      "id": "etc-2",
+      "kr": "잠시만 기다려주세요",
+      "translations": {
+        "en": "One moment, please",
+        "zh-Hans": "请您稍等一下",
+        "ja": "少々お待ちください"
+      }
+    }
+  ]
+}
