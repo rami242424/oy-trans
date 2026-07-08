@@ -8,13 +8,15 @@ export type Langs = "en" | "zh-Hans" | "ja" | null;
 
 function App(){
   const [screen, setScreen] = useState<Screen>("lang");
-  const nextPageWithLang = () => {
-
+  const [language, setLanguage] = useState<Langs>(null);
+  const nextPageWithLang = (lang:Langs) => {
+    setScreen("phrases");
+    setLanguage(lang);
   }
   return(
-    <>최초
-    {screen === "lang" && <LanguageSelect/>}
-    {screen === "phrases" && <PhraseHome/>}
+    <>
+    {screen === "lang" && <LanguageSelect nextPageWithLang={nextPageWithLang}/>}
+    {screen === "phrases" && <PhraseHome language={language}/>}
     </>
   );
 }

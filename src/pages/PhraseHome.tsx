@@ -1,7 +1,11 @@
-
-function PhraseHome(){
+interface IPhraseHomeProps {
+    language : string | null;
+}
+function PhraseHome({language}:IPhraseHomeProps){
     return(
-       <>PhraseHome</>
+        <>
+            <h2>선택한언어:{language}</h2>
+        </>
     );
 }
 
