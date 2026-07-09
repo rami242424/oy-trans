@@ -1,22 +1,23 @@
 import { useState } from "react";
-import PhraseHome from "./pages/PhraseHome";
 import LanguageSelect from "./pages/LanguageSelect";
+import PhraseHome from "./pages/PhraseHome";
 
-export type Screen = "lang" | "phrases" | "display" | "input" | "map";
 
 export type Langs = "en" | "zh-Hans" | "ja" | null;
+export type Screen = "lang" | "phrases" | "display" | "input" | "map";
 
 function App(){
-  const [screen, setScreen] = useState<Screen>("lang");
   const [language, setLanguage] = useState<Langs>(null);
-  const nextPageWithLang = (lang:Langs) => {
-    setScreen("phrases");
+  const [screen, setScreen] = useState<Screen>("lang");
+  const nextPageWithLangs = (lang:Langs) => {
     setLanguage(lang);
+    setScreen("phrases");
   }
   return(
     <>
-    {screen === "lang" && <LanguageSelect nextPageWithLang={nextPageWithLang}/>}
-    {screen === "phrases" && <PhraseHome language={language}/>}
+  
+      {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
+      {screen === "phrases" && <PhraseHome />}
     </>
   );
 }
