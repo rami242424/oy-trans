@@ -17,7 +17,7 @@ function App(){
     <>
   
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
-      {screen === "phrases" && <PhraseHome />}
+      {screen === "phrases" && <PhraseHome language={language} />}
     </>
   );
 }

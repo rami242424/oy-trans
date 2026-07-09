@@ -1,6 +1,11 @@
-function PhraseHome(){
+import type { Langs } from "../App";
+
+interface IPhraseHomeProps {
+    language: Langs;
+}
+function PhraseHome({language}:IPhraseHomeProps){
   return(
-    <>PhraseHome</>
+    <>선택한언어:{language}</>
   );
 }
 
