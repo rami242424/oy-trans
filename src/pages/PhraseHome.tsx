@@ -9,7 +9,7 @@ type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recom
 
 function PhraseHome({language}:IPhraseHomeProps){
     const [category, setCategory] = useState<Category>("payment");
-    if(language === null) return;
+    if(language === null) return null;
     return(
         <>
             <p>선택한언어:{language}, 선택한카테고리:{category}</p>
