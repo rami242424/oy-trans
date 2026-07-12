@@ -4,10 +4,11 @@ import phrases from "../data/phrases.json";
 
 interface IPhraseHomeProps {
     language: Langs;
+    nextToCustomerDisplay: () => void;
 }
 type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recommendation" | "etc";
 
-function PhraseHome({language}:IPhraseHomeProps){
+function PhraseHome({language, nextToCustomerDisplay}:IPhraseHomeProps){
     const [category, setCategory] = useState<Category>("payment");
     if(language === null) return null;
     return(
@@ -23,7 +24,7 @@ function PhraseHome({language}:IPhraseHomeProps){
             </div>
             <div>
                 {phrases[category].map((data) => (
-                    <button key={data.id}>
+                    <button onClick={() => nextToCustomerDisplay(data)} key={data.id}>
                         {data.translations[language]}
                         <p>{data.kr}</p>
                     </button>
