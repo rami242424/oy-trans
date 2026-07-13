@@ -19,21 +19,21 @@ export interface Phrase {
 function App(){
   const [language, setLanguage] = useState<Langs>(null);
   const [screen, setScreen] = useState<Screen>("lang");
-  const [phraseState, setPhraseState] = useState<Phrase>();
+  const [selectedPhrase , setSelectedPhrase] = useState<Phrase | null>(null);
   const nextPageWithLangs = (lang:Langs) => {
     setLanguage(lang);
     setScreen("phrases");
   }
   const nextToCustomerDisplay = (phrase:Phrase) => {
-    setPhraseState(phrase);
+    setSelectedPhrase(phrase);
     setScreen("display");
   }
   return(
     <>
   
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
-      {screen === "phrases" && <PhraseHome language={language} />}
-      {screen === "display" && <CustomerDisplay nextToCustomerDisplay={nextToCustomerDisplay} language={language}/>}
+      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay}/>}
+      {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase}/>}
     </>
   );
 }
