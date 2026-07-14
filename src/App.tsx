@@ -30,7 +30,6 @@ function App(){
   }
   return(
     <>
-  
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
       {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay}/>}
       {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase}/>}
