@@ -1,15 +1,16 @@
-import { useState } from "react";
-import type { Langs, Phrase } from "../App";
+import type { Category, Langs, Phrase } from "../App";
 import phrases from "../data/phrases.json";
 
 interface IPhraseHomeProps {
     language: Langs;
     nextToCustomerDisplay: (phrase:Phrase) => void;
+    category: Category;
+    setCategory: (category:Category) => void;
 }
-type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recommendation" | "etc";
 
-function PhraseHome({language, nextToCustomerDisplay}:IPhraseHomeProps){
-    const [category, setCategory] = useState<Category>("payment");
+function PhraseHome({language, nextToCustomerDisplay, category,
+setCategory}:IPhraseHomeProps){
+ 
     if(language === null) return null;
     return(
         <>

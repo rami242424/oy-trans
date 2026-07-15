@@ -15,11 +15,13 @@ export interface Phrase {
     ja: string,
   }
 }
+export type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recommendation" | "etc";
 
 function App(){
   const [language, setLanguage] = useState<Langs>(null);
   const [screen, setScreen] = useState<Screen>("lang");
   const [selectedPhrase , setSelectedPhrase] = useState<Phrase | null>(null);
+  const [category, setCategory] = useState<Category>("payment");
   const nextPageWithLangs = (lang:Langs) => {
     setLanguage(lang);
     setScreen("phrases");
@@ -28,11 +30,15 @@ function App(){
     setSelectedPhrase(phrase);
     setScreen("display");
   }
+  const backToPhrases = () => {
+    setScreen("phrases");
+    setSelectedPhrase(null);
+  }
   return(
     <>
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
-      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay}/>}
-      {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase}/>}
+      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay} category={category} setCategory={setCategory}/>}
+      {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase} backToPhrases={backToPhrases}/>}
     </>
   );
 }
