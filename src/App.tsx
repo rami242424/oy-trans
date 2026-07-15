@@ -22,6 +22,7 @@ function App(){
   const [screen, setScreen] = useState<Screen>("lang");
   const [selectedPhrase , setSelectedPhrase] = useState<Phrase | null>(null);
   const [category, setCategory] = useState<Category>("payment");
+  const [search, setSearch] = useState("");
   const nextPageWithLangs = (lang:Langs) => {
     setLanguage(lang);
     setScreen("phrases");
@@ -37,7 +38,7 @@ function App(){
   return(
     <>
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
-      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay} category={category} setCategory={setCategory}/>}
+      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay} category={category} setCategory={setCategory} search={search} setSearch={setSearch}/>}
       {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase} backToPhrases={backToPhrases}/>}
     </>
   );

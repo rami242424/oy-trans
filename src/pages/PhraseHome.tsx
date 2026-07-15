@@ -6,14 +6,22 @@ interface IPhraseHomeProps {
     nextToCustomerDisplay: (phrase:Phrase) => void;
     category: Category;
     setCategory: (category:Category) => void;
+    search: string;
+    setSearch: (e:string) => void;
 }
 
 function PhraseHome({language, nextToCustomerDisplay, category,
-setCategory}:IPhraseHomeProps){
- 
+setCategory, search, setSearch}:IPhraseHomeProps){
     if(language === null) return null;
+    const visiblePhrases = search === "" 
+        ? phrases[category]
+        : Object.values(phrases).flat().filter((data) => data.kr.includes(search))
+    console.log(visiblePhrases, "visiblePhrases");
     return(
         <>
+            <div>
+                <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="검색어를 입력하세요"/>
+            </div>
             <p>선택한언어:{language}, 선택한카테고리:{category}</p>
             <div>
                 <button onClick={() => setCategory("payment")}>결제</button>
@@ -24,7 +32,7 @@ setCategory}:IPhraseHomeProps){
                 <button onClick={() => setCategory("etc")}>기타 응대</button>
             </div>
             <div>
-                {phrases[category].map((data) => (
+                {visiblePhrases.map((data) => (
                     <button onClick={() => nextToCustomerDisplay(data)} key={data.id}>
                         {data.translations[language]}
                         <p>{data.kr}</p>
