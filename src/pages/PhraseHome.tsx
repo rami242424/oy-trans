@@ -1,10 +1,10 @@
 import { useState } from "react";
-import type { Langs } from "../App";
+import type { Langs, Phrase } from "../App";
 import phrases from "../data/phrases.json";
 
 interface IPhraseHomeProps {
     language: Langs;
-    nextToCustomerDisplay: () => void;
+    nextToCustomerDisplay: (phrase:Phrase) => void;
 }
 type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recommendation" | "etc";
 
