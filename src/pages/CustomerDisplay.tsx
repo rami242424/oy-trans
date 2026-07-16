@@ -9,13 +9,17 @@ interface ICustomerDisplayProps {
 function CustomerDisplay({selectedPhrase, language, backToPhrases}:ICustomerDisplayProps){
     if(!selectedPhrase || !language) return null;
     return(
-        <>
-            <div><button onClick={backToPhrases}>🔙</button></div>
+        <div className="fixed inset-0 bg-[#4C5940] text-white flex flex-col items-center justify-center">
+            <div className="absolute top-4 left-4 text-2xl p-2"><button onClick={backToPhrases}>🔙</button></div>
             <div>
-                <h2>선택된 질문 : {selectedPhrase.translations[language]}</h2>
-                <p>{selectedPhrase.kr}</p>
+                <h2 className="text-4xl font-bold text-center leading-snug px-8">
+                    {selectedPhrase.translations[language]}
+                </h2>
+                <p className="text-base text-center text-white/60 mt-8">
+                    {selectedPhrase.kr}
+                </p>
             </div>
-        </>
+        </div>
     );
 }
 

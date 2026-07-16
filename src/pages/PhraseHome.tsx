@@ -19,11 +19,11 @@ setCategory, search, setSearch}:IPhraseHomeProps){
     console.log(visiblePhrases, "visiblePhrases");
     return(
         <>
-            <div>
+            <div className="top-4 text-l p-2">
                 <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="검색어를 입력하세요"/>
             </div>
             <p>선택한언어:{language}, 선택한카테고리:{category}</p>
-            <div>
+            <div className="center">
                 <button onClick={() => setCategory("payment")}>결제</button>
                 <button onClick={() => setCategory("tax-refund")}>택스리펀</button>
                 <button onClick={() => setCategory("exchange-carryIn")}>교환불 및 수화물규정</button>
