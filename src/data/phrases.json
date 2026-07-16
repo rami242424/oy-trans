@@ -6,7 +6,16 @@
       "translations": {
         "en": "Would you like to pay by card or cash?",
         "zh-Hans": "请问您用卡还是现金支付？",
-        "ja": "お支払いはカードと現金のどちらになさいますか？"
+        "ja": "お支払いはカードと現金のどちらになさいますか？",
+        "vi": "Quý khách muốn thanh toán bằng thẻ hay tiền mặt?",
+        "th": "ต้องการชำระด้วยบัตรหรือเงินสด?",
+        "ru": "Вы будете оплачивать картой или наличными?",
+        "uz": "Karta bilan to'laysizmi yoki naqd pulda?",
+        "fr": "Souhaitez-vous payer par carte ou en espèces ?",
+        "it": "Desidera pagare con carta o in contanti?",
+        "es": "¿Desea pagar con tarjeta o en efectivo?",
+        "id": "Anda ingin membayar dengan kartu atau tunai?",
+        "ms": "Anda ingin membayar dengan kad atau tunai?"
       }
     },
     {
@@ -15,7 +24,124 @@
       "translations": {
         "en": "Would you like a bag? (There is a small charge)",
         "zh-Hans": "请问您需要袋子吗？（需付费）",
-        "ja": "袋はご入り用ですか？（有料です）"
+        "ja": "袋はご入り用ですか？（有料です）",
+        "vi": "Quý khách có cần túi không? (Có tính phí)",
+        "th": "ต้องการถุงไหม? (มีค่าใช้จ่าย)",
+        "ru": "Вам нужен пакет? (платно)",
+        "uz": "Sizga paket kerakmi? (pullik)",
+        "fr": "Souhaitez-vous un sac ? (payant)",
+        "it": "Desidera una busta? (a pagamento)",
+        "es": "¿Necesita una bolsa? (de pago)",
+        "id": "Apakah Anda perlu kantong? (berbayar)",
+        "ms": "Adakah anda perlukan beg? (berbayar)"
+      }
+    },
+    {
+      "id": "pay-3",
+      "kr": "유니온페이는 실물 카드만 결제 가능합니다",
+      "translations": {
+        "en": "UnionPay is accepted with a physical card only",
+        "zh-Hans": "银联只能使用实体卡支付",
+        "ja": "ユニオンペイは実物カードのみご利用いただけます",
+        "vi": "UnionPay chỉ thanh toán được bằng thẻ vật lý",
+        "th": "UnionPay ใช้ได้เฉพาะบัตรตัวจริงเท่านั้น",
+        "ru": "UnionPay принимается только физической картой",
+        "uz": "UnionPay faqat jismoniy karta bilan ishlaydi",
+        "fr": "UnionPay est accepté uniquement avec une carte physique",
+        "it": "UnionPay è accettata solo con carta fisica",
+        "es": "UnionPay solo se acepta con tarjeta física",
+        "id": "UnionPay hanya bisa digunakan dengan kartu fisik",
+        "ms": "UnionPay hanya boleh digunakan dengan kad fizikal"
+      }
+    },
+    {
+      "id": "pay-4",
+      "kr": "현금과 카드로 분할 결제 가능합니다",
+      "translations": {
+        "en": "You can split the payment between cash and card",
+        "zh-Hans": "可以现金和银行卡分开支付",
+        "ja": "現金とカードで分けてお支払いいただけます",
+        "vi": "Có thể thanh toán kết hợp tiền mặt và thẻ",
+        "th": "สามารถแบ่งจ่ายด้วยเงินสดและบัตรได้",
+        "ru": "Можно оплатить частично наличными и частично картой",
+        "uz": "Naqd pul va karta bilan bo'lib to'lash mumkin",
+        "fr": "Vous pouvez payer en partie en espèces et en partie par carte",
+        "it": "È possibile pagare in parte in contanti e in parte con carta",
+        "es": "Puede dividir el pago entre efectivo y tarjeta",
+        "id": "Anda bisa membayar sebagian tunai dan sebagian kartu",
+        "ms": "Anda boleh membahagikan bayaran antara tunai dan kad"
+      }
+    },
+    {
+      "id": "pay-5",
+      "kr": "카드 잔액이 얼마인지 어플에서 확인해 주시겠어요?",
+      "translations": {
+        "en": "Could you check your card balance in the app?",
+        "zh-Hans": "请在应用里确认一下卡的余额好吗？",
+        "ja": "アプリでカードの残高をご確認いただけますか？",
+        "vi": "Quý khách vui lòng kiểm tra số dư thẻ trong ứng dụng",
+        "th": "กรุณาตรวจสอบยอดเงินในบัตรผ่านแอป",
+        "ru": "Проверьте, пожалуйста, баланс карты в приложении",
+        "uz": "Iltimos, ilovada karta balansini tekshiring",
+        "fr": "Pourriez-vous vérifier le solde de votre carte dans l'application ?",
+        "it": "Potrebbe controllare il saldo della carta nell'app?",
+        "es": "¿Podría comprobar el saldo de su tarjeta en la aplicación?",
+        "id": "Mohon periksa saldo kartu Anda di aplikasi",
+        "ms": "Sila semak baki kad anda dalam aplikasi"
+      }
+    },
+    {
+      "id": "pay-6",
+      "kr": "교통카드로는 결제할 수 없습니다",
+      "translations": {
+        "en": "Transit cards cannot be used for payment",
+        "zh-Hans": "交通卡不能用于支付",
+        "ja": "交通系カードではお支払いできません",
+        "vi": "Không thể thanh toán bằng thẻ giao thông",
+        "th": "ไม่สามารถชำระด้วยบัตรโดยสารได้",
+        "ru": "Транспортной картой оплатить нельзя",
+        "uz": "Transport kartasi bilan to'lab bo'lmaydi",
+        "fr": "Les cartes de transport ne sont pas acceptées",
+        "it": "Le carte dei trasporti non sono accettate",
+        "es": "No se puede pagar con tarjetas de transporte",
+        "id": "Kartu transportasi tidak bisa digunakan untuk pembayaran",
+        "ms": "Kad pengangkutan tidak boleh digunakan untuk pembayaran"
+      }
+    },
+    {
+      "id": "pay-7",
+      "kr": "2개 구매 시 1개 무료입니다. 상품을 직접 가져와 주세요",
+      "translations": {
+        "en": "Buy 2, get 1 free. Please bring the free item yourself",
+        "zh-Hans": "买二送一。请您直接把商品拿过来",
+        "ja": "2個購入で1個無料です。商品をお持ちください",
+        "vi": "Mua 2 tặng 1. Vui lòng tự lấy sản phẩm",
+        "th": "ซื้อ 2 แถม 1 กรุณาหยิบสินค้ามาเอง",
+        "ru": "Купите 2 — получите 1 бесплатно. Пожалуйста, принесите товар сами",
+        "uz": "2 ta olsangiz 1 tasi bepul. Iltimos, mahsulotni o'zingiz olib keling",
+        "fr": "2 achetés, 1 offert. Veuillez apporter l'article vous-même",
+        "it": "Compri 2, 1 in omaggio. La preghiamo di portare l'articolo",
+        "es": "Compre 2 y llévese 1 gratis. Por favor, traiga el producto usted mismo",
+        "id": "Beli 2 gratis 1. Silakan ambil sendiri produknya",
+        "ms": "Beli 2 percuma 1. Sila ambil sendiri produk tersebut"
+      }
+    },
+    {
+      "id": "pay-8",
+      "kr": "1개 구매 시 1개 무료입니다. 상품을 직접 가져와 주세요",
+      "translations": {
+        "en": "Buy 1, get 1 free. Please bring the free item yourself",
+        "zh-Hans": "买一送一。请您直接把商品拿过来",
+        "ja": "1個購入で1個無料です。商品をお持ちください",
+        "vi": "Mua 1 tặng 1. Vui lòng tự lấy sản phẩm",
+        "th": "ซื้อ 1 แถม 1 กรุณาหยิบสินค้ามาเอง",
+        "ru": "Купите 1 — получите 1 бесплатно. Пожалуйста, принесите товар сами",
+        "uz": "1 ta olsangiz 1 tasi bepul. Iltimos, mahsulotni o'zingiz olib keling",
+        "fr": "1 acheté, 1 offert. Veuillez apporter l'article vous-même",
+        "it": "Compri 1, 1 in omaggio. La preghiamo di portare l'articolo",
+        "es": "Compre 1 y llévese 1 gratis. Por favor, traiga el producto usted mismo",
+        "id": "Beli 1 gratis 1. Silakan ambil sendiri produknya",
+        "ms": "Beli 1 percuma 1. Sila ambil sendiri produk tersebut"
       }
     }
   ],
@@ -26,36 +152,234 @@
       "translations": {
         "en": "May I see your passport, please?",
         "zh-Hans": "可以出示一下您的护照吗？",
-        "ja": "パスポートを見せていただけますか？"
+        "ja": "パスポートを見せていただけますか？",
+        "vi": "Quý khách vui lòng cho xem hộ chiếu",
+        "th": "กรุณาแสดงหนังสือเดินทาง",
+        "ru": "Покажите, пожалуйста, ваш паспорт",
+        "uz": "Iltimos, pasportingizni ko'rsating",
+        "fr": "Puis-je voir votre passeport, s'il vous plaît ?",
+        "it": "Posso vedere il suo passaporto, per favore?",
+        "es": "¿Me permite ver su pasaporte, por favor?",
+        "id": "Boleh saya lihat paspor Anda?",
+        "ms": "Boleh saya lihat pasport anda?"
       }
     },
     {
       "id": "tax-2",
-      "kr": "면세는 15,000원 이상 구매 시 가능해요",
+      "kr": "택스리펀은 15,000원 이상 구매 시 가능합니다",
       "translations": {
         "en": "Tax refund is available for purchases of 15,000 KRW or more",
         "zh-Hans": "购买满15,000韩元即可办理退税",
-        "ja": "免税は15,000ウォン以上のお買い上げで可能です"
+        "ja": "免税は15,000ウォン以上のお買い上げで可能です",
+        "vi": "Hoàn thuế áp dụng cho hóa đơn từ 15.000 won trở lên",
+        "th": "คืนภาษีได้เมื่อซื้อครบ 15,000 วอนขึ้นไป",
+        "ru": "Такс-фри доступен при покупке от 15 000 вон",
+        "uz": "Tax refund 15 000 vondan ortiq xaridlarda mumkin",
+        "fr": "La détaxe est possible à partir de 15 000 wons d'achat",
+        "it": "Il tax refund è disponibile per acquisti da 15.000 won",
+        "es": "La devolución de impuestos está disponible desde 15.000 wones",
+        "id": "Pengembalian pajak berlaku untuk pembelian minimal 15.000 won",
+        "ms": "Pulangan cukai tersedia untuk pembelian 15,000 won ke atas"
+      }
+    },
+    {
+      "id": "tax-3",
+      "kr": "실물 여권이 있으면 택스리펀을 받을 수 있습니다",
+      "translations": {
+        "en": "You can get a tax refund if you have your physical passport",
+        "zh-Hans": "有实体护照就可以办理退税",
+        "ja": "実物のパスポートがあれば免税手続きができます",
+        "vi": "Có hộ chiếu bản gốc là được hoàn thuế",
+        "th": "มีหนังสือเดินทางตัวจริงสามารถขอคืนภาษีได้",
+        "ru": "С оригиналом паспорта можно оформить такс-фри",
+        "uz": "Asl pasportingiz bo'lsa, tax refund olishingiz mumkin",
+        "fr": "Avec votre passeport original, vous pouvez obtenir la détaxe",
+        "it": "Con il passaporto originale può ottenere il tax refund",
+        "es": "Con su pasaporte físico puede obtener la devolución de impuestos",
+        "id": "Dengan paspor asli, Anda bisa mendapat pengembalian pajak",
+        "ms": "Dengan pasport asal, anda boleh mendapat pulangan cukai"
+      }
+    },
+    {
+      "id": "tax-4",
+      "kr": "여권이 스캔되지 않습니다. 택스리펀용 영수증을 따로 뽑아드릴까요? 이 영수증으로 3층에서 환급받으실 수 있습니다",
+      "translations": {
+        "en": "Your passport isn't scanning. Shall I print a separate tax refund receipt? You can get your refund on the 3rd floor with it",
+        "zh-Hans": "您的护照无法扫描。我给您另打一张退税收据好吗？凭这张收据可以在3楼办理退税",
+        "ja": "パスポートがスキャンできません。免税用のレシートを別途お出ししましょうか？このレシートで3階にて払い戻しを受けられます",
+        "vi": "Hộ chiếu không quét được. Tôi in hóa đơn hoàn thuế riêng cho quý khách nhé? Quý khách nhận hoàn thuế ở tầng 3 với hóa đơn này",
+        "th": "สแกนหนังสือเดินทางไม่ได้ จะออกใบเสร็จคืนภาษีแยกให้ไหม? ใช้ใบเสร็จนี้รับเงินคืนได้ที่ชั้น 3",
+        "ru": "Паспорт не сканируется. Распечатать отдельный чек для такс-фри? С ним возврат можно получить на 3-м этаже",
+        "uz": "Pasport skaner bo'lmayapti. Tax refund uchun alohida chek chiqarib beraymi? Bu chek bilan pulni 3-qavatda olasiz",
+        "fr": "Votre passeport ne se scanne pas. Puis-je imprimer un reçu de détaxe séparé ? Le remboursement se fait au 3e étage avec ce reçu",
+        "it": "Il passaporto non si scansiona. Le stampo una ricevuta separata per il tax refund? Il rimborso si ritira al 3° piano",
+        "es": "Su pasaporte no se escanea. ¿Le imprimo un recibo aparte? Con él puede recibir la devolución en el piso 3",
+        "id": "Paspor tidak bisa dipindai. Saya cetakkan struk pengembalian pajak terpisah? Anda bisa menerimanya di lantai 3",
+        "ms": "Pasport tidak dapat diimbas. Boleh saya cetak resit pulangan cukai berasingan? Anda boleh menuntutnya di tingkat 3"
+      }
+    },
+    {
+      "id": "tax-5",
+      "kr": "여권이 매장 밖에 있다면 지금 가져와 주세요. 기다리겠습니다",
+      "translations": {
+        "en": "If your passport is outside the store, please bring it now. I'll wait for you",
+        "zh-Hans": "如果护照在店外，请现在去拿。我在这里等您",
+        "ja": "パスポートが店の外にある場合は、今お持ちください。お待ちしております",
+        "vi": "Nếu hộ chiếu để bên ngoài, vui lòng lấy ngay bây giờ. Tôi sẽ đợi",
+        "th": "ถ้าหนังสือเดินทางอยู่นอกร้าน กรุณาไปเอามาตอนนี้ เราจะรอ",
+        "ru": "Если паспорт снаружи, принесите его сейчас, пожалуйста. Я подожду",
+        "uz": "Pasportingiz do'kon tashqarisida bo'lsa, hozir olib keling. Kutib turaman",
+        "fr": "Si votre passeport est dehors, veuillez aller le chercher maintenant. Je vous attends",
+        "it": "Se il passaporto è fuori dal negozio, vada a prenderlo ora. La aspetto",
+        "es": "Si su pasaporte está fuera de la tienda, tráigalo ahora. Le espero",
+        "id": "Jika paspor Anda di luar toko, silakan ambil sekarang. Saya akan menunggu",
+        "ms": "Jika pasport anda di luar kedai, sila ambil sekarang. Saya akan tunggu"
+      }
+    },
+    {
+      "id": "tax-6",
+      "kr": "세관에서 구매 물품 확인을 요청할 수 있습니다",
+      "translations": {
+        "en": "Customs may ask to check your purchased items",
+        "zh-Hans": "海关可能会要求查验您购买的商品",
+        "ja": "税関で購入品の確認を求められる場合があります",
+        "vi": "Hải quan có thể yêu cầu kiểm tra hàng đã mua",
+        "th": "ศุลกากรอาจขอตรวจสินค้าที่ซื้อ",
+        "ru": "Таможня может попросить показать купленные товары",
+        "uz": "Bojxona xarid qilingan mahsulotlarni tekshirishni so'rashi mumkin",
+        "fr": "La douane peut demander à vérifier vos achats",
+        "it": "La dogana potrebbe chiedere di controllare gli acquisti",
+        "es": "La aduana puede pedirle mostrar los artículos comprados",
+        "id": "Bea cukai mungkin meminta memeriksa barang belanjaan Anda",
+        "ms": "Kastam mungkin meminta memeriksa barangan yang dibeli"
       }
     }
   ],
   "exchange-carryIn": [
     {
       "id": "ex-1",
-      "kr": "액체류는 100ml 이하만 기내 반입 가능해요",
+      "kr": "상품 1개당 100ml 이하 액체류만, 총 1,000ml까지 기내 반입 가능합니다",
       "translations": {
-        "en": "Only liquids under 100ml are allowed in carry-on baggage",
-        "zh-Hans": "液体类只有100毫升以下才能带上飞机",
-        "ja": "液体類は100ml以下のみ機内持ち込み可能です"
+        "en": "Only liquids of 100ml or less per item, up to 1,000ml in total, are allowed in carry-on",
+        "zh-Hans": "单件液体不超过100毫升、总量不超过1000毫升才能带上飞机",
+        "ja": "液体は1点100ml以下、合計1,000mlまで機内持ち込み可能です",
+        "vi": "Chỉ được mang lên máy bay chất lỏng dưới 100ml mỗi món, tổng tối đa 1.000ml",
+        "th": "ของเหลวขึ้นเครื่องได้ชิ้นละไม่เกิน 100ml รวมไม่เกิน 1,000ml",
+        "ru": "В ручную кладь — жидкости до 100 мл каждая, всего до 1000 мл",
+        "uz": "Qo'l yukiga har biri 100 ml gacha, jami 1000 ml gacha suyuqlik olish mumkin",
+        "fr": "En cabine : liquides de 100 ml maximum par article, 1000 ml au total",
+        "it": "In cabina: liquidi max 100 ml a pezzo, 1000 ml in totale",
+        "es": "En cabina: líquidos de máximo 100 ml por artículo, hasta 1000 ml en total",
+        "id": "Cairan maksimal 100ml per item, total 1000ml, untuk dibawa ke kabin",
+        "ms": "Cecair maksimum 100ml setiap satu, jumlah 1000ml, untuk bagasi kabin"
       }
     },
     {
       "id": "ex-2",
-      "kr": "교환·환불은 영수증이 있어야 가능해요",
+      "kr": "100ml를 초과하는 제품은 위탁 수하물로 보내시면 됩니다",
+      "translations": {
+        "en": "Items over 100ml can go in your checked baggage",
+        "zh-Hans": "超过100毫升的商品可以放托运行李",
+        "ja": "100mlを超える商品は預け荷物に入れてください",
+        "vi": "Sản phẩm trên 100ml có thể gửi hành lý ký gửi",
+        "th": "สินค้าเกิน 100ml ให้ใส่กระเป๋าโหลดใต้เครื่อง",
+        "ru": "Товары более 100 мл можно сдать в багаж",
+        "uz": "100 ml dan ortiq mahsulotlarni yukga topshirsangiz bo'ladi",
+        "fr": "Les articles de plus de 100 ml vont en soute",
+        "it": "I prodotti oltre 100 ml vanno nel bagaglio da stiva",
+        "es": "Los productos de más de 100 ml pueden ir en la maleta facturada",
+        "id": "Produk di atas 100ml bisa dimasukkan bagasi terdaftar",
+        "ms": "Produk melebihi 100ml boleh dimasukkan ke bagasi berdaftar"
+      }
+    },
+    {
+      "id": "ex-3",
+      "kr": "교환·환불은 영수증이 있어야 가능합니다",
       "translations": {
         "en": "Exchanges and refunds require a receipt",
         "zh-Hans": "换货和退款需要出示收据",
-        "ja": "交換・返品にはレシートが必要です"
+        "ja": "交換・返品にはレシートが必要です",
+        "vi": "Đổi trả cần có hóa đơn",
+        "th": "การเปลี่ยนหรือคืนสินค้าต้องมีใบเสร็จ",
+        "ru": "Для обмена и возврата нужен чек",
+        "uz": "Almashtirish va qaytarish uchun chek kerak",
+        "fr": "Un reçu est nécessaire pour tout échange ou remboursement",
+        "it": "Per cambi e rimborsi serve lo scontrino",
+        "es": "Se necesita el recibo para cambios y devoluciones",
+        "id": "Penukaran dan pengembalian memerlukan struk",
+        "ms": "Pertukaran dan bayaran balik memerlukan resit"
+      }
+    },
+    {
+      "id": "ex-4",
+      "kr": "환불은 저희 매장에서 15일 이내에 구매하고 영수증이 있는 경우에만 가능합니다",
+      "translations": {
+        "en": "Refunds are only possible for items bought at this store within 15 days, with a receipt",
+        "zh-Hans": "退款仅限本店15天内购买且有收据的商品",
+        "ja": "返金は当店で15日以内に購入し、レシートがある場合のみ可能です",
+        "vi": "Chỉ hoàn tiền cho hàng mua tại cửa hàng này trong 15 ngày và có hóa đơn",
+        "th": "คืนเงินได้เฉพาะสินค้าที่ซื้อจากร้านนี้ภายใน 15 วันพร้อมใบเสร็จ",
+        "ru": "Возврат — только для товаров из этого магазина в течение 15 дней, при наличии чека",
+        "uz": "Qaytarish faqat shu do'kondan 15 kun ichida olingan va cheki bor mahsulotlar uchun",
+        "fr": "Remboursement uniquement pour les achats de ce magasin sous 15 jours, avec reçu",
+        "it": "Rimborso solo per acquisti in questo negozio entro 15 giorni, con scontrino",
+        "es": "Reembolso solo para compras en esta tienda dentro de 15 días, con recibo",
+        "id": "Pengembalian dana hanya untuk pembelian di toko ini dalam 15 hari, dengan struk",
+        "ms": "Bayaran balik hanya untuk pembelian di kedai ini dalam 15 hari, dengan resit"
+      }
+    },
+    {
+      "id": "ex-5",
+      "kr": "다른 매장에서 구매한 상품은 환불은 안 되고, 같은 가격 이상의 제품으로 교환만 가능합니다",
+      "translations": {
+        "en": "Items from other stores can't be refunded — only exchanged for a product of equal or higher price",
+        "zh-Hans": "其他门店购买的商品不能退款，只能换同价或更高价的商品",
+        "ja": "他店舗で購入した商品は返金できず、同額以上の商品との交換のみ可能です",
+        "vi": "Hàng mua ở cửa hàng khác không hoàn tiền được, chỉ đổi sang sản phẩm giá bằng hoặc cao hơn",
+        "th": "สินค้าจากสาขาอื่นคืนเงินไม่ได้ เปลี่ยนได้เฉพาะสินค้าราคาเท่ากันหรือแพงกว่า",
+        "ru": "Товары из других магазинов не возвращаются — только обмен на товар той же или большей стоимости",
+        "uz": "Boshqa do'kondan olingan mahsulot qaytarilmaydi — faqat teng yoki qimmatroq mahsulotga almashtiriladi",
+        "fr": "Les articles d'autres magasins ne sont pas remboursables — échange uniquement contre un produit de valeur égale ou supérieure",
+        "it": "Prodotti di altri negozi: solo cambio con articoli di pari o maggior valore",
+        "es": "Artículos de otras tiendas: solo cambio por productos de igual o mayor precio",
+        "id": "Barang dari toko lain tidak bisa dikembalikan — hanya ditukar dengan produk harga sama atau lebih tinggi",
+        "ms": "Barangan dari kedai lain tidak boleh dikembalikan — hanya ditukar dengan produk berharga sama atau lebih tinggi"
+      }
+    },
+    {
+      "id": "ex-6",
+      "kr": "개봉한 제품은 환불이 어렵습니다",
+      "translations": {
+        "en": "Opened products cannot be refunded",
+        "zh-Hans": "已开封的商品无法退款",
+        "ja": "開封済みの商品は返品できません",
+        "vi": "Sản phẩm đã mở không thể hoàn tiền",
+        "th": "สินค้าที่เปิดแล้วไม่สามารถคืนเงินได้",
+        "ru": "Вскрытые товары возврату не подлежат",
+        "uz": "Ochilgan mahsulotlar qaytarilmaydi",
+        "fr": "Les produits ouverts ne sont pas remboursables",
+        "it": "I prodotti aperti non sono rimborsabili",
+        "es": "Los productos abiertos no se pueden reembolsar",
+        "id": "Produk yang sudah dibuka tidak bisa dikembalikan",
+        "ms": "Produk yang telah dibuka tidak boleh dikembalikan"
+      }
+    },
+    {
+      "id": "ex-7",
+      "kr": "환불은 결제하신 카드로 처리됩니다",
+      "translations": {
+        "en": "Refunds are processed to the card you paid with",
+        "zh-Hans": "退款将退回您付款的卡",
+        "ja": "返金はお支払いのカードに処理されます",
+        "vi": "Tiền hoàn sẽ trả về thẻ đã thanh toán",
+        "th": "เงินคืนจะเข้าบัตรที่ใช้ชำระ",
+        "ru": "Возврат производится на карту оплаты",
+        "uz": "Pul to'lagan kartangizga qaytariladi",
+        "fr": "Le remboursement est effectué sur la carte utilisée",
+        "it": "Il rimborso avviene sulla carta usata per il pagamento",
+        "es": "El reembolso se hace a la tarjeta con la que pagó",
+        "id": "Pengembalian dana ke kartu yang digunakan membayar",
+        "ms": "Bayaran balik dibuat ke kad yang digunakan"
       }
     }
   ],
@@ -66,7 +390,16 @@
       "translations": {
         "en": "Let me take you to that section",
         "zh-Hans": "我带您去您要找的产品区",
-        "ja": "お探しの商品コーナーへご案内いたします"
+        "ja": "お探しの商品コーナーへご案内いたします",
+        "vi": "Tôi sẽ dẫn quý khách đến khu sản phẩm cần tìm",
+        "th": "เดี๋ยวพาไปที่โซนสินค้าที่ต้องการ",
+        "ru": "Я провожу вас к нужному отделу",
+        "uz": "Sizni kerakli bo'limga olib boraman",
+        "fr": "Je vous accompagne au rayon",
+        "it": "La accompagno al reparto",
+        "es": "Le acompaño a la sección",
+        "id": "Saya antar ke bagian produk yang dicari",
+        "ms": "Saya bawa anda ke bahagian produk itu"
       }
     },
     {
@@ -75,7 +408,70 @@
       "translations": {
         "en": "I'm sorry, this item is currently sold out",
         "zh-Hans": "非常抱歉，这款产品目前缺货了",
-        "ja": "申し訳ございません、こちらは現在品切れです"
+        "ja": "申し訳ございません、こちらは現在品切れです",
+        "vi": "Xin lỗi, sản phẩm này hiện đã hết hàng",
+        "th": "ขออภัย สินค้านี้หมดแล้ว",
+        "ru": "Извините, этот товар сейчас распродан",
+        "uz": "Kechirasiz, bu mahsulot hozir tugagan",
+        "fr": "Désolé, ce produit est en rupture de stock",
+        "it": "Mi dispiace, questo prodotto è esaurito",
+        "es": "Lo siento, este producto está agotado",
+        "id": "Maaf, produk ini sedang habis",
+        "ms": "Maaf, produk ini kehabisan stok"
+      }
+    },
+    {
+      "id": "stock-3",
+      "kr": "재고를 확인해볼게요. 잠시만 기다려주세요",
+      "translations": {
+        "en": "Let me check our stock. One moment, please",
+        "zh-Hans": "我帮您查一下库存，请稍等",
+        "ja": "在庫を確認いたします。少々お待ちください",
+        "vi": "Để tôi kiểm tra kho. Vui lòng đợi một chút",
+        "th": "ขอเช็คสต็อกก่อน กรุณารอสักครู่",
+        "ru": "Я проверю наличие. Подождите, пожалуйста",
+        "uz": "Omborni tekshirib ko'raman. Biroz kuting",
+        "fr": "Je vérifie le stock. Un instant, s'il vous plaît",
+        "it": "Controllo la disponibilità. Un attimo, per favore",
+        "es": "Voy a comprobar el stock. Un momento, por favor",
+        "id": "Saya cek stoknya dulu. Mohon tunggu sebentar",
+        "ms": "Saya semak stok dahulu. Sila tunggu sebentar"
+      }
+    },
+    {
+      "id": "stock-4",
+      "kr": "지금 진열된 것이 마지막 재고예요",
+      "translations": {
+        "en": "What's on the shelf is the last of our stock",
+        "zh-Hans": "货架上的就是最后的库存了",
+        "ja": "陳列されているものが最後の在庫です",
+        "vi": "Hàng trên kệ là hàng cuối cùng",
+        "th": "ที่วางอยู่คือสต็อกสุดท้ายแล้ว",
+        "ru": "На полке — последние экземпляры",
+        "uz": "Peshtaxtadagisi oxirgi qolgani",
+        "fr": "Ce qui est en rayon est notre dernier stock",
+        "it": "Quello esposto è l'ultimo disponibile",
+        "es": "Lo que está expuesto es el último stock",
+        "id": "Yang dipajang adalah stok terakhir",
+        "ms": "Yang dipamerkan adalah stok terakhir"
+      }
+    },
+    {
+      "id": "stock-5",
+      "kr": "패키지만 변경되었고 같은 제품입니다",
+      "translations": {
+        "en": "Only the packaging has changed — it's the same product",
+        "zh-Hans": "只是包装变了，产品是一样的",
+        "ja": "パッケージが変わっただけで、同じ商品です",
+        "vi": "Chỉ đổi bao bì thôi, vẫn là sản phẩm đó",
+        "th": "เปลี่ยนแค่แพ็กเกจ สินค้าเหมือนเดิม",
+        "ru": "Изменилась только упаковка — товар тот же",
+        "uz": "Faqat qadoqlash o'zgargan, mahsulot o'sha",
+        "fr": "Seul l'emballage a changé, c'est le même produit",
+        "it": "È cambiata solo la confezione, il prodotto è lo stesso",
+        "es": "Solo cambió el empaque, es el mismo producto",
+        "id": "Hanya kemasannya yang berubah, produknya sama",
+        "ms": "Hanya bungkusan berubah, produknya sama"
       }
     }
   ],
@@ -86,36 +482,234 @@
       "translations": {
         "en": "Would you like to see a similar product?",
         "zh-Hans": "您想看看类似的产品吗？",
-        "ja": "似ている商品をご覧になりますか？"
+        "ja": "似ている商品をご覧になりますか？",
+        "vi": "Quý khách muốn xem sản phẩm tương tự không?",
+        "th": "อยากดูสินค้าที่คล้ายกันไหม?",
+        "ru": "Показать похожий товар?",
+        "uz": "Shunga o'xshash mahsulot ko'rsataymi?",
+        "fr": "Voulez-vous voir un produit similaire ?",
+        "it": "Vuole vedere un prodotto simile?",
+        "es": "¿Quiere ver un producto similar?",
+        "id": "Mau lihat produk yang mirip?",
+        "ms": "Mahu lihat produk yang serupa?"
       }
     },
     {
       "id": "rec-2",
-      "kr": "이 제품이 요즘 제일 인기 있어요",
+      "kr": "해당 브랜드는 저희 매장에 입점되어 있지 않습니다. 비슷한 다른 제품을 안내해드릴까요?",
       "translations": {
-        "en": "This is our most popular item these days",
-        "zh-Hans": "这款产品最近最受欢迎",
-        "ja": "こちらは最近一番人気の商品です"
+        "en": "We don't carry that brand in this store. Shall I show you something similar?",
+        "zh-Hans": "我们店没有这个品牌。要不要看看类似的产品？",
+        "ja": "そのブランドは当店では取り扱っておりません。似ている商品をご案内しましょうか？",
+        "vi": "Cửa hàng không có thương hiệu đó. Tôi giới thiệu sản phẩm tương tự nhé?",
+        "th": "ร้านเราไม่มีแบรนด์นี้ แนะนำสินค้าคล้ายกันไหม?",
+        "ru": "Этого бренда у нас нет. Показать похожие товары?",
+        "uz": "Bizda bu brend yo'q. O'xshash mahsulot ko'rsataymi?",
+        "fr": "Nous n'avons pas cette marque. Puis-je vous proposer un produit similaire ?",
+        "it": "Non abbiamo questo marchio. Le mostro un prodotto simile?",
+        "es": "No tenemos esa marca. ¿Le muestro algo similar?",
+        "id": "Kami tidak menjual merek itu. Mau saya tunjukkan yang mirip?",
+        "ms": "Kami tiada jenama itu. Mahu saya tunjukkan yang serupa?"
+      }
+    },
+    {
+      "id": "rec-3",
+      "kr": "올리브영에서 가장 유명한 제품입니다",
+      "translations": {
+        "en": "This is Olive Young's most popular product",
+        "zh-Hans": "这是Olive Young最有名的产品",
+        "ja": "オリーブヤングで一番有名な商品です",
+        "vi": "Đây là sản phẩm nổi tiếng nhất của Olive Young",
+        "th": "นี่คือสินค้าที่ดังที่สุดของ Olive Young",
+        "ru": "Это самый известный товар Olive Young",
+        "uz": "Bu Olive Youngning eng mashhur mahsuloti",
+        "fr": "C'est le produit le plus connu d'Olive Young",
+        "it": "È il prodotto più famoso di Olive Young",
+        "es": "Es el producto más famoso de Olive Young",
+        "id": "Ini produk paling terkenal di Olive Young",
+        "ms": "Ini produk paling terkenal di Olive Young"
+      }
+    },
+    {
+      "id": "rec-4",
+      "kr": "피부타입에 따라 추천해드릴게요. 지성이세요, 건성이세요?",
+      "translations": {
+        "en": "I can recommend based on your skin type. Is your skin oily or dry?",
+        "zh-Hans": "我可以根据肤质推荐。您是油性还是干性皮肤？",
+        "ja": "肌タイプに合わせておすすめします。脂性肌ですか、乾燥肌ですか？",
+        "vi": "Tôi sẽ gợi ý theo loại da. Da quý khách là da dầu hay da khô?",
+        "th": "แนะนำตามสภาพผิวได้ ผิวมันหรือผิวแห้ง?",
+        "ru": "Порекомендую по типу кожи. У вас жирная или сухая кожа?",
+        "uz": "Teri turiga qarab tavsiya qilaman. Teringiz yog'limi yoki quruqmi?",
+        "fr": "Je peux recommander selon votre type de peau. Peau grasse ou sèche ?",
+        "it": "Posso consigliare in base al tipo di pelle. Pelle grassa o secca?",
+        "es": "Puedo recomendar según su tipo de piel. ¿Piel grasa o seca?",
+        "id": "Saya bisa rekomendasikan sesuai jenis kulit. Kulit berminyak atau kering?",
+        "ms": "Saya boleh cadangkan ikut jenis kulit. Kulit berminyak atau kering?"
+      }
+    },
+    {
+      "id": "rec-5",
+      "kr": "테스터를 사용해보셔도 돼요",
+      "translations": {
+        "en": "Feel free to try the tester",
+        "zh-Hans": "您可以试用一下测试装",
+        "ja": "テスターをお試しいただけます",
+        "vi": "Quý khách có thể dùng thử tester",
+        "th": "ลองใช้เทสเตอร์ได้เลย",
+        "ru": "Можете попробовать тестер",
+        "uz": "Testerni sinab ko'rishingiz mumkin",
+        "fr": "Vous pouvez essayer le testeur",
+        "it": "Può provare il tester",
+        "es": "Puede probar el tester",
+        "id": "Silakan coba tester-nya",
+        "ms": "Silakan cuba tester"
       }
     }
   ],
   "etc": [
     {
       "id": "etc-1",
-      "kr": "캐리어는 매장 밖에 두고 들어와 주세요",
+      "kr": "매장이 협소하여 캐리어는 밖에 두고 들어와 주세요 (CCTV로 안전하게 관리됩니다)",
       "translations": {
-        "en": "Please leave your suitcase outside the store",
-        "zh-Hans": "请将行李箱放在店外再进来",
-        "ja": "スーツケースは店外に置いてお入りください"
+        "en": "Our store is small, so please leave your suitcase outside (it's monitored by CCTV)",
+        "zh-Hans": "店内空间较小，请把行李箱放在外面（有监控，很安全）",
+        "ja": "店内が狭いため、スーツケースは外に置いてください（防犯カメラで管理されています）",
+        "vi": "Cửa hàng hơi nhỏ, vui lòng để vali bên ngoài (có camera an ninh)",
+        "th": "ร้านค่อนข้างแคบ กรุณาวางกระเป๋าเดินทางไว้ข้างนอก (มีกล้องวงจรปิด)",
+        "ru": "Магазин небольшой, оставьте чемодан снаружи (ведётся видеонаблюдение)",
+        "uz": "Do'kon tor, chamadonni tashqarida qoldiring (kamera kuzatuvi bor)",
+        "fr": "Le magasin est petit, laissez votre valise dehors (surveillée par caméra)",
+        "it": "Il negozio è piccolo, lasci la valigia fuori (è videosorvegliata)",
+        "es": "La tienda es pequeña, deje la maleta fuera (está videovigilada)",
+        "id": "Toko kami sempit, mohon tinggalkan koper di luar (ada CCTV)",
+        "ms": "Kedai kami sempit, sila tinggalkan beg di luar (ada CCTV)"
       }
     },
     {
       "id": "etc-2",
+      "kr": "매장 안에서는 캐리어를 열지 말아 주세요. 밖에서 부탁드립니다",
+      "translations": {
+        "en": "Please don't open your suitcase inside the store — outside, please",
+        "zh-Hans": "请不要在店内打开行李箱，请到外面整理",
+        "ja": "店内でスーツケースを開けないでください。外でお願いします",
+        "vi": "Vui lòng không mở vali trong cửa hàng, xin ra bên ngoài",
+        "th": "กรุณาอย่าเปิดกระเป๋าเดินทางในร้าน กรุณาเปิดข้างนอก",
+        "ru": "Пожалуйста, не открывайте чемодан в магазине — только снаружи",
+        "uz": "Iltimos, chamadonni do'kon ichida ochmang — tashqarida oching",
+        "fr": "Merci de ne pas ouvrir votre valise dans le magasin — dehors, s'il vous plaît",
+        "it": "La preghiamo di non aprire la valigia nel negozio — fuori, per favore",
+        "es": "Por favor, no abra la maleta dentro de la tienda — afuera, por favor",
+        "id": "Mohon jangan membuka koper di dalam toko — di luar saja",
+        "ms": "Sila jangan buka beg pakaian di dalam kedai — di luar sahaja"
+      }
+    },
+    {
+      "id": "etc-3",
+      "kr": "타포린백 상품은 결제 후에 담아 주세요. 매장에서는 장바구니를 이용해 주세요",
+      "translations": {
+        "en": "Please put items into your tarpaulin bag only after payment. Please use a store basket while shopping",
+        "zh-Hans": "请结账后再把商品装进袋子。购物时请使用店内购物篮",
+        "ja": "タポリンバッグには会計後に商品を入れてください。店内では買い物かごをご利用ください",
+        "vi": "Vui lòng bỏ hàng vào túi sau khi thanh toán. Trong cửa hàng xin dùng giỏ",
+        "th": "กรุณาใส่สินค้าในถุงหลังชำระเงิน ระหว่างช้อปกรุณาใช้ตะกร้า",
+        "ru": "Кладите товары в сумку только после оплаты. В магазине используйте корзину",
+        "uz": "Mahsulotlarni to'lovdan keyin sumkaga soling. Do'konda savatdan foydalaning",
+        "fr": "Mettez les articles dans votre sac après le paiement. Utilisez un panier en magasin",
+        "it": "Metta i prodotti nella borsa solo dopo il pagamento. In negozio usi il cestino",
+        "es": "Ponga los productos en su bolsa después de pagar. Use una cesta en la tienda",
+        "id": "Masukkan barang ke tas setelah membayar. Gunakan keranjang saat belanja",
+        "ms": "Masukkan barangan ke dalam beg selepas membayar. Guna bakul semasa membeli-belah"
+      }
+    },
+    {
+      "id": "etc-4",
       "kr": "잠시만 기다려주세요",
       "translations": {
         "en": "One moment, please",
         "zh-Hans": "请您稍等一下",
-        "ja": "少々お待ちください"
+        "ja": "少々お待ちください",
+        "vi": "Vui lòng đợi một chút",
+        "th": "กรุณารอสักครู่",
+        "ru": "Подождите, пожалуйста",
+        "uz": "Biroz kutib turing",
+        "fr": "Un instant, s'il vous plaît",
+        "it": "Un attimo, per favore",
+        "es": "Un momento, por favor",
+        "id": "Mohon tunggu sebentar",
+        "ms": "Sila tunggu sebentar"
+      }
+    },
+    {
+      "id": "etc-5",
+      "kr": "편의점은 위층에 있습니다",
+      "translations": {
+        "en": "The convenience store is upstairs",
+        "zh-Hans": "便利店在楼上",
+        "ja": "コンビニは上の階にあります",
+        "vi": "Cửa hàng tiện lợi ở tầng trên",
+        "th": "ร้านสะดวกซื้ออยู่ชั้นบน",
+        "ru": "Круглосуточный магазин этажом выше",
+        "uz": "Supermarket yuqori qavatda",
+        "fr": "La supérette est à l'étage",
+        "it": "Il minimarket è al piano di sopra",
+        "es": "La tienda de conveniencia está arriba",
+        "id": "Minimarket ada di lantai atas",
+        "ms": "Kedai serbaneka di tingkat atas"
+      }
+    },
+    {
+      "id": "etc-6",
+      "kr": "약국은 건너편 스타벅스 옆에 있습니다",
+      "translations": {
+        "en": "The pharmacy is across from us, next to Starbucks",
+        "zh-Hans": "药店在对面星巴克旁边",
+        "ja": "薬局は向かいのスターバックスの隣です",
+        "vi": "Nhà thuốc ở đối diện, cạnh Starbucks",
+        "th": "ร้านขายยาอยู่ฝั่งตรงข้าม ข้างสตาร์บัคส์",
+        "ru": "Аптека напротив, рядом со Starbucks",
+        "uz": "Dorixona ro'parada, Starbucks yonida",
+        "fr": "La pharmacie est en face, à côté du Starbucks",
+        "it": "La farmacia è di fronte, accanto a Starbucks",
+        "es": "La farmacia está enfrente, junto a Starbucks",
+        "id": "Apotek ada di seberang, sebelah Starbucks",
+        "ms": "Farmasi di seberang, sebelah Starbucks"
+      }
+    },
+    {
+      "id": "etc-7",
+      "kr": "쓰레기통은 뒤쪽 화장실 근처에 있습니다",
+      "translations": {
+        "en": "The trash bin is at the back, near the restroom",
+        "zh-Hans": "垃圾桶在后面洗手间附近",
+        "ja": "ゴミ箱は奥のトイレの近くにあります",
+        "vi": "Thùng rác ở phía sau, gần nhà vệ sinh",
+        "th": "ถังขยะอยู่ด้านหลังใกล้ห้องน้ำ",
+        "ru": "Урна сзади, возле туалета",
+        "uz": "Axlat qutisi orqada, hojatxona yonida",
+        "fr": "La poubelle est au fond, près des toilettes",
+        "it": "Il cestino è in fondo, vicino al bagno",
+        "es": "La papelera está al fondo, cerca del baño",
+        "id": "Tempat sampah di belakang, dekat toilet",
+        "ms": "Tong sampah di belakang, dekat tandas"
+      }
+    },
+    {
+      "id": "etc-8",
+      "kr": "감사합니다. 좋은 여행 되세요!",
+      "translations": {
+        "en": "Thank you! Have a great trip!",
+        "zh-Hans": "谢谢！祝您旅途愉快！",
+        "ja": "ありがとうございます。良いご旅行を！",
+        "vi": "Cảm ơn quý khách! Chúc chuyến đi vui vẻ!",
+        "th": "ขอบคุณ ขอให้เดินทางปลอดภัย!",
+        "ru": "Спасибо! Хорошей поездки!",
+        "uz": "Rahmat! Yaxshi sayohat tilayman!",
+        "fr": "Merci ! Bon voyage !",
+        "it": "Grazie! Buon viaggio!",
+        "es": "¡Gracias! ¡Buen viaje!",
+        "id": "Terima kasih! Selamat jalan!",
+        "ms": "Terima kasih! Selamat jalan!"
       }
     }
   ]
