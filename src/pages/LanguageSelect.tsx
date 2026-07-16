@@ -21,11 +21,20 @@ const LANGS: { code: Langs; label: string }[] = [
 function LanguageSelect({nextPageWithLangs}:ILanguageSelectProps){
   return(
     <>
+      <p className="text-sm text-[#707463] mb-6">
+        Please select your language · 请选择语言 · 言語を選択 · 언어를 선택해 주세요
+      </p>
+      <div className="grid grid-cols-2 gap-3">
         {LANGS.map((l) => (
-          <button key={l.code} onClick={() => nextPageWithLangs(l.code)}>
+          <button 
+            key={l.code} 
+            onClick={() => nextPageWithLangs(l.code)}
+            className="bg-white border border-[#DCE2CF] rounded-2xl py-4 px-4 text-left text-base font-bold text-[#26281F] active:bg-[#EDF0E6] active:scale-95 transition"
+          >
             {l.label}
           </button>
         ))}
+      </div>
     </>
   );
 }
