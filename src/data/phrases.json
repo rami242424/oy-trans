@@ -20,7 +20,7 @@
     },
     {
       "id": "pay-2",
-      "kr": "봉투 필요하세요? (유료예요)",
+      "kr": "쇼핑백 필요하세요? (유료예요)",
       "translations": {
         "en": "Would you like a bag? (There is a small charge)",
         "zh-Hans": "请问您需要袋子吗？（需付费）",

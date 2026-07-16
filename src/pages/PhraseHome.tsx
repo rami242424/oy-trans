@@ -9,7 +9,14 @@ interface IPhraseHomeProps {
     search: string;
     setSearch: (e:string) => void;
 }
-
+const CATEGORIES:{ value: Category; label: string }[]=[
+    { value: "payment", label: "결제"},
+    { value: "tax-refund", label: "택스"},
+    { value: "exchange-carryIn", label: "교환불 및 수화물"},
+    { value: "stock", label: "재고"},
+    { value: "recommendation", label: "추천"},
+    { value: "etc", label: "기타"} 
+]
 function PhraseHome({language, nextToCustomerDisplay, category,
 setCategory, search, setSearch}:IPhraseHomeProps){
     if(language === null) return null;
@@ -18,28 +25,45 @@ setCategory, search, setSearch}:IPhraseHomeProps){
         : Object.values(phrases).flat().filter((data) => data.kr.includes(search))
     console.log(visiblePhrases, "visiblePhrases");
     return(
-        <>
-            <div className="top-4 text-l p-2">
-                <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="검색어를 입력하세요"/>
-            </div>
-            <p>선택한언어:{language}, 선택한카테고리:{category}</p>
-            <div className="grid grid-cols-6 gap-1 rounded-xl border py-3 w-full text-left">
-                <button onClick={() => setCategory("payment")}>결제</button>
-                <button onClick={() => setCategory("tax-refund")}>택스리펀</button>
-                <button onClick={() => setCategory("exchange-carryIn")}>교환불 및 수화물규정</button>
-                <button onClick={() => setCategory("stock")}>재고</button>
-                <button onClick={() => setCategory("recommendation")}>제품추천</button>
-                <button onClick={() => setCategory("etc")}>기타 응대</button>
-            </div>
-            <div>
-                {visiblePhrases.map((data) => (
-                    <button onClick={() => nextToCustomerDisplay(data)} key={data.id}>
-                        {data.translations[language]}
-                        <p>{data.kr}</p>
+        <div>
+            <input 
+                value={search} 
+                onChange={(e) => setSearch(e.target.value)} 
+                placeholder="문구 검색 - 환불, 품절, 결제..."
+                className="w-full bg-white border border-[#DCE2CF] rounded-xl px-4 py-3 text-base outline-none focus:border-[#4C5940] mb-3"
+            />
+            <div className="grid grid-cols-6 gap-2 mb-4">                
+                {CATEGORIES.map((c) => (
+                    <button 
+                        className={
+                            category === c.value
+                                ? "bg-[#4C5940] text-white rounded-xl py-2.5 text-xs font-bold"
+                                : "bg-white text-[#707463] border border-[#DCE2CF] rounded-xl py-2.5 text-xs font-semibold"
+                        }
+                        key={c.label}
+                        onClick={() => setCategory(c.value)}
+                    >
+                        {c.label}
                     </button>
                 ))}
             </div>
-        </>
+             <div className="space-y-2">
+                 {visiblePhrases.map((data) => (
+                    <button 
+                        className="w-full bg-white border border-[#DCE2CF] rounded-2xl p-4 text-left active:bg-[#EDF0E6] active:scale-[0.98] transition"
+                        onClick={() => nextToCustomerDisplay(data)} key={data.id}
+                    >
+                        <span className="block text-base font-bold text-[#26281F] leading-snug">
+                            {data.translations[language]}
+                        </span>
+                        <span className="block text-xs text-[#A3A695] mt-1">
+                            {data.kr}
+                        </span>
+                    </button>
+                 ))}
+
+            </div>
+        </div>
     );
 }
 
