@@ -41,12 +41,15 @@ function PhraseHome({
   return (
     <div className="min-h-screen bg-[#FBFAF6] p-4 pb-24">
       <button className="pb-2" onClick={resetToLang}>←</button>
-      <input
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="문구 검색 — 환불, 품절, 결제…"
-        className="w-full bg-white border border-[#DCE2CF] rounded-xl px-4 py-3 text-base outline-none focus:border-[#4C5940] mb-3"
-      />
+      <div className="relative">
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="문구 검색 — 환불, 품절, 결제…"
+          className="w-full bg-white border border-[#DCE2CF] rounded-xl px-4 py-3 text-base outline-none focus:border-[#4C5940] mb-3"
+        />
+        {search !== "" && <button onClick={() => setSearch("")} className="absolute right-4 top-3 text-[#A3A695] text-xl">✕</button>}
+      </div>
 
       <div className="grid grid-cols-3 gap-2 mb-4">
         {CATEGORIES.map((c) => (
