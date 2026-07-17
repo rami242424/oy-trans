@@ -22,23 +22,23 @@
       "id": "pay-2",
       "kr": "쇼핑백 필요하세요? (유료예요)",
       "translations": {
-        "en": "Would you like a bag? (There is a small charge)",
-        "zh-Hans": "请问您需要袋子吗？（需付费）",
-        "ja": "袋はご入り用ですか？（有料です）",
-        "vi": "Quý khách có cần túi không? (Có tính phí)",
-        "th": "ต้องการถุงไหม? (มีค่าใช้จ่าย)",
+        "en": "Would you like a shopping bag? (There is a small charge)",
+        "zh-Hans": "请问您需要购物袋吗？（需付费）",
+        "ja": "ショッピングバッグはご入り用ですか？（有料です）",
+        "vi": "Quý khách có cần túi mua sắm không? (Có tính phí)",
+        "th": "ต้องการถุงช้อปปิ้งไหม? (มีค่าใช้จ่าย)",
         "ru": "Вам нужен пакет? (платно)",
-        "uz": "Sizga paket kerakmi? (pullik)",
+        "uz": "Sizga xarid sumkasi kerakmi? (pullik)",
         "fr": "Souhaitez-vous un sac ? (payant)",
         "it": "Desidera una busta? (a pagamento)",
         "es": "¿Necesita una bolsa? (de pago)",
-        "id": "Apakah Anda perlu kantong? (berbayar)",
-        "ms": "Adakah anda perlukan beg? (berbayar)"
+        "id": "Apakah Anda perlu kantong belanja? (berbayar)",
+        "ms": "Adakah anda perlukan beg beli-belah? (berbayar)"
       }
     },
     {
       "id": "pay-3",
-      "kr": "유니온페이는 실물 카드만 결제 가능합니다.",
+      "kr": "유니온페이는 실물 카드만 결제 가능합니다",
       "translations": {
         "en": "UnionPay is accepted with a physical card only",
         "zh-Hans": "银联只能使用实体卡支付",
@@ -56,7 +56,7 @@
     },
     {
       "id": "pay-4",
-      "kr": "현금과 카드로 분할 결제 가능합니다.",
+      "kr": "현금과 카드로 분할 결제 가능합니다",
       "translations": {
         "en": "You can split the payment between cash and card",
         "zh-Hans": "可以现金和银行卡分开支付",
@@ -92,7 +92,7 @@
     },
     {
       "id": "pay-6",
-      "kr": "교통카드로는 결제할 수 없습니다.",
+      "kr": "교통카드로는 결제할 수 없습니다",
       "translations": {
         "en": "Transit cards cannot be used for payment",
         "zh-Hans": "交通卡不能用于支付",
@@ -110,7 +110,7 @@
     },
     {
       "id": "pay-7",
-      "kr": "2개 구매 시 1개 무료입니다. 상품을 직접 가져와 주세요.",
+      "kr": "2개 구매 시 1개 무료입니다. 상품을 직접 가져와 주세요",
       "translations": {
         "en": "Buy 2, get 1 free. Please bring the free item yourself",
         "zh-Hans": "买二送一。请您直接把商品拿过来",
@@ -128,7 +128,7 @@
     },
     {
       "id": "pay-8",
-      "kr": "1개 구매 시 1개 무료입니다. 상품을 직접 가져와 주세요.",
+      "kr": "1개 구매 시 1개 무료입니다. 상품을 직접 가져와 주세요",
       "translations": {
         "en": "Buy 1, get 1 free. Please bring the free item yourself",
         "zh-Hans": "买一送一。请您直接把商品拿过来",
@@ -142,6 +142,60 @@
         "es": "Compre 1 y llévese 1 gratis. Por favor, traiga el producto usted mismo",
         "id": "Beli 1 gratis 1. Silakan ambil sendiri produknya",
         "ms": "Beli 1 percuma 1. Sila ambil sendiri produk tersebut"
+      }
+    },
+    {
+      "id": "pay-9",
+      "kr": "지퍼가 달린 리유저블백은 3,000원입니다",
+      "translations": {
+        "en": "The reusable zipper bag is 3,000 KRW",
+        "zh-Hans": "带拉链的环保袋是3,000韩元",
+        "ja": "ジッパー付きリユーザブルバッグは3,000ウォンです",
+        "vi": "Túi có khóa kéo dùng lại được giá 3.000 won",
+        "th": "กระเป๋าซิปแบบใช้ซ้ำราคา 3,000 วอน",
+        "ru": "Многоразовая сумка на молнии стоит 3 000 вон",
+        "uz": "Zamokli qayta ishlatiladigan sumka 3 000 von turadi",
+        "fr": "Le sac réutilisable à fermeture éclair coûte 3 000 wons",
+        "it": "La borsa riutilizzabile con cerniera costa 3.000 won",
+        "es": "La bolsa reutilizable con cremallera cuesta 3.000 wones",
+        "id": "Tas ritsleting yang bisa dipakai ulang harganya 3.000 won",
+        "ms": "Beg zip boleh guna semula berharga 3,000 won"
+      }
+    },
+    {
+      "id": "pay-10",
+      "kr": "쇼핑백은 구매하신 상품 수량만큼만 구매할 수 있습니다 (상품 2개 구매 시 쇼핑백 2개)",
+      "translations": {
+        "en": "You can buy only as many shopping bags as items purchased (2 items = up to 2 bags)",
+        "zh-Hans": "购物袋只能按购买商品的数量购买（买2件商品最多买2个袋子）",
+        "ja": "ショッピングバッグはご購入商品の数量分のみ購入できます（商品2点で袋2枚まで）",
+        "vi": "Túi mua sắm chỉ mua được theo số lượng sản phẩm đã mua (mua 2 sản phẩm được 2 túi)",
+        "th": "ซื้อถุงช้อปปิ้งได้ตามจำนวนสินค้าที่ซื้อเท่านั้น (ซื้อสินค้า 2 ชิ้น ซื้อถุงได้ 2 ใบ)",
+        "ru": "Пакеты можно купить только по количеству купленных товаров (2 товара — до 2 пакетов)",
+        "uz": "Xarid sumkasini faqat olingan mahsulot soniga qarab olish mumkin (2 ta mahsulot — 2 ta sumka)",
+        "fr": "Les sacs sont limités au nombre d'articles achetés (2 articles = 2 sacs maximum)",
+        "it": "Le buste sono limitate al numero di articoli acquistati (2 articoli = massimo 2 buste)",
+        "es": "Las bolsas se limitan a la cantidad de productos comprados (2 productos = máximo 2 bolsas)",
+        "id": "Kantong belanja hanya bisa dibeli sesuai jumlah barang (beli 2 barang = maksimal 2 kantong)",
+        "ms": "Beg beli-belah terhad kepada bilangan barangan dibeli (2 barangan = maksimum 2 beg)"
+      }
+    },
+    {
+      "id": "pay-11",
+      "kr": "쇼핑백은 저희 매장에서 상품을 구매하셨을 때만 구매 가능합니다",
+      "translations": {
+        "en": "Shopping bags can only be purchased with a purchase at this store",
+        "zh-Hans": "购物袋仅限在本店购买商品时才能购买",
+        "ja": "ショッピングバッグは当店で商品をご購入の場合のみ購入できます",
+        "vi": "Túi mua sắm chỉ bán khi quý khách mua hàng tại cửa hàng này",
+        "th": "ถุงช้อปปิ้งซื้อได้เฉพาะเมื่อซื้อสินค้าที่ร้านนี้เท่านั้น",
+        "ru": "Пакеты продаются только при покупке товаров в нашем магазине",
+        "uz": "Sumka faqat do'konimizdan mahsulot olganingizda sotiladi",
+        "fr": "Les sacs ne sont vendus qu'avec un achat dans notre magasin",
+        "it": "Le buste si vendono solo con un acquisto in questo negozio",
+        "es": "Las bolsas solo se venden con una compra en esta tienda",
+        "id": "Kantong belanja hanya dijual jika berbelanja di toko ini",
+        "ms": "Beg beli-belah hanya dijual dengan pembelian di kedai ini"
       }
     }
   ],
@@ -166,7 +220,7 @@
     },
     {
       "id": "tax-2",
-      "kr": "택스리펀은 15,000원 이상 구매 시 가능합니다.",
+      "kr": "택스리펀은 15,000원 이상 구매 시 가능합니다",
       "translations": {
         "en": "Tax refund is available for purchases of 15,000 KRW or more",
         "zh-Hans": "购买满15,000韩元即可办理退税",
@@ -184,7 +238,7 @@
     },
     {
       "id": "tax-3",
-      "kr": "실물 여권이 있으면 택스리펀을 받을 수 있습니다.",
+      "kr": "실물 여권이 있으면 택스리펀을 받을 수 있습니다",
       "translations": {
         "en": "You can get a tax refund if you have your physical passport",
         "zh-Hans": "有实体护照就可以办理退税",
@@ -202,7 +256,7 @@
     },
     {
       "id": "tax-4",
-      "kr": "여권이 스캔되지 않습니다. 택스리펀용 영수증을 따로 뽑아드릴까요? 이 영수증으로 3층에서 환급받으실 수 있습니다.",
+      "kr": "여권이 스캔되지 않습니다. 택스리펀용 영수증을 따로 뽑아드릴까요? 이 영수증으로 3층에서 환급받으실 수 있습니다",
       "translations": {
         "en": "Your passport isn't scanning. Shall I print a separate tax refund receipt? You can get your refund on the 3rd floor with it",
         "zh-Hans": "您的护照无法扫描。我给您另打一张退税收据好吗？凭这张收据可以在3楼办理退税",
@@ -220,7 +274,7 @@
     },
     {
       "id": "tax-5",
-      "kr": "여권이 매장 밖에 있다면 지금 가져와 주세요. 기다리겠습니다.",
+      "kr": "여권이 매장 밖에 있다면 지금 가져와 주세요. 기다리겠습니다",
       "translations": {
         "en": "If your passport is outside the store, please bring it now. I'll wait for you",
         "zh-Hans": "如果护照在店外，请现在去拿。我在这里等您",
@@ -238,7 +292,7 @@
     },
     {
       "id": "tax-6",
-      "kr": "세관에서 구매 물품 확인을 요청할 수 있습니다.",
+      "kr": "세관에서 구매 물품 확인을 요청할 수 있습니다",
       "translations": {
         "en": "Customs may ask to check your purchased items",
         "zh-Hans": "海关可能会要求查验您购买的商品",
@@ -253,12 +307,30 @@
         "id": "Bea cukai mungkin meminta memeriksa barang belanjaan Anda",
         "ms": "Kastam mungkin meminta memeriksa barangan yang dibeli"
       }
+    },
+    {
+      "id": "tax-7",
+      "kr": "1,000원짜리 마스크팩을 추가하면 15,000원이 되어 택스리펀이 가능합니다. 추가해드릴까요? 환급받으시면 최종 금액은 지금과 거의 같습니다",
+      "translations": {
+        "en": "If you add a 1,000 KRW mask pack, your total reaches 15,000 KRW and qualifies for a tax refund. Shall I add one? After the refund, you'll pay about the same as now",
+        "zh-Hans": "加一片1,000韩元的面膜就满15,000韩元，可以办理退税。要加一片吗？退税后最终金额和现在差不多",
+        "ja": "1,000ウォンのマスクパックを追加すると15,000ウォンになり免税が受けられます。追加しましょうか？払い戻し後の金額は今とほぼ同じです",
+        "vi": "Thêm một miếng mặt nạ 1.000 won là đủ 15.000 won để được hoàn thuế. Quý khách muốn thêm không? Sau khi hoàn thuế, số tiền gần như không đổi",
+        "th": "เพิ่มมาส์กแผ่นราคา 1,000 วอน จะครบ 15,000 วอนและได้คืนภาษี ต้องการเพิ่มไหม? หลังคืนภาษียอดจ่ายเกือบเท่าเดิม",
+        "ru": "Если добавить маску за 1 000 вон, сумма достигнет 15 000 вон и вы получите такс-фри. Добавить? После возврата итоговая сумма будет почти такой же",
+        "uz": "1 000 vonlik niqob qo'shsangiz, jami 15 000 von bo'lib tax refund olasiz. Qo'shaymi? Qaytarimdan keyin summa deyarli o'zgarmaydi",
+        "fr": "En ajoutant un masque à 1 000 wons, vous atteignez 15 000 wons et obtenez la détaxe. Je l'ajoute ? Après remboursement, le montant final reste presque le même",
+        "it": "Aggiungendo una maschera da 1.000 won arriva a 15.000 won e ottiene il tax refund. La aggiungo? Dopo il rimborso il totale resta quasi uguale",
+        "es": "Si añade una mascarilla de 1.000 wones, llega a 15.000 y obtiene la devolución. ¿Se la añado? Tras el reembolso, pagará casi lo mismo",
+        "id": "Dengan menambah masker 1.000 won, total mencapai 15.000 won dan bisa dapat pengembalian pajak. Mau ditambahkan? Setelah refund, jumlahnya hampir sama",
+        "ms": "Dengan menambah mask muka 1,000 won, jumlah mencapai 15,000 won dan layak pulangan cukai. Mahu saya tambah? Selepas refund, jumlahnya hampir sama"
+      }
     }
   ],
   "exchange-carryIn": [
     {
       "id": "ex-1",
-      "kr": "상품 1개당 100ml 이하 액체류만, 총 1,000ml까지 기내 반입 가능합니다.",
+      "kr": "상품 1개당 100ml 이하 액체류만, 총 1,000ml까지 기내 반입 가능합니다",
       "translations": {
         "en": "Only liquids of 100ml or less per item, up to 1,000ml in total, are allowed in carry-on",
         "zh-Hans": "单件液体不超过100毫升、总量不超过1000毫升才能带上飞机",
@@ -276,7 +348,7 @@
     },
     {
       "id": "ex-2",
-      "kr": "100ml를 초과하는 제품은 위탁 수하물로 보내시면 됩니다.",
+      "kr": "100ml를 초과하는 제품은 위탁 수하물로 보내시면 됩니다",
       "translations": {
         "en": "Items over 100ml can go in your checked baggage",
         "zh-Hans": "超过100毫升的商品可以放托运行李",
@@ -294,7 +366,7 @@
     },
     {
       "id": "ex-3",
-      "kr": "교환·환불은 영수증이 있어야 가능합니다.",
+      "kr": "교환·환불은 영수증이 있어야 가능합니다",
       "translations": {
         "en": "Exchanges and refunds require a receipt",
         "zh-Hans": "换货和退款需要出示收据",
@@ -312,7 +384,7 @@
     },
     {
       "id": "ex-4",
-      "kr": "환불은 저희 매장에서 15일 이내에 구매하고 영수증이 있는 경우에만 가능합니다.",
+      "kr": "환불은 저희 매장에서 15일 이내에 구매하고 영수증이 있는 경우에만 가능합니다",
       "translations": {
         "en": "Refunds are only possible for items bought at this store within 15 days, with a receipt",
         "zh-Hans": "退款仅限本店15天内购买且有收据的商品",
@@ -330,7 +402,7 @@
     },
     {
       "id": "ex-5",
-      "kr": "다른 매장에서 구매한 상품은 환불은 안 되고, 같은 가격 이상의 제품으로 교환만 가능합니다.",
+      "kr": "다른 매장에서 구매한 상품은 환불은 안 되고, 같은 가격 이상의 제품으로 교환만 가능합니다",
       "translations": {
         "en": "Items from other stores can't be refunded — only exchanged for a product of equal or higher price",
         "zh-Hans": "其他门店购买的商品不能退款，只能换同价或更高价的商品",
@@ -348,7 +420,7 @@
     },
     {
       "id": "ex-6",
-      "kr": "개봉한 제품은 환불이 어렵습니다.",
+      "kr": "개봉한 제품은 환불이 어렵습니다",
       "translations": {
         "en": "Opened products cannot be refunded",
         "zh-Hans": "已开封的商品无法退款",
@@ -366,7 +438,7 @@
     },
     {
       "id": "ex-7",
-      "kr": "환불은 결제하신 카드로 처리됩니다.",
+      "kr": "환불은 결제하신 카드로 처리됩니다",
       "translations": {
         "en": "Refunds are processed to the card you paid with",
         "zh-Hans": "退款将退回您付款的卡",
@@ -386,7 +458,7 @@
   "stock": [
     {
       "id": "stock-1",
-      "kr": "찾으시는 제품 코너로 안내해드릴게요.",
+      "kr": "찾으시는 제품 코너로 안내해드릴게요",
       "translations": {
         "en": "Let me take you to that section",
         "zh-Hans": "我带您去您要找的产品区",
@@ -404,7 +476,7 @@
     },
     {
       "id": "stock-2",
-      "kr": "죄송해요, 이 제품은 현재 품절이에요.",
+      "kr": "죄송해요, 이 제품은 현재 품절이에요",
       "translations": {
         "en": "I'm sorry, this item is currently sold out",
         "zh-Hans": "非常抱歉，这款产品目前缺货了",
@@ -422,7 +494,7 @@
     },
     {
       "id": "stock-3",
-      "kr": "재고를 확인해볼게요. 잠시만 기다려주세요.",
+      "kr": "재고를 확인해볼게요. 잠시만 기다려주세요",
       "translations": {
         "en": "Let me check our stock. One moment, please",
         "zh-Hans": "我帮您查一下库存，请稍等",
@@ -440,7 +512,7 @@
     },
     {
       "id": "stock-4",
-      "kr": "지금 진열된 것이 마지막 재고예요.",
+      "kr": "지금 진열된 것이 마지막 재고예요",
       "translations": {
         "en": "What's on the shelf is the last of our stock",
         "zh-Hans": "货架上的就是最后的库存了",
@@ -458,7 +530,7 @@
     },
     {
       "id": "stock-5",
-      "kr": "패키지만 변경되었고 같은 제품입니다.",
+      "kr": "패키지만 변경되었고 같은 제품입니다",
       "translations": {
         "en": "Only the packaging has changed — it's the same product",
         "zh-Hans": "只是包装变了，产品是一样的",
@@ -514,7 +586,7 @@
     },
     {
       "id": "rec-3",
-      "kr": "올리브영에서 가장 유명한 제품입니다.",
+      "kr": "올리브영에서 가장 유명한 제품입니다",
       "translations": {
         "en": "This is Olive Young's most popular product",
         "zh-Hans": "这是Olive Young最有名的产品",
@@ -550,7 +622,7 @@
     },
     {
       "id": "rec-5",
-      "kr": "테스터를 사용해보셔도 돼요.",
+      "kr": "테스터를 사용해보셔도 돼요",
       "translations": {
         "en": "Feel free to try the tester",
         "zh-Hans": "您可以试用一下测试装",
@@ -570,7 +642,7 @@
   "etc": [
     {
       "id": "etc-1",
-      "kr": "매장이 협소하여 캐리어는 밖에 두고 들어와 주세요. (CCTV로 안전하게 관리됩니다)",
+      "kr": "매장이 협소하여 캐리어는 밖에 두고 들어와 주세요 (CCTV로 안전하게 관리됩니다)",
       "translations": {
         "en": "Our store is small, so please leave your suitcase outside (it's monitored by CCTV)",
         "zh-Hans": "店内空间较小，请把行李箱放在外面（有监控，很安全）",
@@ -588,7 +660,7 @@
     },
     {
       "id": "etc-2",
-      "kr": "매장 안에서는 캐리어를 열지 말아 주세요. 밖에서 부탁드립니다.",
+      "kr": "매장 안에서는 캐리어를 열지 말아 주세요. 밖에서 부탁드립니다",
       "translations": {
         "en": "Please don't open your suitcase inside the store — outside, please",
         "zh-Hans": "请不要在店内打开行李箱，请到外面整理",
@@ -606,7 +678,7 @@
     },
     {
       "id": "etc-3",
-      "kr": "타포린백 상품은 결제 후에 담아 주세요. 매장에서는 장바구니를 이용해 주세요.",
+      "kr": "타포린백 상품은 결제 후에 담아 주세요. 매장에서는 장바구니를 이용해 주세요",
       "translations": {
         "en": "Please put items into your tarpaulin bag only after payment. Please use a store basket while shopping",
         "zh-Hans": "请结账后再把商品装进袋子。购物时请使用店内购物篮",
@@ -624,7 +696,7 @@
     },
     {
       "id": "etc-4",
-      "kr": "잠시만 기다려주세요.",
+      "kr": "잠시만 기다려주세요",
       "translations": {
         "en": "One moment, please",
         "zh-Hans": "请您稍等一下",
@@ -642,7 +714,7 @@
     },
     {
       "id": "etc-5",
-      "kr": "편의점은 위층에 있습니다.",
+      "kr": "편의점은 위층에 있습니다",
       "translations": {
         "en": "The convenience store is upstairs",
         "zh-Hans": "便利店在楼上",
@@ -660,7 +732,7 @@
     },
     {
       "id": "etc-6",
-      "kr": "약국은 건너편 스타벅스 옆에 있습니다.",
+      "kr": "약국은 건너편 스타벅스 옆에 있습니다",
       "translations": {
         "en": "The pharmacy is across from us, next to Starbucks",
         "zh-Hans": "药店在对面星巴克旁边",
@@ -678,7 +750,7 @@
     },
     {
       "id": "etc-7",
-      "kr": "쓰레기통은 뒤쪽 화장실 근처에 있습니다.",
+      "kr": "쓰레기통은 뒤쪽 화장실 근처에 있습니다",
       "translations": {
         "en": "The trash bin is at the back, near the restroom",
         "zh-Hans": "垃圾桶在后面洗手间附近",
@@ -710,6 +782,24 @@
         "es": "¡Gracias! ¡Buen viaje!",
         "id": "Terima kasih! Selamat jalan!",
         "ms": "Terima kasih! Selamat jalan!"
+      }
+    },
+    {
+      "id": "etc-9",
+      "kr": "구매하실 상품은 매장 장바구니에만 담아 주세요 (개인 가방에 담지 말아 주세요)",
+      "translations": {
+        "en": "Please put items only in a store basket, not in your personal bag",
+        "zh-Hans": "要购买的商品请只放入店内购物篮（请勿放入个人包内）",
+        "ja": "ご購入予定の商品は店内のかごにのみお入れください（個人のバッグには入れないでください）",
+        "vi": "Vui lòng chỉ để hàng vào giỏ của cửa hàng (không bỏ vào túi cá nhân)",
+        "th": "กรุณาใส่สินค้าในตะกร้าของร้านเท่านั้น (ห้ามใส่กระเป๋าส่วนตัว)",
+        "ru": "Пожалуйста, кладите товары только в корзину магазина, а не в личную сумку",
+        "uz": "Mahsulotlarni faqat do'kon savatiga soling (shaxsiy sumkaga solmang)",
+        "fr": "Merci de mettre les articles uniquement dans un panier du magasin, pas dans votre sac personnel",
+        "it": "La preghiamo di mettere i prodotti solo nel cestino del negozio, non nella sua borsa",
+        "es": "Por favor, ponga los productos solo en la cesta de la tienda, no en su bolso personal",
+        "id": "Mohon masukkan barang hanya ke keranjang toko (jangan ke tas pribadi)",
+        "ms": "Sila masukkan barangan ke dalam bakul kedai sahaja (bukan beg peribadi)"
       }
     }
   ]
