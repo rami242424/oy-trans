@@ -35,10 +35,17 @@ function App(){
     setScreen("phrases");
     setSelectedPhrase(null);
   }
+  const resetToLang = () => {
+    setSearch("");
+    setCategory("payment");
+    setLanguage(null);
+    setSelectedPhrase(null);
+    setScreen("lang");
+  }
   return(
     <>
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
-      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay} category={category} setCategory={setCategory} search={search} setSearch={setSearch}/>}
+      {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay} category={category} setCategory={setCategory} search={search} setSearch={setSearch} resetToLang={resetToLang}/>}
       {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase} backToPhrases={backToPhrases}/>}
     </>
   );
