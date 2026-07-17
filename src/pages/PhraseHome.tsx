@@ -40,7 +40,7 @@ function PhraseHome({
 
   return (
     <div className="min-h-screen bg-[#FBFAF6] p-4 pb-24">
-      <button onClick={() => resetToLang}>←</button>
+      <button className="pb-2" onClick={resetToLang}>←</button>
       <input
         value={search}
         onChange={(e) => setSearch(e.target.value)}

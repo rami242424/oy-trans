@@ -18,7 +18,7 @@ function CustomerDisplay({
       onClick={backToPhrases}
       className="fixed inset-0 bg-[#4C5940] text-white flex flex-col items-center justify-center cursor-pointer"
     >
-      <button className="absolute top-4 right-4 text-white/70 text-3xl p-2">
+      <button className="absolute top-4 right-4 text-white/70 text-3xl p-2 outline-none">
         ✕
       </button>
       <h2 className="text-4xl font-extrabold text-center leading-snug px-8">

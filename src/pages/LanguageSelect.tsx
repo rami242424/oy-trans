@@ -15,8 +15,8 @@ const LANGS: { code: Langs; label: string }[] = [
   { code: "fr", label: "Français" },
   { code: "it", label: "Italiano" },
   { code: "es", label: "Español" },
-  { code: "id", label: "Bahasa Indonesia" },
-  { code: "ms", label: "Bahasa Melayu" },
+  { code: "id", label: "Indonesia" },
+  { code: "ms", label: "Melayu" },
 ];
 
 function LanguageSelect({ nextPageWithLangs }: ILanguageSelectProps) {
