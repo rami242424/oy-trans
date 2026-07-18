@@ -15,7 +15,9 @@
         "it": "Desidera pagare con carta o in contanti?",
         "es": "¿Desea pagar con tarjeta o en efectivo?",
         "id": "Anda ingin membayar dengan kartu atau tunai?",
-        "ms": "Anda ingin membayar dengan kad atau tunai?"
+        "ms": "Anda ingin membayar dengan kad atau tunai?",
+        "tr": "Kart ile mi yoksa nakit mi ödemek istersiniz?",
+        "mn": "Картаар уу, бэлнээр уу төлөх вэ?"
       }
     },
     {
@@ -33,7 +35,9 @@
         "it": "Desidera una busta? (a pagamento)",
         "es": "¿Necesita una bolsa? (de pago)",
         "id": "Apakah Anda perlu kantong belanja? (berbayar)",
-        "ms": "Adakah anda perlukan beg beli-belah? (berbayar)"
+        "ms": "Adakah anda perlukan beg beli-belah? (berbayar)",
+        "tr": "Alışveriş poşeti ister misiniz? (ücretlidir)",
+        "mn": "Худалдааны уут хэрэгтэй юу? (төлбөртэй)"
       }
     },
     {
@@ -51,7 +55,9 @@
         "it": "UnionPay è accettata solo con carta fisica",
         "es": "UnionPay solo se acepta con tarjeta física",
         "id": "UnionPay hanya bisa digunakan dengan kartu fisik",
-        "ms": "UnionPay hanya boleh digunakan dengan kad fizikal"
+        "ms": "UnionPay hanya boleh digunakan dengan kad fizikal",
+        "tr": "UnionPay yalnızca fiziksel kartla geçerlidir",
+        "mn": "UnionPay зөвхөн биет картаар төлөгдөнө"
       }
     },
     {
@@ -69,7 +75,9 @@
         "it": "È possibile pagare in parte in contanti e in parte con carta",
         "es": "Puede dividir el pago entre efectivo y tarjeta",
         "id": "Anda bisa membayar sebagian tunai dan sebagian kartu",
-        "ms": "Anda boleh membahagikan bayaran antara tunai dan kad"
+        "ms": "Anda boleh membahagikan bayaran antara tunai dan kad",
+        "tr": "Nakit ve kartla bölerek ödeyebilirsiniz",
+        "mn": "Бэлэн мөнгө болон картаар хувааж төлж болно"
       }
     },
     {
@@ -87,7 +95,9 @@
         "it": "Potrebbe controllare il saldo della carta nell'app?",
         "es": "¿Podría comprobar el saldo de su tarjeta en la aplicación?",
         "id": "Mohon periksa saldo kartu Anda di aplikasi",
-        "ms": "Sila semak baki kad anda dalam aplikasi"
+        "ms": "Sila semak baki kad anda dalam aplikasi",
+        "tr": "Kart bakiyenizi uygulamadan kontrol eder misiniz?",
+        "mn": "Картын үлдэгдлээ аппаас шалгана уу"
       }
     },
     {
@@ -105,7 +115,9 @@
         "it": "Le carte dei trasporti non sono accettate",
         "es": "No se puede pagar con tarjetas de transporte",
         "id": "Kartu transportasi tidak bisa digunakan untuk pembayaran",
-        "ms": "Kad pengangkutan tidak boleh digunakan untuk pembayaran"
+        "ms": "Kad pengangkutan tidak boleh digunakan untuk pembayaran",
+        "tr": "Ulaşım kartıyla ödeme yapılamaz",
+        "mn": "Нийтийн тээврийн картаар төлөх боломжгүй"
       }
     },
     {
@@ -123,7 +135,9 @@
         "it": "Compri 2, 1 in omaggio. La preghiamo di portare l'articolo",
         "es": "Compre 2 y llévese 1 gratis. Por favor, traiga el producto usted mismo",
         "id": "Beli 2 gratis 1. Silakan ambil sendiri produknya",
-        "ms": "Beli 2 percuma 1. Sila ambil sendiri produk tersebut"
+        "ms": "Beli 2 percuma 1. Sila ambil sendiri produk tersebut",
+        "tr": "2 alana 1 bedava. Lütfen ürünü kendiniz getirin",
+        "mn": "2 авбал 1 нь үнэгүй. Бүтээгдэхүүнээ өөрөө авчирна уу"
       }
     },
     {
@@ -141,7 +155,9 @@
         "it": "Compri 1, 1 in omaggio. La preghiamo di portare l'articolo",
         "es": "Compre 1 y llévese 1 gratis. Por favor, traiga el producto usted mismo",
         "id": "Beli 1 gratis 1. Silakan ambil sendiri produknya",
-        "ms": "Beli 1 percuma 1. Sila ambil sendiri produk tersebut"
+        "ms": "Beli 1 percuma 1. Sila ambil sendiri produk tersebut",
+        "tr": "1 alana 1 bedava. Lütfen ürünü kendiniz getirin",
+        "mn": "1 авбал 1 нь үнэгүй. Бүтээгдэхүүнээ өөрөө авчирна уу"
       }
     },
     {
@@ -159,7 +175,9 @@
         "it": "La borsa riutilizzabile con cerniera costa 3.000 won",
         "es": "La bolsa reutilizable con cremallera cuesta 3.000 wones",
         "id": "Tas ritsleting yang bisa dipakai ulang harganya 3.000 won",
-        "ms": "Beg zip boleh guna semula berharga 3,000 won"
+        "ms": "Beg zip boleh guna semula berharga 3,000 won",
+        "tr": "Fermuarlı yeniden kullanılabilir çanta 3.000 won",
+        "mn": "Цахилгаантай дахин хэрэглэх уут 3,000 вон"
       }
     },
     {
@@ -177,7 +195,9 @@
         "it": "Le buste sono limitate al numero di articoli acquistati (2 articoli = massimo 2 buste)",
         "es": "Las bolsas se limitan a la cantidad de productos comprados (2 productos = máximo 2 bolsas)",
         "id": "Kantong belanja hanya bisa dibeli sesuai jumlah barang (beli 2 barang = maksimal 2 kantong)",
-        "ms": "Beg beli-belah terhad kepada bilangan barangan dibeli (2 barangan = maksimum 2 beg)"
+        "ms": "Beg beli-belah terhad kepada bilangan barangan dibeli (2 barangan = maksimum 2 beg)",
+        "tr": "Poşetleri yalnızca aldığınız ürün sayısı kadar alabilirsiniz (2 ürün = en fazla 2 poşet)",
+        "mn": "Уутыг зөвхөн авсан барааныхаа тоогоор авах боломжтой (2 бараа = 2 уут)"
       }
     },
     {
@@ -195,7 +215,49 @@
         "it": "Le buste si vendono solo con un acquisto in questo negozio",
         "es": "Las bolsas solo se venden con una compra en esta tienda",
         "id": "Kantong belanja hanya dijual jika berbelanja di toko ini",
-        "ms": "Beg beli-belah hanya dijual dengan pembelian di kedai ini"
+        "ms": "Beg beli-belah hanya dijual dengan pembelian di kedai ini",
+        "tr": "Poşetler yalnızca mağazamızdan alışveriş yapıldığında satılır",
+        "mn": "Уутыг зөвхөн манай дэлгүүрээс бараа авсан үед худалдана"
+      }
+    },
+    {
+      "id": "pay-12",
+      "kr": "페이퍼백은 100원, 지퍼 리유저블백은 3,000원입니다",
+      "translations": {
+        "en": "Paper bags are 100 KRW, reusable zipper bags are 3,000 KRW",
+        "zh-Hans": "纸袋100韩元，带拉链的环保袋3,000韩元",
+        "ja": "紙袋は100ウォン、ジッパー付きリユーザブルバッグは3,000ウォンです",
+        "vi": "Túi giấy 100 won, túi khóa kéo dùng lại 3.000 won",
+        "th": "ถุงกระดาษ 100 วอน ถุงซิปใช้ซ้ำ 3,000 วอน",
+        "ru": "Бумажный пакет — 100 вон, многоразовая сумка на молнии — 3 000 вон",
+        "uz": "Qog'oz paket 100 von, zamokli sumka 3 000 von",
+        "fr": "Sac papier : 100 wons, sac réutilisable zippé : 3 000 wons",
+        "it": "Busta di carta 100 won, borsa riutilizzabile con zip 3.000 won",
+        "es": "Bolsa de papel 100 wones, bolsa reutilizable con cremallera 3.000 wones",
+        "id": "Kantong kertas 100 won, tas ritsleting 3.000 won",
+        "ms": "Beg kertas 100 won, beg zip 3,000 won",
+        "tr": "Kağıt poşet 100 won, fermuarlı çanta 3.000 won",
+        "mn": "Цаасан уут 100 вон, цахилгаантай уут 3,000 вон"
+      }
+    },
+    {
+      "id": "pay-13",
+      "kr": "2개 사면 1개 무료입니다. 1개만 구매하시겠어요?",
+      "translations": {
+        "en": "Buy 2, get 1 free. Would you like just one?",
+        "zh-Hans": "买二送一。您只买一个吗？",
+        "ja": "2個で1個無料です。1個だけご購入されますか？",
+        "vi": "Mua 2 tặng 1. Quý khách chỉ mua 1 thôi ạ?",
+        "th": "ซื้อ 2 แถม 1 จะซื้อแค่ชิ้นเดียวไหม?",
+        "ru": "Купите 2 — 1 в подарок. Возьмёте только один?",
+        "uz": "2 ta olsangiz 1 tasi bepul. Faqat bitta olasizmi?",
+        "fr": "2 achetés, 1 offert. Vous n'en prenez qu'un ?",
+        "it": "Compri 2, 1 in omaggio. Ne prende solo uno?",
+        "es": "Compre 2 y llévese 1 gratis. ¿Quiere solo uno?",
+        "id": "Beli 2 gratis 1. Mau beli satu saja?",
+        "ms": "Beli 2 percuma 1. Mahu beli satu sahaja?",
+        "tr": "2 alana 1 bedava. Yalnızca bir tane mi alacaksınız?",
+        "mn": "2 авбал 1 үнэгүй. Зөвхөн 1-ийг авах уу?"
       }
     }
   ],
@@ -215,7 +277,9 @@
         "it": "Posso vedere il suo passaporto, per favore?",
         "es": "¿Me permite ver su pasaporte, por favor?",
         "id": "Boleh saya lihat paspor Anda?",
-        "ms": "Boleh saya lihat pasport anda?"
+        "ms": "Boleh saya lihat pasport anda?",
+        "tr": "Pasaportunuzu görebilir miyim?",
+        "mn": "Гадаад паспортоо үзүүлнэ үү?"
       }
     },
     {
@@ -233,7 +297,9 @@
         "it": "Il tax refund è disponibile per acquisti da 15.000 won",
         "es": "La devolución de impuestos está disponible desde 15.000 wones",
         "id": "Pengembalian pajak berlaku untuk pembelian minimal 15.000 won",
-        "ms": "Pulangan cukai tersedia untuk pembelian 15,000 won ke atas"
+        "ms": "Pulangan cukai tersedia untuk pembelian 15,000 won ke atas",
+        "tr": "Vergi iadesi 15.000 won ve üzeri alışverişlerde geçerlidir",
+        "mn": "Татварын буцаалт 15,000 воноос дээш худалдан авалтад боломжтой"
       }
     },
     {
@@ -251,7 +317,9 @@
         "it": "Con il passaporto originale può ottenere il tax refund",
         "es": "Con su pasaporte físico puede obtener la devolución de impuestos",
         "id": "Dengan paspor asli, Anda bisa mendapat pengembalian pajak",
-        "ms": "Dengan pasport asal, anda boleh mendapat pulangan cukai"
+        "ms": "Dengan pasport asal, anda boleh mendapat pulangan cukai",
+        "tr": "Fiziksel pasaportunuz varsa vergi iadesi alabilirsiniz",
+        "mn": "Биет паспорттой бол татварын буцаалт авах боломжтой"
       }
     },
     {
@@ -269,7 +337,9 @@
         "it": "Il passaporto non si scansiona. Le stampo una ricevuta separata per il tax refund? Il rimborso si ritira al 3° piano",
         "es": "Su pasaporte no se escanea. ¿Le imprimo un recibo aparte? Con él puede recibir la devolución en el piso 3",
         "id": "Paspor tidak bisa dipindai. Saya cetakkan struk pengembalian pajak terpisah? Anda bisa menerimanya di lantai 3",
-        "ms": "Pasport tidak dapat diimbas. Boleh saya cetak resit pulangan cukai berasingan? Anda boleh menuntutnya di tingkat 3"
+        "ms": "Pasport tidak dapat diimbas. Boleh saya cetak resit pulangan cukai berasingan? Anda boleh menuntutnya di tingkat 3",
+        "tr": "Pasaportunuz taranmıyor. Vergi iadesi için ayrı fiş yazdırayım mı? Bu fişle 3. katta iadenizi alabilirsiniz",
+        "mn": "Паспорт уншигдахгүй байна. Татварын буцаалтын тусдаа баримт хэвлэж өгөх үү? Энэ баримтаар 3 давхарт буцаалтаа авна"
       }
     },
     {
@@ -287,7 +357,9 @@
         "it": "Se il passaporto è fuori dal negozio, vada a prenderlo ora. La aspetto",
         "es": "Si su pasaporte está fuera de la tienda, tráigalo ahora. Le espero",
         "id": "Jika paspor Anda di luar toko, silakan ambil sekarang. Saya akan menunggu",
-        "ms": "Jika pasport anda di luar kedai, sila ambil sekarang. Saya akan tunggu"
+        "ms": "Jika pasport anda di luar kedai, sila ambil sekarang. Saya akan tunggu",
+        "tr": "Pasaportunuz dışarıdaysa lütfen şimdi getirin. Bekliyorum",
+        "mn": "Паспорт тань гадаа байвал одоо авчирна уу. Хүлээж байя"
       }
     },
     {
@@ -305,7 +377,9 @@
         "it": "La dogana potrebbe chiedere di controllare gli acquisti",
         "es": "La aduana puede pedirle mostrar los artículos comprados",
         "id": "Bea cukai mungkin meminta memeriksa barang belanjaan Anda",
-        "ms": "Kastam mungkin meminta memeriksa barangan yang dibeli"
+        "ms": "Kastam mungkin meminta memeriksa barangan yang dibeli",
+        "tr": "Gümrük, satın aldığınız ürünleri kontrol etmek isteyebilir",
+        "mn": "Гааль худалдан авсан барааг шалгаж магадгүй"
       }
     },
     {
@@ -323,7 +397,9 @@
         "it": "Aggiungendo una maschera da 1.000 won arriva a 15.000 won e ottiene il tax refund. La aggiungo? Dopo il rimborso il totale resta quasi uguale",
         "es": "Si añade una mascarilla de 1.000 wones, llega a 15.000 y obtiene la devolución. ¿Se la añado? Tras el reembolso, pagará casi lo mismo",
         "id": "Dengan menambah masker 1.000 won, total mencapai 15.000 won dan bisa dapat pengembalian pajak. Mau ditambahkan? Setelah refund, jumlahnya hampir sama",
-        "ms": "Dengan menambah mask muka 1,000 won, jumlah mencapai 15,000 won dan layak pulangan cukai. Mahu saya tambah? Selepas refund, jumlahnya hampir sama"
+        "ms": "Dengan menambah mask muka 1,000 won, jumlah mencapai 15,000 won dan layak pulangan cukai. Mahu saya tambah? Selepas refund, jumlahnya hampir sama",
+        "tr": "1.000 wonluk maske eklerseniz toplam 15.000 won olur ve vergi iadesi alırsınız. Ekleyeyim mi? İade sonrası ödeyeceğiniz tutar şimdikiyle hemen hemen aynı",
+        "mn": "1,000 воны маск нэмбэл нийт 15,000 вон болж татварын буцаалт авна. Нэмэх үү? Буцаалтын дараа төлөх дүн одоогийнхтой бараг ижил"
       }
     }
   ],
@@ -343,7 +419,9 @@
         "it": "In cabina: liquidi max 100 ml a pezzo, 1000 ml in totale",
         "es": "En cabina: líquidos de máximo 100 ml por artículo, hasta 1000 ml en total",
         "id": "Cairan maksimal 100ml per item, total 1000ml, untuk dibawa ke kabin",
-        "ms": "Cecair maksimum 100ml setiap satu, jumlah 1000ml, untuk bagasi kabin"
+        "ms": "Cecair maksimum 100ml setiap satu, jumlah 1000ml, untuk bagasi kabin",
+        "tr": "Kabin bagajında ürün başına en fazla 100 ml, toplam 1.000 ml sıvıya izin verilir",
+        "mn": "Гар тээшинд нэг бүтээгдэхүүн 100 мл-ээс ихгүй, нийт 1,000 мл хүртэл шингэн авч болно"
       }
     },
     {
@@ -361,7 +439,9 @@
         "it": "I prodotti oltre 100 ml vanno nel bagaglio da stiva",
         "es": "Los productos de más de 100 ml pueden ir en la maleta facturada",
         "id": "Produk di atas 100ml bisa dimasukkan bagasi terdaftar",
-        "ms": "Produk melebihi 100ml boleh dimasukkan ke bagasi berdaftar"
+        "ms": "Produk melebihi 100ml boleh dimasukkan ke bagasi berdaftar",
+        "tr": "100 ml'yi aşan ürünler bavulunuza (uçak altı bagaj) konulabilir",
+        "mn": "100 мл-ээс дээш бүтээгдэхүүнийг ачааны тээшинд хийж болно"
       }
     },
     {
@@ -379,7 +459,9 @@
         "it": "Per cambi e rimborsi serve lo scontrino",
         "es": "Se necesita el recibo para cambios y devoluciones",
         "id": "Penukaran dan pengembalian memerlukan struk",
-        "ms": "Pertukaran dan bayaran balik memerlukan resit"
+        "ms": "Pertukaran dan bayaran balik memerlukan resit",
+        "tr": "Değişim ve iade için fiş gereklidir",
+        "mn": "Солих, буцаахад баримт шаардлагатай"
       }
     },
     {
@@ -397,7 +479,9 @@
         "it": "Rimborso solo per acquisti in questo negozio entro 15 giorni, con scontrino",
         "es": "Reembolso solo para compras en esta tienda dentro de 15 días, con recibo",
         "id": "Pengembalian dana hanya untuk pembelian di toko ini dalam 15 hari, dengan struk",
-        "ms": "Bayaran balik hanya untuk pembelian di kedai ini dalam 15 hari, dengan resit"
+        "ms": "Bayaran balik hanya untuk pembelian di kedai ini dalam 15 hari, dengan resit",
+        "tr": "İade yalnızca bu mağazadan 15 gün içinde alınan ve fişi olan ürünlerde mümkündür",
+        "mn": "Буцаалт зөвхөн энэ дэлгүүрээс 15 хоногийн дотор авсан, баримттай бараанд боломжтой"
       }
     },
     {
@@ -415,7 +499,9 @@
         "it": "Prodotti di altri negozi: solo cambio con articoli di pari o maggior valore",
         "es": "Artículos de otras tiendas: solo cambio por productos de igual o mayor precio",
         "id": "Barang dari toko lain tidak bisa dikembalikan — hanya ditukar dengan produk harga sama atau lebih tinggi",
-        "ms": "Barangan dari kedai lain tidak boleh dikembalikan — hanya ditukar dengan produk berharga sama atau lebih tinggi"
+        "ms": "Barangan dari kedai lain tidak boleh dikembalikan — hanya ditukar dengan produk berharga sama atau lebih tinggi",
+        "tr": "Başka mağazadan alınan ürünler iade edilemez — yalnızca eşit veya daha yüksek fiyatlı ürünle değiştirilebilir",
+        "mn": "Өөр дэлгүүрээс авсан барааг буцаахгүй — зөвхөн ижил буюу илүү үнэтэй бараагаар солино"
       }
     },
     {
@@ -433,7 +519,9 @@
         "it": "I prodotti aperti non sono rimborsabili",
         "es": "Los productos abiertos no se pueden reembolsar",
         "id": "Produk yang sudah dibuka tidak bisa dikembalikan",
-        "ms": "Produk yang telah dibuka tidak boleh dikembalikan"
+        "ms": "Produk yang telah dibuka tidak boleh dikembalikan",
+        "tr": "Açılmış ürünler iade edilemez",
+        "mn": "Задалсан барааг буцаах боломжгүй"
       }
     },
     {
@@ -451,7 +539,49 @@
         "it": "Il rimborso avviene sulla carta usata per il pagamento",
         "es": "El reembolso se hace a la tarjeta con la que pagó",
         "id": "Pengembalian dana ke kartu yang digunakan membayar",
-        "ms": "Bayaran balik dibuat ke kad yang digunakan"
+        "ms": "Bayaran balik dibuat ke kad yang digunakan",
+        "tr": "İade, ödeme yaptığınız karta yapılır",
+        "mn": "Буцаалт төлбөр хийсэн карт руу орно"
+      }
+    },
+    {
+      "id": "ex-8",
+      "kr": "기내 반입이 불가합니다 (위탁 수하물에 넣어야 합니다)",
+      "translations": {
+        "en": "This cannot go in carry-on baggage — it must go in your checked baggage",
+        "zh-Hans": "不能带上飞机，必须放托运行李",
+        "ja": "機内持ち込みはできません。預け荷物に入れてください",
+        "vi": "Không được mang lên máy bay — phải để hành lý ký gửi",
+        "th": "นำขึ้นเครื่องไม่ได้ ต้องใส่กระเป๋าโหลดใต้เครื่อง",
+        "ru": "В ручную кладь нельзя — только в сдаваемый багаж",
+        "uz": "Qo'l yukiga olib bo'lmaydi — yukga topshirish kerak",
+        "fr": "Interdit en cabine — à mettre en soute",
+        "it": "Non ammesso in cabina — va nel bagaglio da stiva",
+        "es": "No puede ir en cabina — debe ir en la maleta facturada",
+        "id": "Tidak boleh dibawa ke kabin — harus masuk bagasi terdaftar",
+        "ms": "Tidak boleh dibawa ke kabin — mesti dimasukkan ke bagasi berdaftar",
+        "tr": "Kabin bagajına alınamaz — bavulunuza (uçak altı) koymanız gerekir",
+        "mn": "Гар тээшинд авч болохгүй — ачааны тээшинд хийх ёстой"
+      }
+    },
+    {
+      "id": "ex-9",
+      "kr": "교환·환불은 영수증이 있고 개봉하지 않은 상품일 경우 15일 이내로 가능합니다",
+      "translations": {
+        "en": "Exchanges and refunds are possible within 15 days with a receipt, for unopened products",
+        "zh-Hans": "凭收据、未拆封的商品可在15天内换货或退款",
+        "ja": "交換・返品はレシートがあり未開封の商品に限り、15日以内に可能です",
+        "vi": "Đổi trả trong 15 ngày với hóa đơn và sản phẩm chưa mở",
+        "th": "เปลี่ยน/คืนได้ภายใน 15 วัน ต้องมีใบเสร็จและสินค้ายังไม่เปิด",
+        "ru": "Обмен и возврат — в течение 15 дней, с чеком и в нераспечатанном виде",
+        "uz": "Almashtirish va qaytarish 15 kun ichida, chek bilan va ochilmagan mahsulot uchun mumkin",
+        "fr": "Échange ou remboursement sous 15 jours, avec reçu et produit non ouvert",
+        "it": "Cambio o rimborso entro 15 giorni, con scontrino e prodotto sigillato",
+        "es": "Cambios y devoluciones dentro de 15 días, con recibo y producto sin abrir",
+        "id": "Penukaran/pengembalian dalam 15 hari, dengan struk dan produk belum dibuka",
+        "ms": "Pertukaran/bayaran balik dalam 15 hari, dengan resit dan produk belum dibuka",
+        "tr": "Değişim ve iade; fişle ve açılmamış üründe 15 gün içinde mümkündür",
+        "mn": "Солих, буцаах нь баримттай, задлаагүй бараанд 15 хоногийн дотор боломжтой"
       }
     }
   ],
@@ -471,7 +601,9 @@
         "it": "La accompagno al reparto",
         "es": "Le acompaño a la sección",
         "id": "Saya antar ke bagian produk yang dicari",
-        "ms": "Saya bawa anda ke bahagian produk itu"
+        "ms": "Saya bawa anda ke bahagian produk itu",
+        "tr": "Sizi o bölüme götüreyim",
+        "mn": "Таныг тухайн хэсэг рүү дагуулж явъя"
       }
     },
     {
@@ -489,7 +621,9 @@
         "it": "Mi dispiace, questo prodotto è esaurito",
         "es": "Lo siento, este producto está agotado",
         "id": "Maaf, produk ini sedang habis",
-        "ms": "Maaf, produk ini kehabisan stok"
+        "ms": "Maaf, produk ini kehabisan stok",
+        "tr": "Üzgünüm, bu ürün şu anda tükendi",
+        "mn": "Уучлаарай, энэ бараа одоогоор дууссан"
       }
     },
     {
@@ -507,7 +641,9 @@
         "it": "Controllo la disponibilità. Un attimo, per favore",
         "es": "Voy a comprobar el stock. Un momento, por favor",
         "id": "Saya cek stoknya dulu. Mohon tunggu sebentar",
-        "ms": "Saya semak stok dahulu. Sila tunggu sebentar"
+        "ms": "Saya semak stok dahulu. Sila tunggu sebentar",
+        "tr": "Stoğu kontrol edeyim. Bir dakika lütfen",
+        "mn": "Нөөцийг шалгая. Түр хүлээнэ үү"
       }
     },
     {
@@ -525,7 +661,9 @@
         "it": "Quello esposto è l'ultimo disponibile",
         "es": "Lo que está expuesto es el último stock",
         "id": "Yang dipajang adalah stok terakhir",
-        "ms": "Yang dipamerkan adalah stok terakhir"
+        "ms": "Yang dipamerkan adalah stok terakhir",
+        "tr": "Raftaki son stoğumuz",
+        "mn": "Лангуун дээрх нь сүүлчийн нөөц"
       }
     },
     {
@@ -543,7 +681,29 @@
         "it": "È cambiata solo la confezione, il prodotto è lo stesso",
         "es": "Solo cambió el empaque, es el mismo producto",
         "id": "Hanya kemasannya yang berubah, produknya sama",
-        "ms": "Hanya bungkusan berubah, produknya sama"
+        "ms": "Hanya bungkusan berubah, produknya sama",
+        "tr": "Sadece ambalaj değişti, ürün aynı",
+        "mn": "Зөвхөн сав баглаа өөрчлөгдсөн, бүтээгдэхүүн адилхан"
+      }
+    },
+    {
+      "id": "stock-6",
+      "kr": "정확한 브랜드명과 상품명을 확인해 주세요",
+      "translations": {
+        "en": "Could you check the exact brand and product name?",
+        "zh-Hans": "请确认准确的品牌名和产品名",
+        "ja": "正確なブランド名と商品名をご確認ください",
+        "vi": "Vui lòng kiểm tra chính xác tên thương hiệu và tên sản phẩm",
+        "th": "กรุณาเช็คชื่อแบรนด์และชื่อสินค้าที่ถูกต้อง",
+        "ru": "Уточните, пожалуйста, точное название бренда и товара",
+        "uz": "Iltimos, brend va mahsulot nomini aniq tekshiring",
+        "fr": "Pourriez-vous vérifier le nom exact de la marque et du produit ?",
+        "it": "Può verificare il nome esatto del marchio e del prodotto?",
+        "es": "¿Podría comprobar el nombre exacto de la marca y del producto?",
+        "id": "Mohon periksa nama merek dan produk yang tepat",
+        "ms": "Sila semak nama jenama dan produk yang tepat",
+        "tr": "Lütfen marka ve ürün adını tam olarak kontrol edin",
+        "mn": "Брэнд болон барааны нэрийг зөв шалгана уу"
       }
     }
   ],
@@ -563,7 +723,9 @@
         "it": "Vuole vedere un prodotto simile?",
         "es": "¿Quiere ver un producto similar?",
         "id": "Mau lihat produk yang mirip?",
-        "ms": "Mahu lihat produk yang serupa?"
+        "ms": "Mahu lihat produk yang serupa?",
+        "tr": "Benzer bir ürün görmek ister misiniz?",
+        "mn": "Төстэй бүтээгдэхүүн үзэх үү?"
       }
     },
     {
@@ -581,7 +743,9 @@
         "it": "Non abbiamo questo marchio. Le mostro un prodotto simile?",
         "es": "No tenemos esa marca. ¿Le muestro algo similar?",
         "id": "Kami tidak menjual merek itu. Mau saya tunjukkan yang mirip?",
-        "ms": "Kami tiada jenama itu. Mahu saya tunjukkan yang serupa?"
+        "ms": "Kami tiada jenama itu. Mahu saya tunjukkan yang serupa?",
+        "tr": "Bu marka mağazamızda yok. Benzer bir ürün göstereyim mi?",
+        "mn": "Энэ брэнд манай дэлгүүрт байхгүй. Төстэй бүтээгдэхүүн санал болгох уу?"
       }
     },
     {
@@ -599,7 +763,9 @@
         "it": "È il prodotto più famoso di Olive Young",
         "es": "Es el producto más famoso de Olive Young",
         "id": "Ini produk paling terkenal di Olive Young",
-        "ms": "Ini produk paling terkenal di Olive Young"
+        "ms": "Ini produk paling terkenal di Olive Young",
+        "tr": "Bu, Olive Young'ın en ünlü ürünü",
+        "mn": "Энэ бол Olive Young-ийн хамгийн алдартай бүтээгдэхүүн"
       }
     },
     {
@@ -617,7 +783,9 @@
         "it": "Posso consigliare in base al tipo di pelle. Pelle grassa o secca?",
         "es": "Puedo recomendar según su tipo de piel. ¿Piel grasa o seca?",
         "id": "Saya bisa rekomendasikan sesuai jenis kulit. Kulit berminyak atau kering?",
-        "ms": "Saya boleh cadangkan ikut jenis kulit. Kulit berminyak atau kering?"
+        "ms": "Saya boleh cadangkan ikut jenis kulit. Kulit berminyak atau kering?",
+        "tr": "Cilt tipinize göre önerebilirim. Cildiniz yağlı mı, kuru mu?",
+        "mn": "Арьсны төрлөөр тань санал болгоё. Арьс тань тослог уу, хуурай юу?"
       }
     },
     {
@@ -635,7 +803,269 @@
         "it": "Può provare il tester",
         "es": "Puede probar el tester",
         "id": "Silakan coba tester-nya",
-        "ms": "Silakan cuba tester"
+        "ms": "Silakan cuba tester",
+        "tr": "Testeri deneyebilirsiniz",
+        "mn": "Тестерийг туршиж үзэж болно"
+      }
+    },
+    {
+      "id": "rec-6",
+      "kr": "건성 피부에 좋습니다",
+      "translations": {
+        "en": "Good for dry skin",
+        "zh-Hans": "适合干性皮肤",
+        "ja": "乾燥肌に良いです",
+        "vi": "Tốt cho da khô",
+        "th": "เหมาะกับผิวแห้ง",
+        "ru": "Подходит для сухой кожи",
+        "uz": "Quruq teri uchun yaxshi",
+        "fr": "Idéal pour les peaux sèches",
+        "it": "Ottimo per pelli secche",
+        "es": "Bueno para piel seca",
+        "id": "Bagus untuk kulit kering",
+        "ms": "Bagus untuk kulit kering",
+        "tr": "Kuru ciltler için iyidir",
+        "mn": "Хуурай арьсанд сайн"
+      }
+    },
+    {
+      "id": "rec-7",
+      "kr": "지성 피부에 좋습니다",
+      "translations": {
+        "en": "Good for oily skin",
+        "zh-Hans": "适合油性皮肤",
+        "ja": "脂性肌に良いです",
+        "vi": "Tốt cho da dầu",
+        "th": "เหมาะกับผิวมัน",
+        "ru": "Подходит для жирной кожи",
+        "uz": "Yog'li teri uchun yaxshi",
+        "fr": "Idéal pour les peaux grasses",
+        "it": "Ottimo per pelli grasse",
+        "es": "Bueno para piel grasa",
+        "id": "Bagus untuk kulit berminyak",
+        "ms": "Bagus untuk kulit berminyak",
+        "tr": "Yağlı ciltler için iyidir",
+        "mn": "Тослог арьсанд сайн"
+      }
+    },
+    {
+      "id": "rec-8",
+      "kr": "이 팩은 물과 함께 섞어 사용하면 됩니다",
+      "translations": {
+        "en": "Mix this pack with water before use",
+        "zh-Hans": "这款面膜请与水混合后使用",
+        "ja": "このパックは水と混ぜてお使いください",
+        "vi": "Mặt nạ này pha với nước rồi dùng",
+        "th": "มาส์กนี้ผสมน้ำก่อนใช้",
+        "ru": "Эту маску нужно смешать с водой перед использованием",
+        "uz": "Bu niqobni suv bilan aralashtirib ishlating",
+        "fr": "Ce masque se mélange avec de l'eau avant utilisation",
+        "it": "Questa maschera va mescolata con acqua prima dell'uso",
+        "es": "Esta mascarilla se mezcla con agua antes de usar",
+        "id": "Masker ini dicampur air sebelum dipakai",
+        "ms": "Mask ini dicampur air sebelum digunakan",
+        "tr": "Bu maske kullanmadan önce suyla karıştırılır",
+        "mn": "Энэ маскийг устай хольж хэрэглэнэ"
+      }
+    },
+    {
+      "id": "rec-9",
+      "kr": "이 상품은 아이들도 사용할 수 있습니다",
+      "translations": {
+        "en": "This product is safe for children too",
+        "zh-Hans": "这款产品儿童也可以使用",
+        "ja": "この商品はお子様にもお使いいただけます",
+        "vi": "Sản phẩm này trẻ em cũng dùng được",
+        "th": "สินค้านี้เด็กก็ใช้ได้",
+        "ru": "Этот продукт подходит и детям",
+        "uz": "Bu mahsulotni bolalar ham ishlatishi mumkin",
+        "fr": "Ce produit convient aussi aux enfants",
+        "it": "Questo prodotto è adatto anche ai bambini",
+        "es": "Este producto también pueden usarlo los niños",
+        "id": "Produk ini juga bisa dipakai anak-anak",
+        "ms": "Produk ini juga sesuai untuk kanak-kanak",
+        "tr": "Bu ürünü çocuklar da kullanabilir",
+        "mn": "Энэ бүтээгдэхүүнийг хүүхэд ч хэрэглэж болно"
+      }
+    },
+    {
+      "id": "rec-10",
+      "kr": "브라이트닝 기능이 들어있습니다",
+      "translations": {
+        "en": "It has brightening properties",
+        "zh-Hans": "含有提亮功效",
+        "ja": "ブライトニング機能があります",
+        "vi": "Có công dụng làm sáng da",
+        "th": "ช่วยให้ผิวกระจ่างใส",
+        "ru": "Обладает осветляющим эффектом",
+        "uz": "Terini yorqinlashtirish xususiyati bor",
+        "fr": "Il a un effet éclaircissant",
+        "it": "Ha un effetto illuminante",
+        "es": "Tiene efecto iluminador",
+        "id": "Mengandung fungsi mencerahkan",
+        "ms": "Mempunyai fungsi mencerahkan",
+        "tr": "Aydınlatıcı etkisi vardır",
+        "mn": "Арьс гэрэлтүүлэх үйлчилгээтэй"
+      }
+    },
+    {
+      "id": "rec-11",
+      "kr": "잡티 개선 효과가 있습니다",
+      "translations": {
+        "en": "It helps improve blemishes and dark spots",
+        "zh-Hans": "有改善瑕疵和色斑的效果",
+        "ja": "シミ改善効果があります",
+        "vi": "Giúp cải thiện thâm nám, khuyết điểm",
+        "th": "ช่วยลดเลือนจุดด่างดำ",
+        "ru": "Помогает уменьшить пигментные пятна",
+        "uz": "Dog'larni kamaytirishga yordam beradi",
+        "fr": "Il aide à atténuer les taches",
+        "it": "Aiuta ad attenuare le macchie",
+        "es": "Ayuda a mejorar las manchas",
+        "id": "Membantu memperbaiki noda kulit",
+        "ms": "Membantu memperbaiki tompok kulit",
+        "tr": "Lekelerin görünümünü azaltmaya yardımcı olur",
+        "mn": "Толбо арилгахад тусалдаг"
+      }
+    },
+    {
+      "id": "rec-12",
+      "kr": "민감성 피부에 적합합니다",
+      "translations": {
+        "en": "Suitable for sensitive skin",
+        "zh-Hans": "适合敏感肌",
+        "ja": "敏感肌に適しています",
+        "vi": "Phù hợp với da nhạy cảm",
+        "th": "เหมาะกับผิวแพ้ง่าย",
+        "ru": "Подходит для чувствительной кожи",
+        "uz": "Sezgir teri uchun mos",
+        "fr": "Convient aux peaux sensibles",
+        "it": "Adatto a pelli sensibili",
+        "es": "Apto para piel sensible",
+        "id": "Cocok untuk kulit sensitif",
+        "ms": "Sesuai untuk kulit sensitif",
+        "tr": "Hassas ciltler için uygundur",
+        "mn": "Мэдрэмтгий арьсанд тохиромжтой"
+      }
+    },
+    {
+      "id": "rec-13",
+      "kr": "모공에 도움을 줍니다",
+      "translations": {
+        "en": "It helps with pores",
+        "zh-Hans": "有助于改善毛孔",
+        "ja": "毛穴ケアに役立ちます",
+        "vi": "Hỗ trợ se khít lỗ chân lông",
+        "th": "ช่วยเรื่องรูขุมขน",
+        "ru": "Помогает сузить поры",
+        "uz": "G'ovaklarni toraytirishga yordam beradi",
+        "fr": "Il aide à resserrer les pores",
+        "it": "Aiuta a minimizzare i pori",
+        "es": "Ayuda con los poros",
+        "id": "Membantu merawat pori-pori",
+        "ms": "Membantu menjaga liang pori",
+        "tr": "Gözeneklere iyi gelir",
+        "mn": "Нүх сүвийг багасгахад тусалдаг"
+      }
+    },
+    {
+      "id": "rec-14",
+      "kr": "선크림에 에센스 기능이 첨가되어 발림성이 좋고 하얗게 뜨지 않습니다",
+      "translations": {
+        "en": "This sunscreen contains essence, so it applies smoothly and leaves no white cast",
+        "zh-Hans": "这款防晒霜添加了精华成分，好推开且不泛白",
+        "ja": "この日焼け止めはエッセンス配合で伸びが良く、白浮きしません",
+        "vi": "Kem chống nắng này có tinh chất, thoa mượt và không để lại vệt trắng",
+        "th": "กันแดดนี้ผสมเอสเซนส์ เกลี่ยง่าย ไม่เหลือคราบขาว",
+        "ru": "Этот санскрин с эссенцией — легко наносится и не оставляет белых следов",
+        "uz": "Bu quyoshdan himoya kremi essensiyali — yaxshi surtiladi va oq iz qoldirmaydi",
+        "fr": "Cette crème solaire contient une essence : elle s'étale bien et ne laisse pas de traces blanches",
+        "it": "Questa crema solare contiene essenza: si stende bene e non lascia aloni bianchi",
+        "es": "Este protector solar contiene esencia: se extiende bien y no deja rastro blanco",
+        "id": "Sunscreen ini mengandung essence, mudah diratakan dan tidak whitecast",
+        "ms": "Pelindung matahari ini mengandungi esen, mudah disapu dan tiada kesan putih",
+        "tr": "Bu güneş kremi esans içerir; kolay sürülür ve beyaz iz bırakmaz",
+        "mn": "Энэ нарнаас хамгаалах тос эссенстэй тул сайн түрхэгдэж, цагаан үлдэц үлдээхгүй"
+      }
+    },
+    {
+      "id": "rec-15",
+      "kr": "백탁이 없습니다",
+      "translations": {
+        "en": "No white cast",
+        "zh-Hans": "不泛白",
+        "ja": "白浮きしません",
+        "vi": "Không để lại vệt trắng",
+        "th": "ไม่ทิ้งคราบขาว",
+        "ru": "Не оставляет белых следов",
+        "uz": "Oq iz qoldirmaydi",
+        "fr": "Ne laisse pas de traces blanches",
+        "it": "Non lascia aloni bianchi",
+        "es": "No deja rastro blanco",
+        "id": "Tidak meninggalkan whitecast",
+        "ms": "Tiada kesan putih",
+        "tr": "Beyaz iz bırakmaz",
+        "mn": "Цагаан үлдэц үлдээхгүй"
+      }
+    },
+    {
+      "id": "rec-16",
+      "kr": "백탁이 있지만 여드름성 피부에 적합한 제품입니다",
+      "translations": {
+        "en": "It leaves a slight white cast, but it's great for acne-prone skin",
+        "zh-Hans": "虽然会泛白，但很适合痘痘肌",
+        "ja": "白浮きしますが、ニキビ肌に適した製品です",
+        "vi": "Có để lại vệt trắng nhưng rất hợp với da mụn",
+        "th": "มีคราบขาวเล็กน้อย แต่เหมาะกับผิวเป็นสิว",
+        "ru": "Оставляет белый след, но отлично подходит для проблемной кожи",
+        "uz": "Oq iz qoldiradi, lekin husnbuzarli teri uchun juda mos",
+        "fr": "Il laisse des traces blanches, mais convient très bien aux peaux acnéiques",
+        "it": "Lascia un alone bianco, ma è ottimo per pelli acneiche",
+        "es": "Deja rastro blanco, pero es ideal para piel con acné",
+        "id": "Ada whitecast, tapi cocok untuk kulit berjerawat",
+        "ms": "Ada kesan putih, tetapi sesuai untuk kulit berjerawat",
+        "tr": "Beyaz iz bırakır ama akneli ciltler için uygundur",
+        "mn": "Цагаан үлдэцтэй ч батгатай арьсанд тохиромжтой"
+      }
+    },
+    {
+      "id": "rec-17",
+      "kr": "피부톤에 따라 톤업 색을 선택하면 됩니다",
+      "translations": {
+        "en": "You can choose the tone-up shade based on your skin tone",
+        "zh-Hans": "可以根据肤色选择提亮色号",
+        "ja": "肌のトーンに合わせてトーンアップの色を選べます",
+        "vi": "Chọn màu tone-up theo tông da của mình",
+        "th": "เลือกเฉดโทนอัพตามสีผิวได้เลย",
+        "ru": "Оттенок тонирующего средства выбирается по тону кожи",
+        "uz": "Toningizga qarab tone-up rangini tanlashingiz mumkin",
+        "fr": "Choisissez la teinte tone-up selon votre carnation",
+        "it": "Può scegliere la tonalità tone-up in base al suo incarnato",
+        "es": "Puede elegir el tono según su color de piel",
+        "id": "Pilih warna tone-up sesuai warna kulit",
+        "ms": "Pilih warna tone-up ikut warna kulit",
+        "tr": "Ten renginize göre tone-up rengini seçebilirsiniz",
+        "mn": "Арьсныхаа өнгөнд тохируулан tone-up өнгө сонгож болно"
+      }
+    },
+    {
+      "id": "rec-18",
+      "kr": "고객님의 피부톤에 맞춰 추천해드리겠습니다",
+      "translations": {
+        "en": "I'll recommend one based on your skin tone",
+        "zh-Hans": "我会根据您的肤色为您推荐",
+        "ja": "お客様の肌のトーンに合わせておすすめいたします",
+        "vi": "Tôi sẽ gợi ý theo tông da của quý khách",
+        "th": "จะแนะนำให้ตามสีผิวของคุณ",
+        "ru": "Я подберу вариант под ваш тон кожи",
+        "uz": "Teringiz rangiga mos variantni tavsiya qilaman",
+        "fr": "Je vous recommanderai selon votre carnation",
+        "it": "Le consiglierò in base al suo incarnato",
+        "es": "Le recomendaré según su tono de piel",
+        "id": "Saya akan rekomendasikan sesuai warna kulit Anda",
+        "ms": "Saya akan cadangkan ikut warna kulit anda",
+        "tr": "Ten renginize göre öneride bulunacağım",
+        "mn": "Таны арьсны өнгөнд тохируулан санал болгоё"
       }
     }
   ],
@@ -655,7 +1085,9 @@
         "it": "Il negozio è piccolo, lasci la valigia fuori (è videosorvegliata)",
         "es": "La tienda es pequeña, deje la maleta fuera (está videovigilada)",
         "id": "Toko kami sempit, mohon tinggalkan koper di luar (ada CCTV)",
-        "ms": "Kedai kami sempit, sila tinggalkan beg di luar (ada CCTV)"
+        "ms": "Kedai kami sempit, sila tinggalkan beg di luar (ada CCTV)",
+        "tr": "Mağazamız küçük, lütfen valizinizi dışarıda bırakın (kameralarla izleniyor)",
+        "mn": "Дэлгүүр жижиг тул чемоданаа гадаа үлдээнэ үү (камерын хяналттай)"
       }
     },
     {
@@ -673,7 +1105,9 @@
         "it": "La preghiamo di non aprire la valigia nel negozio — fuori, per favore",
         "es": "Por favor, no abra la maleta dentro de la tienda — afuera, por favor",
         "id": "Mohon jangan membuka koper di dalam toko — di luar saja",
-        "ms": "Sila jangan buka beg pakaian di dalam kedai — di luar sahaja"
+        "ms": "Sila jangan buka beg pakaian di dalam kedai — di luar sahaja",
+        "tr": "Lütfen valizinizi mağaza içinde açmayın — dışarıda lütfen",
+        "mn": "Чемоданаа дэлгүүр дотор онгойлгохгүй байхыг хүсье — гадаа нээнэ үү"
       }
     },
     {
@@ -691,7 +1125,9 @@
         "it": "Metta i prodotti nella borsa solo dopo il pagamento. In negozio usi il cestino",
         "es": "Ponga los productos en su bolsa después de pagar. Use una cesta en la tienda",
         "id": "Masukkan barang ke tas setelah membayar. Gunakan keranjang saat belanja",
-        "ms": "Masukkan barangan ke dalam beg selepas membayar. Guna bakul semasa membeli-belah"
+        "ms": "Masukkan barangan ke dalam beg selepas membayar. Guna bakul semasa membeli-belah",
+        "tr": "Ürünleri çantanıza yalnızca ödeme sonrası koyun. Alışverişte mağaza sepetini kullanın",
+        "mn": "Барааг зөвхөн төлбөрийн дараа уутандаа хийнэ үү. Дэлгүүрт сагс ашиглана уу"
       }
     },
     {
@@ -709,7 +1145,9 @@
         "it": "Un attimo, per favore",
         "es": "Un momento, por favor",
         "id": "Mohon tunggu sebentar",
-        "ms": "Sila tunggu sebentar"
+        "ms": "Sila tunggu sebentar",
+        "tr": "Bir dakika lütfen",
+        "mn": "Түр хүлээнэ үү"
       }
     },
     {
@@ -727,7 +1165,9 @@
         "it": "Il minimarket è al piano di sopra",
         "es": "La tienda de conveniencia está arriba",
         "id": "Minimarket ada di lantai atas",
-        "ms": "Kedai serbaneka di tingkat atas"
+        "ms": "Kedai serbaneka di tingkat atas",
+        "tr": "Market üst katta",
+        "mn": "Минимаркет дээд давхарт байгаа"
       }
     },
     {
@@ -745,7 +1185,9 @@
         "it": "La farmacia è di fronte, accanto a Starbucks",
         "es": "La farmacia está enfrente, junto a Starbucks",
         "id": "Apotek ada di seberang, sebelah Starbucks",
-        "ms": "Farmasi di seberang, sebelah Starbucks"
+        "ms": "Farmasi di seberang, sebelah Starbucks",
+        "tr": "Eczane karşıda, Starbucks'ın yanında",
+        "mn": "Эмийн сан эсрэг талд, Starbucks-ийн хажууд"
       }
     },
     {
@@ -763,7 +1205,9 @@
         "it": "Il cestino è in fondo, vicino al bagno",
         "es": "La papelera está al fondo, cerca del baño",
         "id": "Tempat sampah di belakang, dekat toilet",
-        "ms": "Tong sampah di belakang, dekat tandas"
+        "ms": "Tong sampah di belakang, dekat tandas",
+        "tr": "Çöp kutusu arkada, tuvaletin yanında",
+        "mn": "Хогийн сав ард, бие засах газрын ойролцоо"
       }
     },
     {
@@ -781,7 +1225,9 @@
         "it": "Grazie! Buon viaggio!",
         "es": "¡Gracias! ¡Buen viaje!",
         "id": "Terima kasih! Selamat jalan!",
-        "ms": "Terima kasih! Selamat jalan!"
+        "ms": "Terima kasih! Selamat jalan!",
+        "tr": "Teşekkürler! İyi yolculuklar!",
+        "mn": "Баярлалаа! Сайхан аялаарай!"
       }
     },
     {
@@ -799,7 +1245,29 @@
         "it": "La preghiamo di mettere i prodotti solo nel cestino del negozio, non nella sua borsa",
         "es": "Por favor, ponga los productos solo en la cesta de la tienda, no en su bolso personal",
         "id": "Mohon masukkan barang hanya ke keranjang toko (jangan ke tas pribadi)",
-        "ms": "Sila masukkan barangan ke dalam bakul kedai sahaja (bukan beg peribadi)"
+        "ms": "Sila masukkan barangan ke dalam bakul kedai sahaja (bukan beg peribadi)",
+        "tr": "Lütfen ürünleri yalnızca mağaza sepetine koyun (kişisel çantanıza değil)",
+        "mn": "Барааг зөвхөн дэлгүүрийн сагсанд хийнэ үү (хувийн цүнхэндээ бүү хийнэ)"
+      }
+    },
+    {
+      "id": "etc-10",
+      "kr": "매장 장바구니는 사용 후 반드시 돌려주셔야 합니다",
+      "translations": {
+        "en": "Please be sure to return the store basket after use",
+        "zh-Hans": "店内购物篮使用后请务必归还",
+        "ja": "店内の買い物かごはご使用後、必ずお返しください",
+        "vi": "Vui lòng trả lại giỏ của cửa hàng sau khi dùng",
+        "th": "กรุณาคืนตะกร้าของร้านหลังใช้เสร็จ",
+        "ru": "Пожалуйста, обязательно верните корзину после использования",
+        "uz": "Savatni ishlatgandan keyin albatta qaytaring",
+        "fr": "Merci de rendre le panier après utilisation",
+        "it": "Si prega di restituire il cestino dopo l'uso",
+        "es": "Por favor, devuelva la cesta después de usarla",
+        "id": "Mohon kembalikan keranjang setelah dipakai",
+        "ms": "Sila pulangkan bakul selepas digunakan",
+        "tr": "Lütfen sepeti kullandıktan sonra mutlaka geri verin",
+        "mn": "Сагсыг хэрэглэсний дараа заавал буцааж өгнө үү"
       }
     }
   ]
