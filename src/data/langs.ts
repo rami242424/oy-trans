@@ -13,4 +13,6 @@ export const LANGS: { code: Langs; badge: string; label: string; kr: string }[] 
   { code: "es", badge: "ES", label: "Español", kr: "스페인어" },
   { code: "id", badge: "ID", label: "Indonesia", kr: "인도네시아어" },
   { code: "ms", badge: "MS", label: "Melayu", kr: "말레이어" },
+  { code: "tr", badge: "TR", label: "Türkçe", kr: "터키어" },
+  { code: "mn", badge: "MN", label: "Монгол", kr: "몽골어" },
 ];
