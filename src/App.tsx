@@ -6,7 +6,7 @@ import CustomerDisplay from "./pages/CustomerDisplay";
 
 export type Screen = "lang" | "phrases" | "display" | "input" | "map";
 export type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recommendation" | "etc";
-export type Langs = "en" | "zh-Hans" | "ja" | "vi" | "th" | "ru" | "uz" | "fr" | "it" | "es" | "id" | "ms" | null;
+export type Langs = "en" | "zh-Hans" | "ja" | "vi" | "th" | "ru" | "uz" | "fr" | "it" | "es" | "id" | "ms" |  "tr" | "mn" | null;
 export interface Phrase {
   id: string;
   kr: string;
@@ -14,6 +14,7 @@ export interface Phrase {
     en: string; "zh-Hans": string; ja: string; vi: string;
     th: string; ru: string; uz: string; fr: string;
     it: string; es: string; id: string; ms: string;
+    tr: string; mn: string;
   };
 }
 
