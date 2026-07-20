@@ -469,7 +469,7 @@
       "kr": "환불은 저희 매장에서 15일 이내에 구매하고 영수증이 있는 경우에만 가능합니다",
       "translations": {
         "en": "Refunds are only possible for items bought at this store within 15 days, with a receipt",
-        "zh-Hans": "退款仅限本店15天内购买且有收据的商品",
+        "zh-Hans": "退款仅限本店购买后15天内且持有购物小票的商品",
         "ja": "返金は当店で15日以内に購入し、レシートがある場合のみ可能です",
         "vi": "Chỉ hoàn tiền cho hàng mua tại cửa hàng này trong 15 ngày và có hóa đơn",
         "th": "คืนเงินได้เฉพาะสินค้าที่ซื้อจากร้านนี้ภายใน 15 วันพร้อมใบเสร็จ",
@@ -509,7 +509,7 @@
       "kr": "개봉한 제품은 환불이 어렵습니다",
       "translations": {
         "en": "Opened products cannot be refunded",
-        "zh-Hans": "已开封的商品无法退款",
+        "zh-Hans": "已开封商品不予退换",
         "ja": "開封済みの商品は返品できません",
         "vi": "Sản phẩm đã mở không thể hoàn tiền",
         "th": "สินค้าที่เปิดแล้วไม่สามารถคืนเงินได้",
@@ -569,7 +569,7 @@
       "kr": "교환·환불은 영수증이 있고 개봉하지 않은 상품일 경우 15일 이내로 가능합니다",
       "translations": {
         "en": "Exchanges and refunds are possible within 15 days with a receipt, for unopened products",
-        "zh-Hans": "凭收据、未拆封的商品可在15天内换货或退款",
+        "zh-Hans": "凭购物小票、未拆封的商品可在15天内换货或退款",
         "ja": "交換・返品はレシートがあり未開封の商品に限り、15日以内に可能です",
         "vi": "Đổi trả trong 15 ngày với hóa đơn và sản phẩm chưa mở",
         "th": "เปลี่ยน/คืนได้ภายใน 15 วัน ต้องมีใบเสร็จและสินค้ายังไม่เปิด",
@@ -773,7 +773,7 @@
       "kr": "피부타입에 따라 추천해드릴게요. 지성이세요, 건성이세요?",
       "translations": {
         "en": "I can recommend based on your skin type. Is your skin oily or dry?",
-        "zh-Hans": "我可以根据肤质推荐。您是油性还是干性皮肤？",
+        "zh-Hans": "我可以根据您的肤质给您推荐一下。请问您是油皮还是干皮呢？",
         "ja": "肌タイプに合わせておすすめします。脂性肌ですか、乾燥肌ですか？",
         "vi": "Tôi sẽ gợi ý theo loại da. Da quý khách là da dầu hay da khô?",
         "th": "แนะนำตามสภาพผิวได้ ผิวมันหรือผิวแห้ง?",
@@ -813,7 +813,7 @@
       "kr": "건성 피부에 좋습니다",
       "translations": {
         "en": "Good for dry skin",
-        "zh-Hans": "适合干性皮肤",
+        "zh-Hans": "适合干皮",
         "ja": "乾燥肌に良いです",
         "vi": "Tốt cho da khô",
         "th": "เหมาะกับผิวแห้ง",
@@ -833,7 +833,7 @@
       "kr": "지성 피부에 좋습니다",
       "translations": {
         "en": "Good for oily skin",
-        "zh-Hans": "适合油性皮肤",
+        "zh-Hans": "适合油皮",
         "ja": "脂性肌に良いです",
         "vi": "Tốt cho da dầu",
         "th": "เหมาะกับผิวมัน",
@@ -1066,6 +1066,26 @@
         "ms": "Saya akan cadangkan ikut warna kulit anda",
         "tr": "Ten renginize göre öneride bulunacağım",
         "mn": "Таны арьсны өнгөнд тохируулан санал болгоё"
+      }
+    },
+    {
+      "id": "rec-19",
+      "kr": "복합성 피부에 좋습니다",
+      "translations": {
+        "en": "Good for combination skin",
+        "zh-Hans": "适合混合皮",
+        "ja": "混合肌に良いです",
+        "vi": "Tốt cho da hỗn hợp",
+        "th": "เหมาะกับผิวผสม",
+        "ru": "Подходит для комбинированной кожи",
+        "uz": "Aralash teri uchun yaxshi",
+        "fr": "Idéal pour les peaux mixtes",
+        "it": "Ottimo per pelli miste",
+        "es": "Bueno para piel mixta",
+        "id": "Bagus untuk kulit kombinasi",
+        "ms": "Bagus untuk kulit kombinasi",
+        "tr": "Karma ciltler için iyidir",
+        "mn": "Холимог арьсанд сайн"
       }
     }
   ],
