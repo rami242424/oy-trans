@@ -1,75 +1,131 @@
-# React + TypeScript + Vite
+# OY-trans 🌿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**올리브영 인천공항점 크루를 위한 다국어 응대 문구 앱**
 
-Currently, two official plugins are available:
+외국인 고객 응대 시 검증된 표준 문구를 14개 언어로 즉시 보여주는 현장용 웹앱입니다.
+매장에서 일하며 직접 느낀 문제를 기획하고, 만들고, 배포 당일부터 실제 매장에서 사용하고 있습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live**: https://oy-trans.netlify.app
+📱 모바일 최적화 (매장에서 폰으로 사용)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## WHY — 왜 만들었나
 
-## Expanding the ESLint configuration
+인천공항점은 고객의 대부분이 외국인입니다. 응대 중 이런 순간이 매일 반복됩니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- "이 제품은 100ml가 넘어서 기내 반입이 안 돼요"를 우즈베크어로 설명해야 할 때
+- 택스리펀 최소 금액이 안 되는 고객에게 "1,000원짜리 마스크팩을 추가하면 환급받아서 결과적으로 같은 금액"이라는 3단 논리를 전달해야 할 때
+- 피크타임에 번역기에 문장을 타이핑할 여유가 없을 때
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**기존 서비스로는 해결되지 않았습니다.**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| 서비스            | 한계                                                 |
+| ----------------- | ---------------------------------------------------- |
+| 올리브영 국내몰   | 한국어 전용 — 다국어 미지원                          |
+| 올리브영 글로벌몰 | 해외 배송 전용 — 오프라인 매장 방문객 응대 기능 없음 |
+| 파파고/구글 번역  | 매번 타이핑 필요, 매장 정책·규정 문구의 오역 리스크  |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+즉, **오프라인 매장의 실시간 다국어 응대는 사각지대**였고, 그 자리를 채우는 앱을 직접 만들기로 했습니다.
+
+## HOW — 어떻게 해결했나
+
+### 핵심 설계: 크루가 고르고, 고객은 읽는다
+
+언어 장벽이 있는 고객에게 카테고리 탐색을 시키는 것은 오히려 진입장벽이라고 판단했습니다.
+**크루가 문구를 선택 → 고객에게 화면을 크게 보여주는** 단방향 흐름으로 설계했습니다.
 
 ```
+언어 선택 → 카테고리/검색 → 문구 선택 → 고객 화면(크게 표시) → 복귀
+```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 데이터가 핵심 가치
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **64개 응대 문구 × 14개 언어** (영어·중국어·일본어·베트남어·태국어·러시아어·우즈베크어·프랑스어·이탈리아어·스페인어·인도네시아어·말레이어·터키어·몽골어)
+- 문구는 전부 **현장 경험에서 나온 것**: 기내 반입 규정, 택스리펀 절차, 쇼핑백 정책, 피부타입별 추천 등 범용 번역앱에 없는 매장 표준 문구
+- 문구 데이터는 코드와 분리된 JSON으로 관리 — 문구 추가/수정 시 코드 수정 없이 push만으로 자동 재배포
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```json
+{
+  "id": "tax-7",
+  "kr": "1,000원짜리 마스크팩을 추가하면 15,000원이 되어 택스리펀이 가능합니다...",
+  "translations": { "en": "...", "zh-Hans": "...", ...14개 언어 }
+}
+```
 
+### 주요 기능
+
+- 🌐 **14개 언어 지원** — 방한 관광객 통계와 "크루가 직접 대응하기 어려운 언어" 기준으로 선정
+- 🔍 **전체 문구 검색** — 카테고리를 몰라도 한국어 키워드로 즉시 검색 (`Object.values().flat().filter()`)
+- 📂 **응대 빈도 기반 카테고리 6종** — 결제 / 택스리펀 / 교환·수하물 / 재고 / 추천 / 매장 안내
+- 📺 **고객 화면 모드** — 풀스크린 큰 글씨 + 한국어 병기, 화면 아무 곳이나 탭하면 복귀
+- 🔄 **세션 리셋** — 다음 고객 응대를 위한 원탭 전체 초기화
+
+### 기술 스택과 선택 이유
+
+| 기술                  | 선택 이유                                                                                                                                                                                |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| React 18 + TypeScript | 14개 언어 키를 가진 문구 데이터 구조를 컴파일 타임에 검증                                                                                                                                |
+| Vite                  | 빠른 개발 서버, 이후 유지보수 속도                                                                                                                                                       |
+| Tailwind CSS v4       | 화면 5개 소규모 + 재사용 컴포넌트가 적은 구조라 utility-first의 속도 이점이 극대화. (칸반보드에서는 동적 스타일이 많아 styled-components 선택 — 프로젝트 성격에 따라 도구를 다르게 선택) |
+| Netlify               | GitHub 연동 자동 배포 — 문구 JSON 수정 → push → 매장 반영                                                                                                                                |
+
+### 의도적으로 선택하지 않은 것
+
+- **react-router 미사용**: 화면 5개 규모, URL 공유 불필요, 접객 속도가 최우선인 앱 특성상 라우터의 이점이 없다고 판단해 상태 기반 조건부 렌더링으로 구현. 뒤로가기도 `navigate(-1)` 대신 목적지가 명시된 상태 전환 함수(`backToPhrases`, `resetToLang`)로 구현해 상태 청소까지 한 곳에서 처리
+- **전역 상태 라이브러리 미사용**: 컴포넌트 깊이가 1단계라 props drilling이 발생하지 않음. 상태는 "사용하는 컴포넌트들의 가장 가까운 공통 조상" 원칙으로 배치 — 카테고리 상태는 처음 화면 로컬로 뒀다가, 고객 화면에서 복귀 시 유지되어야 한다는 요구사항이 생기면서 App으로 승격 (요구사항 변화에 따른 상태 재배치 경험)
+- **국기 이모지 미사용**: 국기는 언어≠국가 문제를 일으키는 안티패턴. 언어 코드 배지(EN, ZH...) + 원어 표기(English, 中文...)로 대체
+
+## WHAT — 검증과 배움
+
+### 배포 당일부터 실사용
+
+배포(2026.07.16) 당일 매장에서 바로 사용을 시작했고, 첫날 세 가지를 확인했습니다.
+
+1. **효과**: 영·중·일 응대가 가능한 제작자 본인조차 "손짓발짓" 대비 회당 에너지 소모가 확실히 감소 — 이 앱의 가치는 번역 속도가 아니라 **검증된 표준 문구 + 넓은 언어 커버리지 + 응대 에너지 절약**
+2. **한계**: 피크타임에는 앱을 꺼낼 접근 비용이 더 큼 → 즐겨찾기/최근 문구 기능을 백로그로 도출
+3. **편향**: 제작자는 문구 위치를 다 알고 있어 빠른 것 → 동료 크루 테스트 필요성 확인
+
+### 원어민 검수 루프
+
+중국어 가능 동료 크루의 검수로 번역을 현장 언어로 교정했습니다.
+
+- `收据`(격식) → `购物小票`(매장 구어) / `无法退款` → `不予退换`(공지체)
+- `油性/干性皮肤`(교과서) → `油皮/干皮`(중국 뷰티 소비자 실제 용어)
+- 검수 중 "복합성 피부(混合皮) 문구도 필요하다"는 요청을 받아 즉시 반영
+
+**배포 → 실사용 → 검수 → 반영**의 피드백 루프가 실제로 동작하는 프로젝트입니다.
+
+> 🙏 중국어 검수: 동료 크루 리주님
+
+### 백로그 (실사용 데이터로 우선순위 결정)
+
+- [ ] 즐겨찾기/최근 사용 문구 (피크타임 접근 비용 절감)
+- [ ] 매장 지도 — 구역 탭 → 고객 화면 표시
+- [ ] Chain 문구 — 품절 안내 → 대체 추천처럼 이어지는 응대 흐름
+- [ ] 자유 입력 번역 (예외 상황 대응)
+- [ ] 문구 검색 유의어 대응 (keywords 필드)
+- [ ] 우즈베크어·몽골어·터키어 검수
+
+## 실행 방법
+
+```bash
+git clone https://github.com/rami242424/oy-trans.git
+cd oy-trans
+npm install
+npm run dev
+```
+
+## 폴더 구조
+
+```
+src/
+├── App.tsx              # 상태 5개 + 화면 전환 함수 소유
+├── pages/
+│   ├── LanguageSelect.tsx
+│   ├── PhraseHome.tsx   # 검색 + 카테고리 + 문구 목록
+│   └── CustomerDisplay.tsx
+└── data/
+    ├── phrases.json     # 64개 문구 × 14개 언어
+    └── langs.ts         # 언어 메타데이터 (코드·배지·원어·한글)
 ```
