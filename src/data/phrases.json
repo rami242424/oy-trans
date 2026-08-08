@@ -401,6 +401,26 @@
         "tr": "1.000 wonluk maske eklerseniz toplam 15.000 won olur ve vergi iadesi alırsınız. Ekleyeyim mi? İade sonrası ödeyeceğiniz tutar şimdikiyle hemen hemen aynı",
         "mn": "1,000 воны маск нэмбэл нийт 15,000 вон болж татварын буцаалт авна. Нэмэх үү? Буцаалтын дараа төлөх дүн одоогийнхтой бараг ижил"
       }
+    },
+    {
+      "id": "tax-8",
+      "kr": "여권이 없다면, 택스리펀 영수증을 뽑아드리겠습니다. 여권을 지참해 3층에 가시면 됩니다",
+      "translations": {
+        "en": "If you don't have your passport, I'll print you a tax refund receipt. Just bring your passport and go to the 3rd floor",
+        "zh-Hans": "如果没有护照，我给您打一张退税收据。请带上护照去3楼办理",
+        "ja": "パスポートがない場合は、免税用のレシートをお出しします。パスポートをお持ちになり3階へお越しください",
+        "vi": "Nếu không có hộ chiếu, tôi sẽ in hóa đơn hoàn thuế cho quý khách. Quý khách mang hộ chiếu lên tầng 3 là được",
+        "th": "ถ้าไม่มีหนังสือเดินทาง จะออกใบเสร็จคืนภาษีให้ นำหนังสือเดินทางไปที่ชั้น 3 ได้เลย",
+        "ru": "Если паспорта нет с собой, я распечатаю чек для такс-фри. Возьмите паспорт и подойдите на 3-й этаж",
+        "uz": "Agar pasportingiz bo'lmasa, tax refund uchun chek chiqarib beraman. Pasportingizni olib 3-qavatga boring",
+        "fr": "Si vous n'avez pas votre passeport, je vous imprime un reçu de détaxe. Apportez votre passeport et rendez-vous au 3e étage",
+        "it": "Se non ha il passaporto, le stampo una ricevuta per il tax refund. Porti il passaporto e vada al 3° piano",
+        "es": "Si no tiene su pasaporte, le imprimo un recibo de devolución de impuestos. Lleve su pasaporte al piso 3",
+        "id": "Jika tidak membawa paspor, saya cetakkan struk pengembalian pajak. Bawa paspor Anda ke lantai 3",
+        "ms": "Jika tiada pasport, saya cetak resit pulangan cukai untuk anda. Bawa pasport anda ke tingkat 3",
+        "tr": "Pasaportunuz yoksa, size vergi iadesi fişi bastırayım. Pasaportunuzu alıp 3. kata gidebilirsiniz",
+        "mn": "Хэрэв паспортгүй бол татварын буцаалтын баримт хэвлэж өгье. Паспортоо аваад 3 давхарт очно уу"
+      }
     }
   ],
   "exchange-carryIn": [
