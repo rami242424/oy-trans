@@ -259,6 +259,26 @@
         "tr": "2 alana 1 bedava. Yalnızca bir tane mi alacaksınız?",
         "mn": "2 авбал 1 үнэгүй. Зөвхөн 1-ийг авах уу?"
       }
+    },
+    {
+      "id": "pay-14",
+      "kr": "전체 결제 취소 후 재결제하여 도와드리겠습니다",
+      "translations": {
+        "en": "I'll cancel the entire payment and process it again",
+        "zh-Hans": "我会先取消全部付款，然后重新为您结算",
+        "ja": "一旦全額をキャンセルしてから、再度お会計いたします",
+        "vi": "Tôi sẽ hủy toàn bộ thanh toán rồi thanh toán lại giúp quý khách",
+        "th": "จะยกเลิกการชำระเงินทั้งหมดแล้วทำรายการใหม่ให้ค่ะ/ครับ",
+        "ru": "Я отменю весь платёж и проведу оплату заново",
+        "uz": "Butun to'lovni bekor qilib, qaytadan to'lov qilib beraman",
+        "fr": "Je vais annuler l'ensemble du paiement et le refaire",
+        "it": "Annullo l'intero pagamento e lo rifaccio",
+        "es": "Cancelaré todo el pago y lo procesaré de nuevo",
+        "id": "Saya akan membatalkan seluruh pembayaran lalu memprosesnya kembali",
+        "ms": "Saya akan batalkan keseluruhan bayaran dan proses semula",
+        "tr": "Tüm ödemeyi iptal edip yeniden yapacağım",
+        "mn": "Бүх төлбөрийг цуцалж, дахин төлбөр хийж өгье"
+      }
     }
   ],
   "tax-refund": [
@@ -1126,6 +1146,26 @@
         "ms": "Bagus untuk kulit kombinasi",
         "tr": "Karma ciltler için iyidir",
         "mn": "Холимог арьсанд сайн"
+      }
+    },
+    {
+      "id": "rec-20",
+      "kr": "여드름 피부에도 사용 가능합니다",
+      "translations": {
+        "en": "This can also be used on acne-prone skin",
+        "zh-Hans": "痘痘肌也可以使用",
+        "ja": "ニキビ肌にもお使いいただけます",
+        "vi": "Da mụn cũng dùng được",
+        "th": "ผิวที่เป็นสิวก็ใช้ได้",
+        "ru": "Подходит и для кожи, склонной к акне",
+        "uz": "Aknega moyil teri uchun ham ishlatish mumkin",
+        "fr": "Convient aussi aux peaux à tendance acnéique",
+        "it": "Adatto anche a pelli con tendenza acneica",
+        "es": "También se puede usar en piel con tendencia al acné",
+        "id": "Bisa juga digunakan untuk kulit berjerawat",
+        "ms": "Boleh juga digunakan untuk kulit berjerawat",
+        "tr": "Akne eğilimli ciltlerde de kullanılabilir",
+        "mn": "Батганатай арьсанд ч хэрэглэж болно"
       }
     }
   ],
