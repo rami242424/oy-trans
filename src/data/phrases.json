@@ -445,6 +445,26 @@
       }
     },
     {
+      "id": "ex-10",
+      "kr": "기내반입은 100ml 미만 제품 1,000ml까지 가능합니다. 일행과 나눠서 가져가실 수 있습니다",
+      "translations": {
+        "en": "Carry-on allows items under 100ml, up to 1,000ml in total. You can split them with the people you're with",
+        "zh-Hans": "随身携带只能带100毫升以下的产品，总量最多1000毫升。可以和同行的人分开携带",
+        "ja": "機内持ち込みは100ml未満の商品を合計1,000mlまで可能です。ご一緒の方と分けてお持ちいただけます",
+        "vi": "Hành lý xách tay chỉ được mang sản phẩm dưới 100ml, tổng tối đa 1.000ml. Quý khách có thể chia cho người đi cùng",
+        "th": "ขึ้นเครื่องได้เฉพาะสินค้าต่ำกว่า 100ml รวมไม่เกิน 1,000ml แบ่งกับคนที่มาด้วยกันได้",
+        "ru": "В ручную кладь — товары менее 100 мл, всего до 1 000 мл. Можно распределить их между теми, кто с вами",
+        "uz": "Qo'l yukiga 100 ml dan kam mahsulotlar, jami 1 000 ml gacha olish mumkin. Birga kelganlaringiz bilan bo'lishib olsangiz bo'ladi",
+        "fr": "En cabine : produits de moins de 100 ml, jusqu'à 1 000 ml au total. Vous pouvez les répartir avec les personnes qui vous accompagnent",
+        "it": "In cabina: prodotti sotto i 100 ml, fino a 1.000 ml in totale. Può dividerli con le persone che sono con lei",
+        "es": "En cabina: productos de menos de 100 ml, hasta 1.000 ml en total. Puede repartirlos entre sus acompañantes",
+        "id": "Bagasi kabin hanya untuk produk di bawah 100ml, total maksimal 1.000ml. Bisa dibagi dengan orang yang bersama Anda",
+        "ms": "Bagasi kabin hanya untuk produk bawah 100ml, jumlah maksimum 1,000ml. Boleh dibahagikan dengan orang yang bersama anda",
+        "tr": "Kabin bagajına 100 ml'nin altındaki ürünler, toplam 1.000 ml'ye kadar alınabilir. Yanınızdaki kişilerle paylaşarak taşıyabilirsiniz",
+        "mn": "Гар тээшинд 100 мл-ээс бага бүтээгдэхүүнийг нийт 1,000 мл хүртэл авч болно. Хамт яваа хүмүүстэйгээ хуваан авч болно"
+      }
+    },
+    {
       "id": "ex-3",
       "kr": "교환·환불은 영수증이 있어야 가능합니다",
       "translations": {
