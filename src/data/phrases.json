@@ -765,6 +765,26 @@
         "tr": "Lütfen marka ve ürün adını tam olarak kontrol edin",
         "mn": "Брэнд болон барааны нэрийг зөв шалгана уу"
       }
+    },
+    {
+      "id": "stock-7",
+      "kr": "해당 제품은 약국에서 판매됩니다. 약국은 건너편 스타벅스 옆쪽으로 가시면 됩니다",
+      "translations": {
+        "en": "That product is sold at a pharmacy. It's across the street, next to Starbucks",
+        "zh-Hans": "这款产品在药店有售。药店在对面星巴克旁边",
+        "ja": "その商品は薬局で販売しております。薬局は向かいのスターバックスの隣です",
+        "vi": "Sản phẩm đó được bán ở hiệu thuốc. Hiệu thuốc ở bên kia đường, cạnh Starbucks",
+        "th": "สินค้านี้จำหน่ายที่ร้านขายยา ร้านขายยาอยู่ฝั่งตรงข้าม ข้างสตาร์บัคส์",
+        "ru": "Этот товар продаётся в аптеке. Она через дорогу, рядом со Starbucks",
+        "uz": "Bu mahsulot dorixonada sotiladi. Dorixona qarshi tomonda, Starbucks yonida",
+        "fr": "Ce produit est vendu en pharmacie. Elle se trouve en face, à côté du Starbucks",
+        "it": "Quel prodotto si vende in farmacia. È dall'altra parte della strada, accanto allo Starbucks",
+        "es": "Ese producto se vende en la farmacia. Está enfrente, junto al Starbucks",
+        "id": "Produk itu dijual di apotek. Apoteknya di seberang, sebelah Starbucks",
+        "ms": "Produk itu dijual di farmasi. Farmasinya di seberang jalan, sebelah Starbucks",
+        "tr": "Bu ürün eczanede satılıyor. Eczane karşıda, Starbucks'ın yanında",
+        "mn": "Тухайн бүтээгдэхүүнийг эмийн санд зардаг. Эмийн сан замын эсрэг талд, Starbucks-ын хажууд байгаа"
+      }
     }
   ],
   "recommendation": [
