@@ -1389,6 +1389,26 @@
         "tr": "Lütfen sepeti kullandıktan sonra mutlaka geri verin",
         "mn": "Сагсыг хэрэглэсний дараа заавал буцааж өгнө үү"
       }
+    },
+    {
+      "id": "etc-11",
+      "kr": "매장 장바구니를 빌려드리겠습니다. 사용 후 반드시 매장에 반납해 주세요",
+      "translations": {
+        "en": "I'll lend you a store basket. Please be sure to return it to the store after use",
+        "zh-Hans": "我借您一个店内购物篮，使用后请务必归还给店里",
+        "ja": "店内の買い物かごをお貸しします。ご使用後は必ず店舗にお返しください",
+        "vi": "Tôi sẽ cho quý khách mượn giỏ của cửa hàng. Vui lòng trả lại cho cửa hàng sau khi dùng",
+        "th": "จะให้ยืมตะกร้าของร้านนะคะ/ครับ ใช้เสร็จกรุณาคืนที่ร้านด้วย",
+        "ru": "Я одолжу вам корзину магазина. Пожалуйста, обязательно верните её в магазин после использования",
+        "uz": "Sizga do'kon savatini beraman. Ishlatgandan keyin albatta do'konga qaytaring",
+        "fr": "Je vais vous prêter un panier du magasin. Merci de le rendre au magasin après utilisation",
+        "it": "Le presto un cestino del negozio. La preghiamo di restituirlo al negozio dopo l'uso",
+        "es": "Le prestaré una cesta de la tienda. Por favor, devuélvala a la tienda después de usarla",
+        "id": "Saya pinjamkan keranjang toko. Mohon kembalikan ke toko setelah digunakan",
+        "ms": "Saya pinjamkan bakul kedai. Sila pulangkan ke kedai selepas digunakan",
+        "tr": "Size mağaza sepeti ödünç vereceğim. Kullandıktan sonra mutlaka mağazaya geri verin",
+        "mn": "Дэлгүүрийн сагсыг зээлж өгье. Хэрэглэсний дараа заавал дэлгүүрт буцааж өгнө үү"
+      }
     }
   ]
 }
