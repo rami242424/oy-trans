@@ -304,22 +304,22 @@
     },
     {
       "id": "tax-2",
-      "kr": "택스리펀은 15,000원 이상 구매 시 가능합니다",
+      "kr": "택스리펀은 15,000원 이상 구매 시 가능합니다. 추가로 더 구매하고 싶은 물건은 없나요?",
       "translations": {
-        "en": "Tax refund is available for purchases of 15,000 KRW or more",
-        "zh-Hans": "购买满15,000韩元即可办理退税",
-        "ja": "免税は15,000ウォン以上のお買い上げで可能です",
-        "vi": "Hoàn thuế áp dụng cho hóa đơn từ 15.000 won trở lên",
-        "th": "คืนภาษีได้เมื่อซื้อครบ 15,000 วอนขึ้นไป",
-        "ru": "Такс-фри доступен при покупке от 15 000 вон",
-        "uz": "Tax refund 15 000 vondan ortiq xaridlarda mumkin",
-        "fr": "La détaxe est possible à partir de 15 000 wons d'achat",
-        "it": "Il tax refund è disponibile per acquisti da 15.000 won",
-        "es": "La devolución de impuestos está disponible desde 15.000 wones",
-        "id": "Pengembalian pajak berlaku untuk pembelian minimal 15.000 won",
-        "ms": "Pulangan cukai tersedia untuk pembelian 15,000 won ke atas",
-        "tr": "Vergi iadesi 15.000 won ve üzeri alışverişlerde geçerlidir",
-        "mn": "Татварын буцаалт 15,000 воноос дээш худалдан авалтад боломжтой"
+        "en": "Tax refund is available for purchases of 15,000 KRW or more. Is there anything else you'd like to buy?",
+        "zh-Hans": "购买满15,000韩元即可办理退税。还有其他想买的商品吗？",
+        "ja": "免税は15,000ウォン以上のお買い上げで可能です。他にお買い求めになりたい商品はございますか？",
+        "vi": "Hoàn thuế áp dụng cho hóa đơn từ 15.000 won trở lên. Quý khách có muốn mua thêm gì nữa không?",
+        "th": "คืนภาษีได้เมื่อซื้อครบ 15,000 วอนขึ้นไป มีอะไรอยากซื้อเพิ่มอีกไหม?",
+        "ru": "Такс-фри доступен при покупке от 15 000 вон. Хотите приобрести что-нибудь ещё?",
+        "uz": "Tax refund 15 000 vondan ortiq xaridlarda mumkin. Yana biror narsa sotib olmoqchimisiz?",
+        "fr": "La détaxe est possible à partir de 15 000 wons d'achat. Souhaitez-vous acheter autre chose ?",
+        "it": "Il tax refund è disponibile per acquisti da 15.000 won. Desidera acquistare qualcos'altro?",
+        "es": "La devolución de impuestos está disponible desde 15.000 wones. ¿Desea comprar algo más?",
+        "id": "Pengembalian pajak berlaku untuk pembelian minimal 15.000 won. Apakah ada barang lain yang ingin dibeli?",
+        "ms": "Pulangan cukai tersedia untuk pembelian 15,000 won ke atas. Ada lagi barang yang ingin dibeli?",
+        "tr": "Vergi iadesi 15.000 won ve üzeri alışverişlerde geçerlidir. Almak istediğiniz başka bir şey var mı?",
+        "mn": "Татварын буцаалт 15,000 воноос дээш худалдан авалтад боломжтой. Нэмж авахыг хүссэн зүйл байна уу?"
       }
     },
     {
