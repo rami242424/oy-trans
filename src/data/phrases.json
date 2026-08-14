@@ -643,6 +643,26 @@
         "tr": "Değişim ve iade; fişle ve açılmamış üründe 15 gün içinde mümkündür",
         "mn": "Солих, буцаах нь баримттай, задлаагүй бараанд 15 хоногийн дотор боломжтой"
       }
+    },
+    {
+      "id": "ex-11",
+      "kr": "교환하시면 추후 교환이나 환불은 불가합니다",
+      "translations": {
+        "en": "Once you exchange it, further exchanges or refunds won't be possible",
+        "zh-Hans": "换货之后，将无法再次换货或退款",
+        "ja": "交換された後は、再度の交換や返金はできません",
+        "vi": "Sau khi đổi hàng, sẽ không thể đổi hoặc hoàn tiền thêm lần nữa",
+        "th": "หากเปลี่ยนสินค้าแล้ว จะไม่สามารถเปลี่ยนหรือคืนเงินได้อีก",
+        "ru": "После обмена дальнейший обмен или возврат будет невозможен",
+        "uz": "Almashtirgandan keyin qayta almashtirish yoki qaytarish mumkin bo'lmaydi",
+        "fr": "Après un échange, aucun autre échange ou remboursement ne sera possible",
+        "it": "Dopo il cambio, non sarà più possibile un ulteriore cambio o rimborso",
+        "es": "Una vez realizado el cambio, no será posible otro cambio ni reembolso",
+        "id": "Setelah ditukar, penukaran atau pengembalian dana selanjutnya tidak bisa dilakukan",
+        "ms": "Selepas ditukar, pertukaran atau bayaran balik selanjutnya tidak boleh dibuat",
+        "tr": "Değişim yapıldıktan sonra tekrar değişim veya iade mümkün değildir",
+        "mn": "Нэг удаа сольсны дараа дахин солих, буцаах боломжгүй"
+      }
     }
   ],
   "stock": [
