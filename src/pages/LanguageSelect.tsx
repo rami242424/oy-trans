@@ -5,7 +5,6 @@ interface ILanguageSelectProps {
   nextPageWithLangs: (lang: Langs) => void;
 }
 
-
 function LanguageSelect({ nextPageWithLangs }: ILanguageSelectProps) {
   return (
     <div className="min-h-screen bg-[#FBFAF6] px-6 pt-12 pb-8">
