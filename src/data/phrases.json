@@ -1187,6 +1187,46 @@
         "tr": "Akne eğilimli ciltlerde de kullanılabilir.",
         "mn": "Батганатай арьсанд ч хэрэглэж болно."
       }
+    },
+    {
+      "id": "rec-21",
+      "kr": "가성비 있는 제품으로 추천드립니다.",
+      "translations": {
+        "en": "I recommend this as a cost-effective product.",
+        "zh-Hans": "我推荐这款性价比高的产品。",
+        "ja": "コスパの良い商品としておすすめします。",
+        "vi": "Tôi giới thiệu đây là sản phẩm có giá cả hợp lý, đáng đồng tiền.",
+        "th": "ขอแนะนำสินค้านี้เพราะคุ้มค่าคุ้มราคา.",
+        "ru": "Рекомендую этот товар как выгодный по цене и качеству.",
+        "uz": "Narxi va sifati mos keladigan mahsulot sifatida tavsiya qilaman.",
+        "fr": "Je vous recommande ce produit pour son excellent rapport qualité-prix.",
+        "it": "Le consiglio questo prodotto per il suo ottimo rapporto qualità-prezzo.",
+        "es": "Le recomiendo este producto por su buena relación calidad-precio.",
+        "id": "Saya rekomendasikan produk ini karena harganya sepadan dengan kualitasnya.",
+        "ms": "Saya cadangkan produk ini kerana nilainya berbaloi dengan harga.",
+        "tr": "Bunu fiyat performansı iyi bir ürün olarak öneririm.",
+        "mn": "Үнэ, чанарын харьцаа сайтай тул энэ бүтээгдэхүүнийг санал болгож байна."
+      }
+    },
+    {
+      "id": "rec-22",
+      "kr": "기획상품 구성으로 가성비 있는 제품입니다.",
+      "translations": {
+        "en": "It's a specially curated set, so it's a cost-effective product.",
+        "zh-Hans": "这是特别企划套装，性价比很高。",
+        "ja": "企画商品セットなので、コスパの良い商品です。",
+        "vi": "Đây là sản phẩm theo bộ khuyến mãi đặc biệt nên rất đáng giá.",
+        "th": "เป็นสินค้าจัดชุดพิเศษ จึงคุ้มค่าคุ้มราคา.",
+        "ru": "Это специальный набор, поэтому товар выгодный по цене и качеству.",
+        "uz": "Bu maxsus tayyorlangan to'plam bo'lgani uchun narxi va sifati mos mahsulot.",
+        "fr": "C'est un coffret spécialement composé, donc un excellent rapport qualité-prix.",
+        "it": "È un set appositamente confezionato, quindi ha un ottimo rapporto qualità-prezzo.",
+        "es": "Es un set especialmente preparado, por lo que tiene muy buena relación calidad-precio.",
+        "id": "Ini adalah paket produk spesial, jadi harganya sangat sepadan.",
+        "ms": "Ini set produk istimewa, jadi nilainya sangat berbaloi.",
+        "tr": "Bu, özel hazırlanmış bir set olduğu için fiyat performansı yüksek bir üründür.",
+        "mn": "Энэ бол тусгайлан бүрдүүлсэн иж бүрдэл тул үнэ, чанарын харьцаа сайтай бүтээгдэхүүн юм."
+      }
     }
   ],
   "etc": [
