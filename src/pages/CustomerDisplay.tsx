@@ -11,9 +11,11 @@ interface ICustomerDisplayProps {
 const allPhrases = Object.values(phrases).flat() as Phrase[];
 const findPhrase = (id: string) => allPhrases.find((p) => p.id === id);
 
-// 괄호 구간(반각 ( ) · 전각 （ ）)을 분리해 항상 새 줄에 표시
+// 괄호 구간을 새 줄로 분리 (뒤따르는 구두점은 괄호에 붙여서 고아 방지)
 const renderWithParens = (text: string) => {
-  const parts = text.split(/(\([^)]*\)|（[^）]*）)/g).filter(Boolean);
+  const parts = text
+    .split(/((?:\([^)]*\)|（[^）]*）)[.。!?！？]?)/g)
+    .filter((s) => s.trim() !== "");
   return parts.map((part, i) =>
     /^[（(]/.test(part) ? (
       <span key={i} className="block mt-2">
@@ -60,13 +62,15 @@ function CustomerDisplay({
         key={selectedPhrase.id}
         className="flex-1 min-h-0 w-full flex flex-col items-center justify-center px-6 text-center overflow-y-auto"
       >
-        <h2 className="a-item w-full max-w-[640px] text-[clamp(23px,6vw,34px)] font-black leading-[1.4] tracking-[-0.02em] text-white break-words [text-shadow:0_1px_2px_rgba(22,37,11,0.12)]">
+        <h2
+          className="a-item w-full max-w-[640px] text-[clamp(23px,6vw,34px)] font-black leading-[1.4] tracking-[-0.02em] text-white [text-wrap:balance] [overflow-wrap:break-word] [text-shadow:0_1px_2px_rgba(22,37,11,0.12)]"
+        >
           {renderWithParens(selectedPhrase.translations[language])}
         </h2>
 
         <p
           style={{ animationDelay: "90ms" }}
-          className="a-item w-full max-w-[340px] text-[13.5px] text-[#16250B]/60 font-semibold mt-8 pt-6 border-t border-[#16250B]/15 leading-relaxed break-words"
+          className="a-item w-full max-w-[340px] text-[13.5px] text-[#16250B]/60 font-semibold mt-8 pt-6 border-t border-[#16250B]/15 leading-relaxed [text-wrap:balance] [overflow-wrap:break-word]"
         >
           {renderWithParens(selectedPhrase.kr)}
         </p>
