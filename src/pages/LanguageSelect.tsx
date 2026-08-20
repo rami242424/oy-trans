@@ -7,20 +7,21 @@ interface ILanguageSelectProps {
 
 function LanguageSelect({ nextPageWithLangs }: ILanguageSelectProps) {
   return (
-    <div className="min-h-screen bg-[#FBFAF6] px-6 pt-12 pb-8">
+    <div className="a-screen min-h-screen bg-[#FBFAF6] px-6 pt-12 pb-8">
       <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#4C5940] bg-[#EDF0E6] px-3 py-1.5 rounded-full mb-4">
         <span className="w-[7px] h-[7px] rounded-full bg-[#6B7A55]" />
         OLIVE YOUNG · 인천공항점
       </span>
-      <p className="text-sm text-[#707463] leading-relaxed mb-6">
+      <p className="a-fade text-sm text-[#707463] leading-relaxed mb-6">
         Please select your language · 请选择语言 · 言語を選択 · 언어를 선택해 주세요
       </p>
       <div className="grid grid-cols-2 gap-2.5">
-        {LANGS.map((l) => (
+        {LANGS.map((l, i) => (
           <button
             key={l.code}
+            style={{ animationDelay: `${Math.min(i, 10) * 25}ms` }}
             onClick={() => nextPageWithLangs(l.code)}
-            className="flex items-center gap-3 bg-white border-[1.5px] border-[#DCE2CF] rounded-2xl px-3.5 py-[14px] text-left active:scale-[0.97] active:bg-[#EDF0E6] active:border-[#6B7A55] transition"
+            className="a-item flex items-center gap-3 bg-white border-[1.5px] border-[#DCE2CF] rounded-2xl px-3.5 py-[14px] text-left transition-all duration-150 active:scale-[0.97] active:bg-[#EDF0E6] active:border-[#6B7A55] hover:border-[#B9C4A5]"
           >
             <span className="flex-shrink-0 w-9 h-[30px] flex items-center justify-center bg-[#EDF0E6] text-[#4C5940] rounded-lg text-xs font-extrabold tracking-wide">
               {l.badge}

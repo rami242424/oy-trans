@@ -54,12 +54,12 @@ function PhraseHome({
     .filter((p): p is Phrase => p !== undefined);
 
   return (
-    <div className="min-h-screen bg-[#FBFAF6] px-5 pt-5 pb-24">
+    <div className="a-screen min-h-screen bg-[#FBFAF6] px-5 pt-5 pb-24">
       {/* 상단바 */}
       <div className="flex items-center gap-3 mb-4">
         <button
           onClick={resetToLang}
-          className="w-[38px] h-[38px] flex items-center justify-center bg-white border-[1.5px] border-[#DCE2CF] rounded-xl text-[#26281F]"
+          className="w-[38px] h-[38px] flex items-center justify-center bg-white border-[1.5px] border-[#DCE2CF] rounded-xl text-[#26281F] transition-transform duration-150 active:scale-90"
         >
           ←
         </button>
@@ -75,7 +75,7 @@ function PhraseHome({
       </div>
 
       {/* 검색창 */}
-      <div className="flex items-center gap-2.5 bg-white border-[1.5px] border-[#DCE2CF] rounded-[14px] px-4 py-3 mb-3 focus-within:border-[#6B7A55] transition">
+      <div className="flex items-center gap-2.5 bg-white border-[1.5px] border-[#DCE2CF] rounded-[14px] px-4 py-3 mb-3 transition-all duration-200 focus-within:border-[#6B7A55] focus-within:shadow-[0_0_0_3px_rgba(107,122,85,0.12)]">
         <span className="text-[#A3A695]">🔍</span>
         <input
           value={search}
@@ -84,7 +84,10 @@ function PhraseHome({
           className="flex-1 bg-transparent outline-none text-[15px] text-[#26281F] placeholder-[#A3A695]"
         />
         {search !== "" && (
-          <button onClick={() => setSearch("")} className="text-[#A3A695] text-lg">
+          <button
+            onClick={() => setSearch("")}
+            className="text-[#A3A695] text-lg transition-transform duration-150 active:scale-75"
+          >
             ✕
           </button>
         )}
@@ -97,11 +100,12 @@ function PhraseHome({
             최근 사용
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1">
-            {recentPhrases.map((p) => (
+            {recentPhrases.map((p, i) => (
               <button
                 key={p.id}
+                style={{ animationDelay: `${i * 40}ms` }}
                 onClick={() => nextToCustomerDisplay(p)}
-                className="flex-shrink-0 max-w-[150px] truncate px-3 py-2 rounded-xl bg-[#EDF0E6] border-[1.5px] border-[#DCE2CF] text-[12px] font-semibold text-[#4C5940] whitespace-nowrap active:scale-95 transition"
+                className="a-chip flex-shrink-0 max-w-[150px] truncate px-3 py-2 rounded-xl bg-[#EDF0E6] border-[1.5px] border-[#DCE2CF] text-[12px] font-semibold text-[#4C5940] whitespace-nowrap transition-transform duration-150 active:scale-95"
               >
                 {p.kr}
               </button>
@@ -117,9 +121,10 @@ function PhraseHome({
             key={c.value}
             onClick={() => setCategory(c.value)}
             className={
-              category === c.value
-                ? "flex flex-col items-center gap-1 py-2.5 rounded-[13px] bg-[#4C5940] border-[1.5px] border-[#4C5940] text-white text-[11.5px] font-bold"
-                : "flex flex-col items-center gap-1 py-2.5 rounded-[13px] bg-white border-[1.5px] border-[#DCE2CF] text-[#707463] text-[11.5px] font-semibold"
+              (category === c.value
+                ? "bg-[#4C5940] border-[#4C5940] text-white shadow-[0_4px_14px_rgba(76,89,64,0.35)] "
+                : "bg-white border-[#DCE2CF] text-[#707463] ") +
+              "flex flex-col items-center gap-1 py-2.5 rounded-[13px] border-[1.5px] text-[11.5px] font-bold transition-all duration-200 active:scale-95"
             }
           >
             <span className="text-[17px] leading-none">{c.icon}</span>
@@ -129,15 +134,16 @@ function PhraseHome({
       </div>
 
       {/* 문구 목록 */}
-      <div className="text-[11px] font-extrabold text-[#A3A695] tracking-widest uppercase mb-2">
+      <div className="a-fade text-[11px] font-extrabold text-[#A3A695] tracking-widest uppercase mb-2">
         {currentLabel}
       </div>
-      <div className="space-y-2">
-        {visiblePhrases.map((data) => (
+      <div key={category + search} className="space-y-2">
+        {visiblePhrases.map((data, i) => (
           <button
             key={data.id}
+            style={{ animationDelay: `${Math.min(i, 8) * 30}ms` }}
             onClick={() => nextToCustomerDisplay(data)}
-            className="w-full bg-white border-[1.5px] border-[#DCE2CF] rounded-2xl px-4 py-[15px] text-left active:scale-[0.98] active:border-[#6B7A55] transition"
+            className="a-item w-full bg-white border-[1.5px] border-[#DCE2CF] rounded-2xl px-4 py-[15px] text-left transition-all duration-150 active:scale-[0.98] active:border-[#6B7A55] hover:border-[#B9C4A5]"
           >
             <span className="block text-[15.5px] font-bold text-[#26281F] leading-snug">
               {data.translations[language]}
