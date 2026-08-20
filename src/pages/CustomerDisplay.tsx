@@ -11,6 +11,20 @@ interface ICustomerDisplayProps {
 const allPhrases = Object.values(phrases).flat() as Phrase[];
 const findPhrase = (id: string) => allPhrases.find((p) => p.id === id);
 
+// 괄호 구간(반각 ( ) · 전각 （ ）)을 분리해 항상 새 줄에 표시
+const renderWithParens = (text: string) => {
+  const parts = text.split(/(\([^)]*\)|（[^）]*）)/g).filter(Boolean);
+  return parts.map((part, i) =>
+    /^[（(]/.test(part) ? (
+      <span key={i} className="block mt-2">
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+};
+
 function CustomerDisplay({
   selectedPhrase,
   language,
@@ -22,7 +36,7 @@ function CustomerDisplay({
   return (
     <div
       onClick={backToPhrases}
-      className="a-display fixed inset-0 bg-[#8DC72E] text-[#16250B] flex flex-col cursor-pointer"
+      className="a-display fixed inset-0 bg-[#8DC72E] text-[#16250B] flex flex-col cursor-pointer overflow-hidden"
     >
       <div className="flex items-center justify-between px-6 pt-7">
         <span className="flex items-center gap-2">
@@ -44,21 +58,21 @@ function CustomerDisplay({
 
       <div
         key={selectedPhrase.id}
-        className="flex-1 flex flex-col items-center justify-center px-7 text-center"
+        className="flex-1 min-h-0 w-full flex flex-col items-center justify-center px-6 text-center overflow-y-auto"
       >
-        <h2 className="a-item text-[clamp(26px,7vw,36px)] font-black leading-[1.32] tracking-[-0.02em] break-keep text-white [text-shadow:0_1px_2px_rgba(22,37,11,0.12)]">
-          {selectedPhrase.translations[language]}
+        <h2 className="a-item w-full max-w-[640px] text-[clamp(23px,6vw,34px)] font-black leading-[1.4] tracking-[-0.02em] text-white break-words [text-shadow:0_1px_2px_rgba(22,37,11,0.12)]">
+          {renderWithParens(selectedPhrase.translations[language])}
         </h2>
 
         <p
           style={{ animationDelay: "90ms" }}
-          className="a-item text-[13.5px] text-[#16250B]/60 font-semibold mt-9 pt-6 border-t border-[#16250B]/15 max-w-[320px] leading-relaxed break-keep"
+          className="a-item w-full max-w-[340px] text-[13.5px] text-[#16250B]/60 font-semibold mt-8 pt-6 border-t border-[#16250B]/15 leading-relaxed break-words"
         >
-          {selectedPhrase.kr}
+          {renderWithParens(selectedPhrase.kr)}
         </p>
 
         {selectedPhrase.next && (
-          <div className="flex flex-wrap gap-2 justify-center mt-9">
+          <div className="flex flex-wrap gap-2 justify-center mt-8">
             {selectedPhrase.next.map((n, i) => (
               <button
                 key={n.to}
@@ -77,7 +91,7 @@ function CustomerDisplay({
         )}
       </div>
 
-      <div className="pb-8 text-center text-[11px] font-semibold tracking-wide text-[#16250B]/40">
+      <div className="pb-8 pt-2 text-center text-[11px] font-semibold tracking-wide text-[#16250B]/40">
         화면을 탭하면 돌아갑니다
       </div>
     </div>
