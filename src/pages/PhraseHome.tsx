@@ -13,13 +13,13 @@ interface IPhraseHomeProps {
   recentIds: string[];
 }
 
-const CATEGORIES: { value: Category; icon: string; label: string }[] = [
-  { value: "payment", icon: "💳", label: "결제" },
-  { value: "tax-refund", icon: "🛃", label: "택스" },
-  { value: "exchange-carryIn", icon: "✈️", label: "교환·수하물" },
-  { value: "stock", icon: "📦", label: "재고" },
-  { value: "recommendation", icon: "💄", label: "추천" },
-  { value: "etc", icon: "💬", label: "기타" },
+const CATEGORIES: { value: Category; label: string }[] = [
+  { value: "payment", label: "결제" },
+  { value: "tax-refund", label: "택스리펀" },
+  { value: "exchange-carryIn", label: "교환·수하물" },
+  { value: "stock", label: "재고" },
+  { value: "recommendation", label: "추천" },
+  { value: "etc", label: "기타" },
 ];
 
 const allPhrases = Object.values(phrases).flat() as Phrase[];
@@ -47,112 +47,126 @@ function PhraseHome({
   const currentLabel =
     search === ""
       ? CATEGORIES.find((c) => c.value === category)?.label
-      : `검색 결과 ${visiblePhrases.length}건`;
+      : `검색 결과 ${visiblePhrases.length}`;
 
   const recentPhrases = recentIds
     .map((id) => findPhrase(id))
     .filter((p): p is Phrase => p !== undefined);
 
   return (
-    <div className="a-screen min-h-screen bg-[#FBFAF6] px-5 pt-5 pb-24">
+    <div className="a-screen min-h-screen bg-white max-w-md mx-auto">
       {/* 상단바 */}
-      <div className="flex items-center gap-3 mb-4">
-        <button
-          onClick={resetToLang}
-          className="w-[38px] h-[38px] flex items-center justify-center bg-white border-[1.5px] border-[#DCE2CF] rounded-xl text-[#26281F] transition-transform duration-150 active:scale-90"
-        >
-          ←
-        </button>
-        <div className="flex-1 min-w-0">
-          <div className="text-[16.5px] font-extrabold text-[#26281F]">응대 문구</div>
-          <div className="text-[11.5px] text-[#707463]">
-            탭하면 고객 화면으로 크게 표시됩니다
-          </div>
+      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm px-5 pt-4 pb-3 border-b border-[#F0F1EC]">
+        <div className="flex items-center justify-between mb-3">
+          <button
+            onClick={resetToLang}
+            className="flex items-center gap-1.5 text-[13px] font-bold text-[#191B17] transition-opacity active:opacity-50"
+          >
+            <span className="text-[16px] leading-none">←</span>
+            <span className="font-black tracking-tight">OLIVE YOUNG</span>
+            <span className="w-1 h-1 rounded-full bg-[#9BCB33]" />
+          </button>
+          <span className="text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
+            {currentLang?.badge}
+          </span>
         </div>
-        <span className="bg-[#4C5940] text-white text-[12.5px] font-bold px-3 py-2 rounded-xl whitespace-nowrap">
-          {currentLang?.badge} · {currentLang?.label}
-        </span>
+
+        {/* 검색 */}
+        <div className="flex items-center gap-2 bg-[#F7F8F5] rounded-xl px-3.5 py-2.5 transition-shadow duration-200 focus-within:shadow-[inset_0_0_0_1.5px_#4C5940]">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-[#8A8D83] flex-shrink-0">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.4" />
+            <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+          </svg>
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="문구 검색"
+            className="flex-1 bg-transparent outline-none text-[14.5px] font-medium text-[#191B17] placeholder-[#A9ACA1]"
+          />
+          {search !== "" && (
+            <button
+              onClick={() => setSearch("")}
+              className="w-5 h-5 flex items-center justify-center rounded-full bg-[#D9DCD2] text-white text-[10px] transition-transform active:scale-75"
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* 검색창 */}
-      <div className="flex items-center gap-2.5 bg-white border-[1.5px] border-[#DCE2CF] rounded-[14px] px-4 py-3 mb-3 transition-all duration-200 focus-within:border-[#6B7A55] focus-within:shadow-[0_0_0_3px_rgba(107,122,85,0.12)]">
-        <span className="text-[#A3A695]">🔍</span>
-        <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="문구 검색 — 환불, 품절, 결제…"
-          className="flex-1 bg-transparent outline-none text-[15px] text-[#26281F] placeholder-[#A3A695]"
-        />
-        {search !== "" && (
-          <button
-            onClick={() => setSearch("")}
-            className="text-[#A3A695] text-lg transition-transform duration-150 active:scale-75"
-          >
-            ✕
-          </button>
+      <div className="px-5 pb-24">
+        {/* 최근 사용 */}
+        {recentPhrases.length > 0 && (
+          <div className="pt-4">
+            <div className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase mb-2">
+              최근 사용
+            </div>
+            <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5">
+              {recentPhrases.map((p, i) => (
+                <button
+                  key={p.id}
+                  style={{ animationDelay: `${i * 35}ms` }}
+                  onClick={() => nextToCustomerDisplay(p)}
+                  className="a-chip flex-shrink-0 max-w-[160px] truncate px-3 py-[7px] rounded-full bg-[#F2F4EC] text-[12px] font-semibold text-[#3E4636] whitespace-nowrap transition-transform duration-150 active:scale-95"
+                >
+                  {p.kr}
+                </button>
+              ))}
+            </div>
+          </div>
         )}
-      </div>
 
-      {/* 최근 사용 문구 */}
-      {recentPhrases.length > 0 && (
-        <div className="mb-3">
-          <div className="text-[11px] font-extrabold text-[#A3A695] tracking-widest uppercase mb-1.5">
-            최근 사용
-          </div>
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {recentPhrases.map((p, i) => (
-              <button
-                key={p.id}
-                style={{ animationDelay: `${i * 40}ms` }}
-                onClick={() => nextToCustomerDisplay(p)}
-                className="a-chip flex-shrink-0 max-w-[150px] truncate px-3 py-2 rounded-xl bg-[#EDF0E6] border-[1.5px] border-[#DCE2CF] text-[12px] font-semibold text-[#4C5940] whitespace-nowrap transition-transform duration-150 active:scale-95"
-              >
-                {p.kr}
-              </button>
-            ))}
-          </div>
+        {/* 카테고리 — 가로 스크롤 필 */}
+        <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 pt-4 pb-1">
+          {CATEGORIES.map((c) => (
+            <button
+              key={c.value}
+              onClick={() => setCategory(c.value)}
+              className={
+                (category === c.value
+                  ? "bg-[#191B17] text-white "
+                  : "bg-white text-[#5A5D53] shadow-[inset_0_0_0_1.2px_#E4E6DE] ") +
+                "flex-shrink-0 px-4 py-[9px] rounded-full text-[13px] font-bold transition-all duration-200 active:scale-95"
+              }
+            >
+              {c.label}
+            </button>
+          ))}
         </div>
-      )}
 
-      {/* 카테고리 */}
-      <div className="grid grid-cols-3 gap-2 mb-4">
-        {CATEGORIES.map((c) => (
-          <button
-            key={c.value}
-            onClick={() => setCategory(c.value)}
-            className={
-              (category === c.value
-                ? "bg-[#4C5940] border-[#4C5940] text-white shadow-[0_4px_14px_rgba(76,89,64,0.35)] "
-                : "bg-white border-[#DCE2CF] text-[#707463] ") +
-              "flex flex-col items-center gap-1 py-2.5 rounded-[13px] border-[1.5px] text-[11.5px] font-bold transition-all duration-200 active:scale-95"
-            }
-          >
-            <span className="text-[17px] leading-none">{c.icon}</span>
-            {c.label}
-          </button>
-        ))}
-      </div>
+        {/* 섹션 라벨 */}
+        <div className="a-fade flex items-baseline gap-1.5 pt-5 pb-1">
+          <span className="text-[17px] font-extrabold text-[#191B17]">{currentLabel}</span>
+          {search === "" && (
+            <span className="text-[12px] font-bold text-[#9BCB33]">
+              {visiblePhrases.length}
+            </span>
+          )}
+        </div>
 
-      {/* 문구 목록 */}
-      <div className="a-fade text-[11px] font-extrabold text-[#A3A695] tracking-widest uppercase mb-2">
-        {currentLabel}
-      </div>
-      <div key={category + search} className="space-y-2">
-        {visiblePhrases.map((data, i) => (
-          <button
-            key={data.id}
-            style={{ animationDelay: `${Math.min(i, 8) * 30}ms` }}
-            onClick={() => nextToCustomerDisplay(data)}
-            className="a-item w-full bg-white border-[1.5px] border-[#DCE2CF] rounded-2xl px-4 py-[15px] text-left transition-all duration-150 active:scale-[0.98] active:border-[#6B7A55] hover:border-[#B9C4A5]"
-          >
-            <span className="block text-[15.5px] font-bold text-[#26281F] leading-snug">
-              {data.translations[language]}
-            </span>
-            <span className="block text-[13px] text-[#707463] mt-1 leading-relaxed">
-              {data.kr}
-            </span>
-          </button>
-        ))}
+        {/* 문구 리스트 — 헤어라인 구분 */}
+        <div key={category + search}>
+          {visiblePhrases.map((data, i) => (
+            <button
+              key={data.id}
+              style={{ animationDelay: `${Math.min(i, 8) * 28}ms` }}
+              onClick={() => nextToCustomerDisplay(data)}
+              className="a-item w-full py-[15px] text-left border-b border-[#F0F1EC] transition-colors duration-150 active:bg-[#F7F8F5] group"
+            >
+              <span className="flex items-start justify-between gap-3">
+                <span className="min-w-0">
+                  <span className="block text-[15.5px] font-bold text-[#191B17] leading-[1.4]">
+                    {data.translations[language]}
+                  </span>
+                  <span className="block text-[12.5px] text-[#8A8D83] mt-[5px] leading-relaxed">
+                    {data.kr}
+                  </span>
+                </span>
+                <span className="flex-shrink-0 mt-1 text-[#D9DCD2] text-[13px]">›</span>
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

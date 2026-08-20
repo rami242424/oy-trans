@@ -7,30 +7,41 @@ interface ILanguageSelectProps {
 
 function LanguageSelect({ nextPageWithLangs }: ILanguageSelectProps) {
   return (
-    <div className="a-screen min-h-screen bg-[#FBFAF6] px-6 pt-12 pb-8">
-      <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#4C5940] bg-[#EDF0E6] px-3 py-1.5 rounded-full mb-4">
-        <span className="w-[7px] h-[7px] rounded-full bg-[#6B7A55]" />
-        OLIVE YOUNG · 인천공항점
-      </span>
-      <p className="a-fade text-sm text-[#707463] leading-relaxed mb-6">
-        Please select your language · 请选择语言 · 言語を選択 · 언어를 선택해 주세요
+    <div className="a-screen min-h-screen bg-white px-6 pt-14 pb-10 max-w-md mx-auto">
+      {/* 워드마크 헤더 */}
+      <div className="mb-1 flex items-center gap-2">
+        <span className="text-[19px] font-black tracking-tight text-[#191B17]">
+          OLIVE YOUNG
+        </span>
+        <span className="w-1.5 h-1.5 rounded-full bg-[#9BCB33] mt-0.5" />
+      </div>
+      <div className="text-[12px] font-semibold text-[#8A8D83] tracking-wide mb-10">
+        인천공항점 · Incheon Airport
+      </div>
+
+      <h1 className="text-[26px] font-extrabold leading-[1.25] text-[#191B17] mb-2">
+        언어를 선택해 주세요
+      </h1>
+      <p className="a-fade text-[13.5px] text-[#8A8D83] leading-relaxed mb-8">
+        Select your language · 请选择语言 · 言語を選択
       </p>
-      <div className="grid grid-cols-2 gap-2.5">
+
+      <div className="grid grid-cols-2 gap-x-3 gap-y-1">
         {LANGS.map((l, i) => (
           <button
             key={l.code}
-            style={{ animationDelay: `${Math.min(i, 10) * 25}ms` }}
+            style={{ animationDelay: `${Math.min(i, 10) * 22}ms` }}
             onClick={() => nextPageWithLangs(l.code)}
-            className="a-item flex items-center gap-3 bg-white border-[1.5px] border-[#DCE2CF] rounded-2xl px-3.5 py-[14px] text-left transition-all duration-150 active:scale-[0.97] active:bg-[#EDF0E6] active:border-[#6B7A55] hover:border-[#B9C4A5]"
+            className="a-item flex items-center gap-3 py-[13px] border-b border-[#F0F1EC] text-left transition-colors duration-150 active:bg-[#F7F8F5]"
           >
-            <span className="flex-shrink-0 w-9 h-[30px] flex items-center justify-center bg-[#EDF0E6] text-[#4C5940] rounded-lg text-xs font-extrabold tracking-wide">
+            <span className="flex-shrink-0 w-[38px] text-[11px] font-extrabold tracking-widest text-[#4C5940]">
               {l.badge}
             </span>
-            <span className="flex flex-col">
-              <span className="text-[14.5px] font-bold text-[#26281F] leading-tight">
+            <span className="flex flex-col min-w-0">
+              <span className="text-[15px] font-bold text-[#191B17] leading-tight truncate">
                 {l.label}
               </span>
-              <span className="text-[11px] text-[#A3A695] font-medium">{l.kr}</span>
+              <span className="text-[11px] text-[#8A8D83] font-medium">{l.kr}</span>
             </span>
           </button>
         ))}
