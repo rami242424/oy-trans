@@ -54,16 +54,16 @@ function PhraseHome({
     .filter((p): p is Phrase => p !== undefined);
 
   return (
-    <div className="a-screen min-h-screen bg-white max-w-md mx-auto">
+    <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-2xl mx-auto">
       {/* 상단바 */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm px-5 pt-4 pb-3 border-b border-[#F0F1EC]">
+      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm px-5 pt-4 pb-3 border-b border-[#E9EBE1]">
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={resetToLang}
             className="flex items-center gap-1.5 text-[13px] font-bold text-[#191B17] transition-opacity active:opacity-50"
           >
             <span className="text-[16px] leading-none">←</span>
-            <span className="font-black tracking-tight">OLIVE YOUNG</span>
+            <span className="font-black tracking-tight">OY-trans</span>
             <span className="w-1 h-1 rounded-full bg-[#9BCB33]" />
           </button>
           <span className="text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
@@ -71,8 +71,7 @@ function PhraseHome({
           </span>
         </div>
 
-        {/* 검색 */}
-        <div className="flex items-center gap-2 bg-[#F7F8F5] rounded-xl px-3.5 py-2.5 transition-shadow duration-200 focus-within:shadow-[inset_0_0_0_1.5px_#4C5940]">
+        <div className="flex items-center gap-2 bg-[#F5F6F2] rounded-xl px-3.5 py-2.5 transition-shadow duration-200 focus-within:shadow-[inset_0_0_0_1.5px_#4C5940]">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-[#8A8D83] flex-shrink-0">
             <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.4" />
             <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
@@ -101,7 +100,7 @@ function PhraseHome({
             <div className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase mb-2">
               최근 사용
             </div>
-            <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5">
+            <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
               {recentPhrases.map((p, i) => (
                 <button
                   key={p.id}
@@ -116,8 +115,8 @@ function PhraseHome({
           </div>
         )}
 
-        {/* 카테고리 — 가로 스크롤 필 */}
-        <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 pt-4 pb-1">
+        {/* 카테고리 — 모바일: 가로 스크롤 / 데스크톱: 줄바꿈 */}
+        <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 pt-4 pb-1 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
           {CATEGORIES.map((c) => (
             <button
               key={c.value}
@@ -125,7 +124,7 @@ function PhraseHome({
               className={
                 (category === c.value
                   ? "bg-[#191B17] text-white "
-                  : "bg-white text-[#5A5D53] shadow-[inset_0_0_0_1.2px_#E4E6DE] ") +
+                  : "bg-white text-[#5A5D53] shadow-[inset_0_0_0_1.2px_#DDE0D5] ") +
                 "flex-shrink-0 px-4 py-[9px] rounded-full text-[13px] font-bold transition-all duration-200 active:scale-95"
               }
             >
@@ -134,7 +133,6 @@ function PhraseHome({
           ))}
         </div>
 
-        {/* 섹션 라벨 */}
         <div className="a-fade flex items-baseline gap-1.5 pt-5 pb-1">
           <span className="text-[17px] font-extrabold text-[#191B17]">{currentLabel}</span>
           {search === "" && (
@@ -144,14 +142,14 @@ function PhraseHome({
           )}
         </div>
 
-        {/* 문구 리스트 — 헤어라인 구분 */}
+        {/* 문구 리스트 — 구분선 강화 */}
         <div key={category + search}>
           {visiblePhrases.map((data, i) => (
             <button
               key={data.id}
               style={{ animationDelay: `${Math.min(i, 8) * 28}ms` }}
               onClick={() => nextToCustomerDisplay(data)}
-              className="a-item w-full py-[15px] text-left border-b border-[#F0F1EC] transition-colors duration-150 active:bg-[#F7F8F5] group"
+              className="a-item w-full py-[15px] text-left border-b border-[#E9EBE1] transition-colors duration-150 active:bg-[#F7F8F5]"
             >
               <span className="flex items-start justify-between gap-3">
                 <span className="min-w-0">
@@ -162,7 +160,7 @@ function PhraseHome({
                     {data.kr}
                   </span>
                 </span>
-                <span className="flex-shrink-0 mt-1 text-[#D9DCD2] text-[13px]">›</span>
+                <span className="flex-shrink-0 mt-1 text-[#C9CDBF] text-[13px]">›</span>
               </span>
             </button>
           ))}
