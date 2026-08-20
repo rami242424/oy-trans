@@ -16,6 +16,7 @@ export interface Phrase {
     it: string; es: string; id: string; ms: string;
     tr: string; mn: string;
   };
+  next?: { to: string; label: { [key: string]: string } }[];
 }
 
 function App(){
@@ -47,7 +48,7 @@ function App(){
     <>
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs}/>}
       {screen === "phrases" && <PhraseHome language={language} nextToCustomerDisplay={nextToCustomerDisplay} category={category} setCategory={setCategory} search={search} setSearch={setSearch} resetToLang={resetToLang}/>}
-      {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase} backToPhrases={backToPhrases}/>}
+      {screen === "display" && <CustomerDisplay language={language} selectedPhrase={selectedPhrase} backToPhrases={backToPhrases} nextToCustomerDisplay={nextToCustomerDisplay}/>}
     </>
   );
 }

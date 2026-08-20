@@ -684,7 +684,15 @@
         "ms": "Maaf, produk ini kehabisan stok. Mahu saya tunjukkan produk lain yang serupa?",
         "tr": "Üzgünüm, bu ürün tükendi. Benzer başka bir ürün göstereyim mi?",
         "mn": "Уучлаарай, энэ бараа дууссан. Төстэй өөр бараа санал болгох уу?"
-      }
+      },
+      "next": [
+        {
+          "to": "rec-4",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "stock-3",
@@ -724,7 +732,15 @@
         "ms": "Yang dipamerkan adalah yang terakhir. Mahu saya tunjukkan produk lain yang serupa?",
         "tr": "Raftaki son ürün. Benzer başka bir ürün göstereyim mi?",
         "mn": "Тавиур дээрх нь сүүлчийнх. Төстэй өөр бараа санал болгох уу?"
-      }
+      },
+      "next": [
+        {
+          "to": "rec-4",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "stock-5",
@@ -826,7 +842,15 @@
         "ms": "Kami tiada jenama itu. Mahu saya tunjukkan yang serupa?",
         "tr": "Bu marka mağazamızda yok. Benzer bir ürün göstereyim mi?",
         "mn": "Энэ брэнд манай дэлгүүрт байхгүй. Төстэй бүтээгдэхүүн санал болгох уу?"
-      }
+      },
+      "next": [
+        {
+          "to": "rec-4",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "rec-3",
@@ -850,23 +874,85 @@
     },
     {
       "id": "rec-4",
-      "kr": "피부타입에 따라 추천해드릴게요. 지성이세요, 건성이세요?",
+      "kr": "피부타입에 따라 추천해드릴게요. 어떤 타입이세요?",
       "translations": {
-        "en": "I can recommend based on your skin type. Is your skin oily or dry?",
-        "zh-Hans": "我可以根据您的肤质给您推荐一下。请问您是油皮还是干皮呢？",
-        "ja": "肌タイプに合わせておすすめします。脂性肌ですか、乾燥肌ですか？",
-        "vi": "Tôi sẽ gợi ý theo loại da. Da quý khách là da dầu hay da khô?",
-        "th": "แนะนำตามสภาพผิวได้ ผิวมันหรือผิวแห้ง?",
-        "ru": "Порекомендую по типу кожи. У вас жирная или сухая кожа?",
-        "uz": "Teri turiga qarab tavsiya qilaman. Teringiz yog'limi yoki quruqmi?",
-        "fr": "Je peux recommander selon votre type de peau. Peau grasse ou sèche ?",
-        "it": "Posso consigliare in base al tipo di pelle. Pelle grassa o secca?",
-        "es": "Puedo recomendar según su tipo de piel. ¿Piel grasa o seca?",
-        "id": "Saya bisa rekomendasikan sesuai jenis kulit. Kulit berminyak atau kering?",
-        "ms": "Saya boleh cadangkan ikut jenis kulit. Kulit berminyak atau kering?",
-        "tr": "Cilt tipinize göre önerebilirim. Cildiniz yağlı mı, kuru mu?",
-        "mn": "Арьсны төрлөөр тань санал болгоё. Арьс тань тослог уу, хуурай юу?"
-      }
+        "en": "I'll recommend based on your skin type. Which type are you?",
+        "zh-Hans": "我根据您的肤质来推荐。请问您是哪种肤质？",
+        "ja": "肌タイプに合わせておすすめします。どのタイプですか？",
+        "vi": "Tôi sẽ gợi ý theo loại da. Da quý khách thuộc loại nào?",
+        "th": "จะแนะนำตามสภาพผิวให้ คุณเป็นผิวแบบไหน?",
+        "ru": "Порекомендую по типу кожи. Какой у вас тип?",
+        "uz": "Teri turingizga qarab tavsiya qilaman. Qaysi turga kirasiz?",
+        "fr": "Je vous conseille selon votre type de peau. Quel est votre type ?",
+        "it": "Le consiglio in base al tipo di pelle. Che tipo ha?",
+        "es": "Le recomiendo según su tipo de piel. ¿Cuál es su tipo?",
+        "id": "Saya rekomendasikan sesuai jenis kulit. Jenis kulit Anda apa?",
+        "ms": "Saya cadangkan ikut jenis kulit. Jenis kulit anda apa?",
+        "tr": "Cilt tipinize göre öneririm. Hangi tiptesiniz?",
+        "mn": "Арьсны төрлөөр тань санал болгоё. Ямар төрөл вэ?"
+      },
+      "next": [
+        {
+          "to": "rec-6",
+          "label": {
+            "kr": "건성",
+            "en": "Dry",
+            "zh-Hans": "干皮",
+            "ja": "乾燥肌",
+            "vi": "Da khô",
+            "th": "ผิวแห้ง",
+            "ru": "Сухая",
+            "uz": "Quruq",
+            "fr": "Sèche",
+            "it": "Secca",
+            "es": "Seca",
+            "id": "Kering",
+            "ms": "Kering",
+            "tr": "Kuru",
+            "mn": "Хуурай"
+          }
+        },
+        {
+          "to": "rec-7",
+          "label": {
+            "kr": "지성",
+            "en": "Oily",
+            "zh-Hans": "油皮",
+            "ja": "脂性肌",
+            "vi": "Da dầu",
+            "th": "ผิวมัน",
+            "ru": "Жирная",
+            "uz": "Yog'li",
+            "fr": "Grasse",
+            "it": "Grassa",
+            "es": "Grasa",
+            "id": "Berminyak",
+            "ms": "Berminyak",
+            "tr": "Yağlı",
+            "mn": "Тослог"
+          }
+        },
+        {
+          "to": "rec-19",
+          "label": {
+            "kr": "복합성",
+            "en": "Combination",
+            "zh-Hans": "混合皮",
+            "ja": "混合肌",
+            "vi": "Da hỗn hợp",
+            "th": "ผิวผสม",
+            "ru": "Комбинированная",
+            "uz": "Aralash",
+            "fr": "Mixte",
+            "it": "Mista",
+            "es": "Mixta",
+            "id": "Kombinasi",
+            "ms": "Kombinasi",
+            "tr": "Karma",
+            "mn": "Холимог"
+          }
+        }
+      ]
     },
     {
       "id": "rec-5",
@@ -1110,7 +1196,7 @@
     },
     {
       "id": "rec-17",
-      "kr": "피부톤에 맞는 톤업 색을 선택하시면 도움이 됩니다 (노란 피부→보라색, 붉은기→초록색, 자연스러운 톤업→핑크색, 칙칙한 피부→블루).",
+      "kr": "피부톤에 맞는 톤업 색을 선택하시면 도움이 됩니다 (노란 피부→보라색, 붉은기→초록색, 자연스러운 톤업→핑크색, 칙칙한 피부→파란색).",
       "translations": {
         "en": "Choosing a tone-up shade that suits your skin tone helps (yellow tone→purple, redness→green, natural glow→pink, dull skin→blue).",
         "zh-Hans": "选择适合您肤色的提亮色号会更有帮助（偏黄→紫色，泛红→绿色，自然提亮→粉色，暗沉→蓝色）。",
@@ -1189,44 +1275,564 @@
       }
     },
     {
-      "id": "rec-21",
-      "kr": "가성비 있는 제품으로 추천드립니다.",
+      "kr": "건조하고 손상된 모발에 도움을 줍니다.",
       "translations": {
-        "en": "I recommend this as a cost-effective product.",
-        "zh-Hans": "我推荐这款性价比高的产品。",
-        "ja": "コスパの良い商品としておすすめします。",
-        "vi": "Tôi giới thiệu đây là sản phẩm có giá cả hợp lý, đáng đồng tiền.",
-        "th": "ขอแนะนำสินค้านี้เพราะคุ้มค่าคุ้มราคา.",
-        "ru": "Рекомендую этот товар как выгодный по цене и качеству.",
-        "uz": "Narxi va sifati mos keladigan mahsulot sifatida tavsiya qilaman.",
-        "fr": "Je vous recommande ce produit pour son excellent rapport qualité-prix.",
-        "it": "Le consiglio questo prodotto per il suo ottimo rapporto qualità-prezzo.",
-        "es": "Le recomiendo este producto por su buena relación calidad-precio.",
-        "id": "Saya rekomendasikan produk ini karena harganya sepadan dengan kualitasnya.",
-        "ms": "Saya cadangkan produk ini kerana nilainya berbaloi dengan harga.",
-        "tr": "Bunu fiyat performansı iyi bir ürün olarak öneririm.",
-        "mn": "Үнэ, чанарын харьцаа сайтай тул энэ бүтээгдэхүүнийг санал болгож байна."
-      }
+        "en": "It helps dry and damaged hair.",
+        "zh-Hans": "有助于干燥受损的发质。",
+        "ja": "乾燥してダメージを受けた髪に役立ちます。",
+        "vi": "Giúp ích cho tóc khô và hư tổn.",
+        "th": "ช่วยบำรุงผมแห้งเสีย.",
+        "ru": "Помогает сухим и повреждённым волосам.",
+        "uz": "Quruq va shikastlangan sochga foydali.",
+        "fr": "Il aide les cheveux secs et abîmés.",
+        "it": "Aiuta i capelli secchi e danneggiati.",
+        "es": "Ayuda al cabello seco y dañado.",
+        "id": "Membantu rambut kering dan rusak.",
+        "ms": "Membantu rambut kering dan rosak.",
+        "tr": "Kuru ve yıpranmış saçlara iyi gelir.",
+        "mn": "Хуурай, гэмтсэн үсэнд тустай."
+      },
+      "id": "rec-21"
     },
     {
-      "id": "rec-22",
-      "kr": "기획상품 구성으로 가성비 있는 제품입니다.",
+      "kr": "두피 쿨링 효과가 있습니다.",
       "translations": {
-        "en": "It's a specially curated set, so it's a cost-effective product.",
-        "zh-Hans": "这是特别企划套装，性价比很高。",
-        "ja": "企画商品セットなので、コスパの良い商品です。",
-        "vi": "Đây là sản phẩm theo bộ khuyến mãi đặc biệt nên rất đáng giá.",
-        "th": "เป็นสินค้าจัดชุดพิเศษ จึงคุ้มค่าคุ้มราคา.",
-        "ru": "Это специальный набор, поэтому товар выгодный по цене и качеству.",
-        "uz": "Bu maxsus tayyorlangan to'plam bo'lgani uchun narxi va sifati mos mahsulot.",
-        "fr": "C'est un coffret spécialement composé, donc un excellent rapport qualité-prix.",
-        "it": "È un set appositamente confezionato, quindi ha un ottimo rapporto qualità-prezzo.",
-        "es": "Es un set especialmente preparado, por lo que tiene muy buena relación calidad-precio.",
-        "id": "Ini adalah paket produk spesial, jadi harganya sangat sepadan.",
-        "ms": "Ini set produk istimewa, jadi nilainya sangat berbaloi.",
-        "tr": "Bu, özel hazırlanmış bir set olduğu için fiyat performansı yüksek bir üründür.",
-        "mn": "Энэ бол тусгайлан бүрдүүлсэн иж бүрдэл тул үнэ, чанарын харьцаа сайтай бүтээгдэхүүн юм."
-      }
+        "en": "It has a cooling effect on the scalp.",
+        "zh-Hans": "有头皮清凉效果。",
+        "ja": "頭皮のクーリング効果があります。",
+        "vi": "Có tác dụng làm mát da đầu.",
+        "th": "มีฤทธิ์เย็นช่วยหนังศีรษะ.",
+        "ru": "Обладает охлаждающим эффектом для кожи головы.",
+        "uz": "Bosh terisini salqinlashtirish ta'siri bor.",
+        "fr": "Il a un effet rafraîchissant sur le cuir chevelu.",
+        "it": "Ha un effetto rinfrescante sul cuoio capelluto.",
+        "es": "Tiene efecto refrescante en el cuero cabelludo.",
+        "id": "Memberi efek dingin pada kulit kepala.",
+        "ms": "Memberi kesan sejuk pada kulit kepala.",
+        "tr": "Saç derisinde serinletici etkisi vardır.",
+        "mn": "Толгойн арьсыг сэрүүцүүлэх нөлөөтэй."
+      },
+      "id": "rec-22"
+    },
+    {
+      "kr": "두피 각질과 비듬 관리에 좋습니다.",
+      "translations": {
+        "en": "It's good for scalp flakes and dandruff care.",
+        "zh-Hans": "有助于改善头皮角质和头皮屑。",
+        "ja": "頭皮の角質やフケのケアに良いです。",
+        "vi": "Tốt cho việc chăm sóc gàu và da chết trên da đầu.",
+        "th": "ดีต่อการดูแลรังแคและขุยบนหนังศีรษะ.",
+        "ru": "Подходит для ухода за перхотью и шелушением кожи головы.",
+        "uz": "Bosh terisidagi qavat va kepakni parvarish qilishga yaxshi.",
+        "fr": "Bon pour les pellicules et les squames du cuir chevelu.",
+        "it": "Ottimo per forfora e desquamazione del cuoio capelluto.",
+        "es": "Bueno para la caspa y descamación del cuero cabelludo.",
+        "id": "Bagus untuk merawat ketombe dan kulit mati di kepala.",
+        "ms": "Bagus untuk merawat kelemumur dan kulit mati kepala.",
+        "tr": "Saç derisindeki kepek ve pullanma için iyidir.",
+        "mn": "Толгойн арьсны хуушуур, тоосонцорт сайн."
+      },
+      "id": "rec-23"
+    },
+    {
+      "kr": "탈모 증상 완화에 도움을 주는 기능성 제품입니다.",
+      "translations": {
+        "en": "This is a functional product that helps relieve hair loss symptoms.",
+        "zh-Hans": "这是有助于缓解脱发症状的功能性产品。",
+        "ja": "抜け毛の症状緩和に役立つ機能性製品です。",
+        "vi": "Đây là sản phẩm chức năng giúp giảm triệu chứng rụng tóc.",
+        "th": "เป็นผลิตภัณฑ์เฉพาะที่ช่วยบรรเทาอาการผมร่วง.",
+        "ru": "Это функциональное средство, помогающее при выпадении волос.",
+        "uz": "Bu soch to'kilishini kamaytirishga yordam beruvchi funksional mahsulot.",
+        "fr": "C'est un produit fonctionnel qui aide à réduire la chute des cheveux.",
+        "it": "È un prodotto funzionale che aiuta contro la caduta dei capelli.",
+        "es": "Es un producto funcional que ayuda a reducir la caída del cabello.",
+        "id": "Ini produk fungsional yang membantu mengurangi kerontokan rambut.",
+        "ms": "Ini produk berfungsi membantu mengurangkan keguguran rambut.",
+        "tr": "Saç dökülmesini azaltmaya yardımcı fonksiyonel bir üründür.",
+        "mn": "Үс унахыг багасгахад тустай функциональ бүтээгдэхүүн."
+      },
+      "id": "rec-24"
+    },
+    {
+      "kr": "헹구지 않고 사용하는 제품입니다.",
+      "translations": {
+        "en": "This is a leave-in product, no rinsing needed.",
+        "zh-Hans": "这是免洗型产品，无需冲洗。",
+        "ja": "洗い流さずに使うタイプの製品です。",
+        "vi": "Đây là sản phẩm không cần xả lại.",
+        "th": "เป็นผลิตภัณฑ์แบบไม่ต้องล้างออก.",
+        "ru": "Это несмываемое средство.",
+        "uz": "Bu chayish shart bo'lmagan mahsulot.",
+        "fr": "C'est un produit sans rinçage.",
+        "it": "È un prodotto senza risciacquo.",
+        "es": "Es un producto sin aclarado.",
+        "id": "Ini produk tanpa bilas.",
+        "ms": "Ini produk tanpa bilas.",
+        "tr": "Bu, durulama gerektirmeyen bir üründür.",
+        "mn": "Энэ бол зайлах шаардлагагүй бүтээгдэхүүн."
+      },
+      "id": "rec-25"
+    },
+    {
+      "kr": "모발에 볼륨을 살려주는 제품입니다.",
+      "translations": {
+        "en": "This product adds volume to your hair.",
+        "zh-Hans": "这款产品能让头发更蓬松。",
+        "ja": "髪にボリュームを与える製品です。",
+        "vi": "Sản phẩm này giúp tóc bồng bềnh hơn.",
+        "th": "ผลิตภัณฑ์นี้ช่วยเพิ่มวอลลุ่มให้ผม.",
+        "ru": "Это средство придаёт волосам объём.",
+        "uz": "Bu mahsulot sochga hajm beradi.",
+        "fr": "Ce produit donne du volume aux cheveux.",
+        "it": "Questo prodotto dà volume ai capelli.",
+        "es": "Este producto da volumen al cabello.",
+        "id": "Produk ini menambah volume rambut.",
+        "ms": "Produk ini menambah volum rambut.",
+        "tr": "Bu ürün saça hacim kazandırır.",
+        "mn": "Энэ бүтээгдэхүүн үсэнд эзэлхүүн өгдөг."
+      },
+      "id": "rec-26"
+    },
+    {
+      "kr": "하루 1정(포) 섭취하시면 됩니다.",
+      "translations": {
+        "en": "Take one tablet (packet) per day.",
+        "zh-Hans": "每天服用1粒（包）即可。",
+        "ja": "1日1錠（包）お召し上がりください。",
+        "vi": "Mỗi ngày dùng 1 viên (gói).",
+        "th": "รับประทานวันละ 1 เม็ด (ซอง).",
+        "ru": "Принимайте по одной таблетке (пакетику) в день.",
+        "uz": "Kuniga 1 tabletka (paket) iste'mol qiling.",
+        "fr": "Prenez un comprimé (sachet) par jour.",
+        "it": "Assuma una compressa (bustina) al giorno.",
+        "es": "Tome una tableta (sobre) al día.",
+        "id": "Konsumsi 1 tablet (sachet) per hari.",
+        "ms": "Ambil 1 tablet (paket) sehari.",
+        "tr": "Günde bir tablet (poşet) alın.",
+        "mn": "Өдөрт 1 шахмал (уут) хэрэглэнэ."
+      },
+      "id": "rec-27"
+    },
+    {
+      "kr": "유산균 제품입니다.",
+      "translations": {
+        "en": "This is a probiotic product.",
+        "zh-Hans": "这是益生菌产品。",
+        "ja": "乳酸菌の製品です。",
+        "vi": "Đây là sản phẩm men vi sinh.",
+        "th": "เป็นผลิตภัณฑ์โพรไบโอติก.",
+        "ru": "Это пробиотик.",
+        "uz": "Bu probiotik mahsulot.",
+        "fr": "C'est un produit probiotique.",
+        "it": "È un prodotto probiotico.",
+        "es": "Es un producto probiótico.",
+        "id": "Ini produk probiotik.",
+        "ms": "Ini produk probiotik.",
+        "tr": "Bu bir probiyotik üründür.",
+        "mn": "Энэ бол пробиотик бүтээгдэхүүн."
+      },
+      "id": "rec-28"
+    },
+    {
+      "kr": "콜라겐 제품으로 피부에 도움을 줍니다.",
+      "translations": {
+        "en": "It's a collagen product that helps your skin.",
+        "zh-Hans": "这是有助于皮肤的胶原蛋白产品。",
+        "ja": "コラーゲン製品で肌に役立ちます。",
+        "vi": "Đây là sản phẩm collagen tốt cho da.",
+        "th": "เป็นผลิตภัณฑ์คอลลาเจนที่ดีต่อผิว.",
+        "ru": "Это коллагеновое средство, полезное для кожи.",
+        "uz": "Bu teriga foydali kollagen mahsuloti.",
+        "fr": "C'est un produit au collagène bénéfique pour la peau.",
+        "it": "È un prodotto al collagene utile per la pelle.",
+        "es": "Es un producto con colágeno que ayuda a la piel.",
+        "id": "Ini produk kolagen yang membantu kulit.",
+        "ms": "Ini produk kolagen yang membantu kulit.",
+        "tr": "Cilde iyi gelen bir kolajen ürünüdür.",
+        "mn": "Арьсанд тустай коллаген бүтээгдэхүүн."
+      },
+      "id": "rec-29"
+    },
+    {
+      "kr": "눈 건강에 도움을 주는 제품입니다.",
+      "translations": {
+        "en": "This product supports eye health.",
+        "zh-Hans": "这是有助于眼部健康的产品。",
+        "ja": "目の健康に役立つ製品です。",
+        "vi": "Sản phẩm này tốt cho sức khỏe mắt.",
+        "th": "ผลิตภัณฑ์นี้ช่วยบำรุงสุขภาพดวงตา.",
+        "ru": "Это средство полезно для здоровья глаз.",
+        "uz": "Bu mahsulot ko'z salomatligiga foydali.",
+        "fr": "Ce produit contribue à la santé des yeux.",
+        "it": "Questo prodotto favorisce la salute degli occhi.",
+        "es": "Este producto ayuda a la salud ocular.",
+        "id": "Produk ini membantu kesehatan mata.",
+        "ms": "Produk ini membantu kesihatan mata.",
+        "tr": "Bu ürün göz sağlığına destek olur.",
+        "mn": "Энэ бүтээгдэхүүн нүдний эрүүл мэндэд тустай."
+      },
+      "id": "rec-30"
+    },
+    {
+      "kr": "피로 회복에 도움을 줍니다.",
+      "translations": {
+        "en": "It helps with recovery from fatigue.",
+        "zh-Hans": "有助于缓解疲劳。",
+        "ja": "疲労回復に役立ちます。",
+        "vi": "Giúp phục hồi khi mệt mỏi.",
+        "th": "ช่วยฟื้นฟูความเหนื่อยล้า.",
+        "ru": "Помогает восстановиться при усталости.",
+        "uz": "Charchoqni bosishga yordam beradi.",
+        "fr": "Il aide à récupérer de la fatigue.",
+        "it": "Aiuta a recuperare dalla stanchezza.",
+        "es": "Ayuda a recuperarse del cansancio.",
+        "id": "Membantu pemulihan dari kelelahan.",
+        "ms": "Membantu pemulihan daripada keletihan.",
+        "tr": "Yorgunluğun atılmasına yardımcı olur.",
+        "mn": "Ядаргаа тайлахад тусалдаг."
+      },
+      "id": "rec-31"
+    },
+    {
+      "kr": "공복보다는 식후에 드시는 것이 좋습니다.",
+      "translations": {
+        "en": "It's better to take it after a meal rather than on an empty stomach.",
+        "zh-Hans": "建议饭后服用，而不是空腹服用。",
+        "ja": "空腹時よりも食後に召し上がるのがおすすめです。",
+        "vi": "Nên uống sau bữa ăn thay vì lúc đói.",
+        "th": "ควรรับประทานหลังอาหารมากกว่าตอนท้องว่าง.",
+        "ru": "Лучше принимать после еды, а не натощак.",
+        "uz": "Och qoringa emas, ovqatdan keyin ichgan ma'qul.",
+        "fr": "Il vaut mieux le prendre après un repas qu'à jeun.",
+        "it": "È meglio assumerlo dopo i pasti che a stomaco vuoto.",
+        "es": "Es mejor tomarlo después de comer que en ayunas.",
+        "id": "Sebaiknya diminum setelah makan, bukan saat perut kosong.",
+        "ms": "Elok diambil selepas makan, bukan ketika perut kosong.",
+        "tr": "Aç karnına değil, yemekten sonra alınması daha iyidir.",
+        "mn": "Хоосон ходоодоор биш, хоолны дараа хэрэглэвэл сайн."
+      },
+      "id": "rec-32"
+    },
+    {
+      "kr": "매트한 질감입니다.",
+      "translations": {
+        "en": "It has a matte finish.",
+        "zh-Hans": "是雾面质地。",
+        "ja": "マットな質感です。",
+        "vi": "Chất kem lì (matte).",
+        "th": "เนื้อสัมผัสแบบแมตต์.",
+        "ru": "Матовая текстура.",
+        "uz": "Mat teksturaga ega.",
+        "fr": "Il a un fini mat.",
+        "it": "Ha una finitura opaca.",
+        "es": "Tiene un acabado mate.",
+        "id": "Teksturnya matte.",
+        "ms": "Teksturnya matte.",
+        "tr": "Mat bir dokusu vardır.",
+        "mn": "Мат бүтэцтэй."
+      },
+      "id": "rec-33"
+    },
+    {
+      "kr": "촉촉하고 광택 있는 질감입니다.",
+      "translations": {
+        "en": "It has a moist, glossy finish.",
+        "zh-Hans": "是水润有光泽的质地。",
+        "ja": "しっとりとしたツヤのある質感です。",
+        "vi": "Chất kem ẩm mượt và bóng.",
+        "th": "เนื้อสัมผัสชุ่มชื้นและเงางาม.",
+        "ru": "Увлажняющая текстура с блеском.",
+        "uz": "Nam va yaltiroq teksturaga ega.",
+        "fr": "Il a un fini hydratant et brillant.",
+        "it": "Ha una finitura idratante e lucida.",
+        "es": "Tiene un acabado hidratante y brillante.",
+        "id": "Teksturnya lembap dan berkilau.",
+        "ms": "Teksturnya lembap dan berkilau.",
+        "tr": "Nemli ve parlak bir dokusu vardır.",
+        "mn": "Чийглэг, гялалзсан бүтэцтэй."
+      },
+      "id": "rec-34"
+    },
+    {
+      "kr": "지속력이 좋아 잘 지워지지 않습니다.",
+      "translations": {
+        "en": "It lasts well and doesn't come off easily.",
+        "zh-Hans": "持久度好，不易脱妆。",
+        "ja": "持ちが良く、落ちにくいです。",
+        "vi": "Độ bám tốt, không dễ trôi.",
+        "th": "ติดทนดี ไม่ลบง่าย.",
+        "ru": "Хорошо держится и не стирается.",
+        "uz": "Uzoq turadi va oson o'chmaydi.",
+        "fr": "Il tient bien et ne s'efface pas facilement.",
+        "it": "Ha una lunga tenuta e non si toglie facilmente.",
+        "es": "Tiene buena duración y no se quita fácilmente.",
+        "id": "Tahan lama dan tidak mudah luntur.",
+        "ms": "Tahan lama dan tidak mudah luntur.",
+        "tr": "Kalıcılığı iyidir, kolay çıkmaz.",
+        "mn": "Удаан тогтдог, амархан арилдаггүй."
+      },
+      "id": "rec-35"
+    },
+    {
+      "kr": "커버력이 높은 제품입니다.",
+      "translations": {
+        "en": "This product has high coverage.",
+        "zh-Hans": "这是遮瑕力强的产品。",
+        "ja": "カバー力が高い製品です。",
+        "vi": "Sản phẩm này có độ che phủ cao.",
+        "th": "ผลิตภัณฑ์นี้ปกปิดได้ดีมาก.",
+        "ru": "Это средство с высокой кроющей способностью.",
+        "uz": "Bu yuqori qoplash qobiliyatiga ega mahsulot.",
+        "fr": "Ce produit a une couvrance élevée.",
+        "it": "Questo prodotto ha un'alta coprenza.",
+        "es": "Este producto tiene alta cobertura.",
+        "id": "Produk ini punya daya tutup tinggi.",
+        "ms": "Produk ini mempunyai liputan tinggi.",
+        "tr": "Bu ürünün kapatıcılığı yüksektir.",
+        "mn": "Энэ бүтээгдэхүүн өндөр бүрхэх чадвартай."
+      },
+      "id": "rec-36"
+    },
+    {
+      "kr": "자연스러운 톤으로 데일리로 사용하기 좋습니다.",
+      "translations": {
+        "en": "The shade is natural, great for everyday use.",
+        "zh-Hans": "色调自然，适合日常使用。",
+        "ja": "自然な色味で普段使いに良いです。",
+        "vi": "Tông tự nhiên, rất hợp dùng hằng ngày.",
+        "th": "โทนสีธรรมชาติ เหมาะใช้ประจำวัน.",
+        "ru": "Естественный оттенок, отлично для повседневного использования.",
+        "uz": "Tabiiy rang, kundalik foydalanish uchun juda mos.",
+        "fr": "La teinte est naturelle, parfaite au quotidien.",
+        "it": "La tonalità è naturale, ottima per tutti i giorni.",
+        "es": "El tono es natural, ideal para el día a día.",
+        "id": "Warnanya natural, cocok untuk sehari-hari.",
+        "ms": "Warnanya semula jadi, sesuai untuk harian.",
+        "tr": "Doğal bir tonu var, günlük kullanım için ideal.",
+        "mn": "Байгалийн өнгөтэй, өдөр тутам хэрэглэхэд тохиромжтой."
+      },
+      "id": "rec-37"
+    },
+    {
+      "kr": "웜톤에 잘 어울립니다.",
+      "translations": {
+        "en": "It suits warm skin tones well.",
+        "zh-Hans": "很适合暖色调肌肤。",
+        "ja": "イエベ（ウォームトーン）によく似合います。",
+        "vi": "Rất hợp với tông da ấm.",
+        "th": "เข้ากับผิวโทนอุ่นได้ดี.",
+        "ru": "Хорошо подходит тёплому тону кожи.",
+        "uz": "Issiq teri toniga juda mos.",
+        "fr": "Il convient bien aux carnations chaudes.",
+        "it": "Sta bene sugli incarnati caldi.",
+        "es": "Favorece a los tonos de piel cálidos.",
+        "id": "Cocok untuk kulit undertone hangat.",
+        "ms": "Sesuai untuk kulit ton hangat.",
+        "tr": "Sıcak ten tonlarına çok yakışır.",
+        "mn": "Дулаан өнгөтэй арьсанд сайн зохидог."
+      },
+      "id": "rec-38"
+    },
+    {
+      "kr": "쿨톤에 잘 어울립니다.",
+      "translations": {
+        "en": "It suits cool skin tones well.",
+        "zh-Hans": "很适合冷色调肌肤。",
+        "ja": "ブルベ（クールトーン）によく似合います。",
+        "vi": "Rất hợp với tông da lạnh.",
+        "th": "เข้ากับผิวโทนเย็นได้ดี.",
+        "ru": "Хорошо подходит холодному тону кожи.",
+        "uz": "Sovuq teri toniga juda mos.",
+        "fr": "Il convient bien aux carnations froides.",
+        "it": "Sta bene sugli incarnati freddi.",
+        "es": "Favorece a los tonos de piel fríos.",
+        "id": "Cocok untuk kulit undertone dingin.",
+        "ms": "Sesuai untuk kulit ton sejuk.",
+        "tr": "Soğuk ten tonlarına çok yakışır.",
+        "mn": "Хүйтэн өнгөтэй арьсанд сайн зохидог."
+      },
+      "id": "rec-39"
+    },
+    {
+      "kr": "수분 공급에 집중된 제품입니다.",
+      "translations": {
+        "en": "This product focuses on hydration.",
+        "zh-Hans": "这是主打补水的产品。",
+        "ja": "保湿に特化した製品です。",
+        "vi": "Sản phẩm này tập trung cấp ẩm.",
+        "th": "ผลิตภัณฑ์นี้เน้นการเติมความชุ่มชื้น.",
+        "ru": "Это средство направлено на увлажнение.",
+        "uz": "Bu mahsulot namlantirishga qaratilgan.",
+        "fr": "Ce produit est axé sur l'hydratation.",
+        "it": "Questo prodotto è focalizzato sull'idratazione.",
+        "es": "Este producto se centra en la hidratación.",
+        "id": "Produk ini fokus pada pelembapan.",
+        "ms": "Produk ini fokus pada pelembapan.",
+        "tr": "Bu ürün nemlendirmeye odaklanır.",
+        "mn": "Энэ бүтээгдэхүүн чийгшүүлэхэд төвлөрсөн."
+      },
+      "id": "rec-40"
+    },
+    {
+      "kr": "진정 효과가 있습니다.",
+      "translations": {
+        "en": "It has a soothing effect.",
+        "zh-Hans": "有舒缓效果。",
+        "ja": "鎮静効果があります。",
+        "vi": "Có tác dụng làm dịu da.",
+        "th": "มีฤทธิ์ช่วยปลอบประโลมผิว.",
+        "ru": "Обладает успокаивающим действием.",
+        "uz": "Tinchlantiruvchi ta'sirga ega.",
+        "fr": "Il a un effet apaisant.",
+        "it": "Ha un effetto lenitivo.",
+        "es": "Tiene efecto calmante.",
+        "id": "Memiliki efek menenangkan.",
+        "ms": "Mempunyai kesan menenangkan.",
+        "tr": "Yatıştırıcı etkisi vardır.",
+        "mn": "Тайвшруулах нөлөөтэй."
+      },
+      "id": "rec-41"
+    },
+    {
+      "kr": "각질 제거에 도움을 줍니다.",
+      "translations": {
+        "en": "It helps remove dead skin cells.",
+        "zh-Hans": "有助于去除角质。",
+        "ja": "古い角質の除去に役立ちます。",
+        "vi": "Giúp loại bỏ tế bào chết.",
+        "th": "ช่วยผลัดเซลล์ผิวที่ตายแล้ว.",
+        "ru": "Помогает удалить омертвевшие клетки кожи.",
+        "uz": "O'lik teri hujayralarini ketkazishga yordam beradi.",
+        "fr": "Il aide à éliminer les cellules mortes.",
+        "it": "Aiuta a rimuovere le cellule morte.",
+        "es": "Ayuda a eliminar las células muertas.",
+        "id": "Membantu mengangkat sel kulit mati.",
+        "ms": "Membantu menanggalkan sel kulit mati.",
+        "tr": "Ölü derinin atılmasına yardımcı olur.",
+        "mn": "Үхсэн эсийг арилгахад тусалдаг."
+      },
+      "id": "rec-42"
+    },
+    {
+      "kr": "피부 탄력 개선에 도움을 줍니다.",
+      "translations": {
+        "en": "It helps improve skin elasticity.",
+        "zh-Hans": "有助于改善皮肤弹性。",
+        "ja": "肌のハリ改善に役立ちます。",
+        "vi": "Giúp cải thiện độ đàn hồi của da.",
+        "th": "ช่วยเพิ่มความยืดหยุ่นของผิว.",
+        "ru": "Помогает повысить упругость кожи.",
+        "uz": "Teri elastikligini yaxshilashga yordam beradi.",
+        "fr": "Il aide à améliorer l'élasticité de la peau.",
+        "it": "Aiuta a migliorare l'elasticità della pelle.",
+        "es": "Ayuda a mejorar la elasticidad de la piel.",
+        "id": "Membantu meningkatkan elastisitas kulit.",
+        "ms": "Membantu meningkatkan keanjalan kulit.",
+        "tr": "Cildin esnekliğini artırmaya yardımcı olur.",
+        "mn": "Арьсны уян хатан чанарыг сайжруулахад тусална."
+      },
+      "id": "rec-43"
+    },
+    {
+      "kr": "향이 강하지 않은 무향 제품입니다.",
+      "translations": {
+        "en": "This is a fragrance-free product with no strong scent.",
+        "zh-Hans": "这是无香型产品，气味不重。",
+        "ja": "香りの強くない無香料の製品です。",
+        "vi": "Đây là sản phẩm không mùi, hương không nồng.",
+        "th": "เป็นผลิตภัณฑ์ไร้น้ำหอม กลิ่นไม่แรง.",
+        "ru": "Это средство без отдушек, без резкого запаха.",
+        "uz": "Bu hidsiz, kuchli hidi yo'q mahsulot.",
+        "fr": "C'est un produit sans parfum, sans odeur forte.",
+        "it": "È un prodotto senza profumo, senza odori forti.",
+        "es": "Es un producto sin fragancia, sin olor fuerte.",
+        "id": "Ini produk tanpa pewangi, tidak beraroma kuat.",
+        "ms": "Ini produk tanpa wangian, tiada bau kuat.",
+        "tr": "Bu, güçlü kokusu olmayan parfümsüz bir üründür.",
+        "mn": "Хүчтэй үнэргүй, үнэргүй бүтээгдэхүүн."
+      },
+      "id": "rec-44"
+    },
+    {
+      "kr": "비건 제품입니다.",
+      "translations": {
+        "en": "This is a vegan product.",
+        "zh-Hans": "这是纯素产品。",
+        "ja": "ヴィーガン製品です。",
+        "vi": "Đây là sản phẩm thuần chay.",
+        "th": "เป็นผลิตภัณฑ์วีแกน.",
+        "ru": "Это веганский продукт.",
+        "uz": "Bu vegan mahsulot.",
+        "fr": "C'est un produit vegan.",
+        "it": "È un prodotto vegano.",
+        "es": "Es un producto vegano.",
+        "id": "Ini produk vegan.",
+        "ms": "Ini produk vegan.",
+        "tr": "Bu bir vegan üründür.",
+        "mn": "Энэ бол веган бүтээгдэхүүн."
+      },
+      "id": "rec-45"
+    },
+    {
+      "kr": "임산부도 사용 가능한 제품입니다.",
+      "translations": {
+        "en": "This product can also be used during pregnancy.",
+        "zh-Hans": "孕妇也可以使用。",
+        "ja": "妊娠中の方もお使いいただける製品です。",
+        "vi": "Phụ nữ mang thai cũng dùng được.",
+        "th": "สตรีมีครรภ์ก็ใช้ได้.",
+        "ru": "Средство подходит и беременным.",
+        "uz": "Homilador ayollar ham ishlatishi mumkin.",
+        "fr": "Ce produit convient aussi aux femmes enceintes.",
+        "it": "Questo prodotto è adatto anche in gravidanza.",
+        "es": "Este producto también pueden usarlo las embarazadas.",
+        "id": "Produk ini juga aman untuk ibu hamil.",
+        "ms": "Produk ini juga sesuai untuk wanita hamil.",
+        "tr": "Bu ürün hamilelikte de kullanılabilir.",
+        "mn": "Жирэмсэн үед ч хэрэглэж болно."
+      },
+      "id": "rec-46"
+    },
+    {
+      "kr": "세안 후 가장 먼저 사용하시면 됩니다.",
+      "translations": {
+        "en": "Use it first, right after cleansing.",
+        "zh-Hans": "洁面后最先使用即可。",
+        "ja": "洗顔後、一番最初にお使いください。",
+        "vi": "Dùng đầu tiên ngay sau khi rửa mặt.",
+        "th": "ใช้เป็นขั้นแรกหลังล้างหน้า.",
+        "ru": "Используйте первым сразу после умывания.",
+        "uz": "Yuz yuvgandan keyin eng birinchi ishlating.",
+        "fr": "À utiliser en premier, juste après le nettoyage.",
+        "it": "Da usare per primo, subito dopo la detersione.",
+        "es": "Úselo primero, justo después de la limpieza.",
+        "id": "Gunakan paling awal, setelah cuci muka.",
+        "ms": "Guna paling awal, selepas mencuci muka.",
+        "tr": "Yüz temizliğinden hemen sonra ilk olarak kullanın.",
+        "mn": "Нүүрээ угаасны дараа хамгийн түрүүнд хэрэглэнэ."
+      },
+      "id": "rec-47"
+    },
+    {
+      "kr": "아침저녁 모두 사용 가능합니다.",
+      "translations": {
+        "en": "You can use it both morning and night.",
+        "zh-Hans": "早晚都可以使用。",
+        "ja": "朝晩どちらもお使いいただけます。",
+        "vi": "Có thể dùng cả sáng và tối.",
+        "th": "ใช้ได้ทั้งเช้าและเย็น.",
+        "ru": "Можно использовать утром и вечером.",
+        "uz": "Ertalab ham, kechqurun ham ishlatsa bo'ladi.",
+        "fr": "Vous pouvez l'utiliser matin et soir.",
+        "it": "Si può usare mattina e sera.",
+        "es": "Se puede usar por la mañana y por la noche.",
+        "id": "Bisa dipakai pagi dan malam.",
+        "ms": "Boleh digunakan pagi dan malam.",
+        "tr": "Sabah ve akşam kullanabilirsiniz.",
+        "mn": "Өглөө орой хоёуланд нь хэрэглэж болно."
+      },
+      "id": "rec-48"
     }
   ],
   "etc": [
