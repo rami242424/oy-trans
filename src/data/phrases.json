@@ -18,7 +18,15 @@
         "ms": "Adakah anda perlukan beg beli-belah? (berbayar).",
         "tr": "Alışveriş poşeti ister misiniz? (ücretlidir).",
         "mn": "Худалдааны уут хэрэгтэй юу? (төлбөртэй)."
-      }
+      },
+      "next": [
+        {
+          "to": "pay-2",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "pay-2",
@@ -300,7 +308,15 @@
         "ms": "Pembelian 15,000 won ke atas layak pulangan cukai. Ada lagi yang anda perlukan?",
         "tr": "15.000 won ve üzeri alışverişte vergi iadesi mümkün. Başka bir ihtiyacınız var mı?",
         "mn": "15,000 воноос дээш худалдан авалтад татварын буцаалт боломжтой. Өөр хэрэгтэй зүйл байна уу?"
-      }
+      },
+      "next": [
+        {
+          "to": "tax-7",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "tax-3",
@@ -822,7 +838,15 @@
         "ms": "Mahu lihat produk yang serupa?",
         "tr": "Benzer bir ürün görmek ister misiniz?",
         "mn": "Төстэй бүтээгдэхүүн үзэх үү?"
-      }
+      },
+      "next": [
+        {
+          "to": "rec-4",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "rec-2",
@@ -992,7 +1016,15 @@
         "ms": "Bagus untuk kulit kering.",
         "tr": "Kuru ciltler için iyidir.",
         "mn": "Хуурай арьсанд сайн."
-      }
+      },
+      "next": [
+        {
+          "to": "rec-5",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "rec-7",
@@ -1012,7 +1044,15 @@
         "ms": "Bagus untuk kulit berminyak.",
         "tr": "Yağlı ciltler için iyidir.",
         "mn": "Тослог арьсанд сайн."
-      }
+      },
+      "next": [
+        {
+          "to": "rec-5",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "rec-8",
@@ -1252,7 +1292,15 @@
         "ms": "Bagus untuk kulit kombinasi.",
         "tr": "Karma ciltler için iyidir.",
         "mn": "Холимог арьсанд сайн."
-      }
+      },
+      "next": [
+        {
+          "to": "rec-5",
+          "label": {
+            "kr": "다음 →"
+          }
+        }
+      ]
     },
     {
       "id": "rec-20",
