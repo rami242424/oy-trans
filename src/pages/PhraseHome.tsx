@@ -1,6 +1,6 @@
 import type { Category, Langs, Phrase } from "../App";
-import { LANGS } from "../data/langs";
 import phrases from "../data/phrases.json";
+import { LANGS } from "../data/langs";
 
 interface IPhraseHomeProps {
   language: Langs;
@@ -10,6 +10,7 @@ interface IPhraseHomeProps {
   search: string;
   setSearch: (e: string) => void;
   resetToLang: () => void;
+  recentIds: string[];
 }
 
 const CATEGORIES: { value: Category; icon: string; label: string }[] = [
@@ -21,6 +22,9 @@ const CATEGORIES: { value: Category; icon: string; label: string }[] = [
   { value: "etc", icon: "💬", label: "기타" },
 ];
 
+const allPhrases = Object.values(phrases).flat() as Phrase[];
+const findPhrase = (id: string) => allPhrases.find((p) => p.id === id);
+
 function PhraseHome({
   language,
   nextToCustomerDisplay,
@@ -29,26 +33,29 @@ function PhraseHome({
   search,
   setSearch,
   resetToLang,
+  recentIds,
 }: IPhraseHomeProps) {
   if (language === null) return null;
 
+  const currentLang = LANGS.find((l) => l.code === language);
+
   const visiblePhrases =
     search === ""
-      ? phrases[category]
-      : Object.values(phrases)
-          .flat()
-          .filter((data) => data.kr.includes(search));
+      ? (phrases[category] as Phrase[])
+      : allPhrases.filter((data) => data.kr.includes(search));
 
   const currentLabel =
     search === ""
       ? CATEGORIES.find((c) => c.value === category)?.label
       : `검색 결과 ${visiblePhrases.length}건`;
 
-  const currentLang = LANGS.find((l) => l.code === language);
+  const recentPhrases = recentIds
+    .map((id) => findPhrase(id))
+    .filter((p): p is Phrase => p !== undefined);
 
   return (
     <div className="min-h-screen bg-[#FBFAF6] px-5 pt-5 pb-24">
-      {/* ── 상단바 ── */}
+      {/* 상단바 */}
       <div className="flex items-center gap-3 mb-4">
         <button
           onClick={resetToLang}
@@ -62,12 +69,12 @@ function PhraseHome({
             탭하면 고객 화면으로 크게 표시됩니다
           </div>
         </div>
-        <span className="bg-[#4C5940] text-white text-[12.5px] font-bold px-3 py-2 rounded-xl uppercase">
-          {language} {currentLang?.kr}
+        <span className="bg-[#4C5940] text-white text-[12.5px] font-bold px-3 py-2 rounded-xl whitespace-nowrap">
+          {currentLang?.badge} · {currentLang?.label}
         </span>
       </div>
 
-      {/* ── 검색창 ── */}
+      {/* 검색창 */}
       <div className="flex items-center gap-2.5 bg-white border-[1.5px] border-[#DCE2CF] rounded-[14px] px-4 py-3 mb-3 focus-within:border-[#6B7A55] transition">
         <span className="text-[#A3A695]">🔍</span>
         <input
@@ -83,7 +90,27 @@ function PhraseHome({
         )}
       </div>
 
-      {/* ── 카테고리 ── */}
+      {/* 최근 사용 문구 */}
+      {recentPhrases.length > 0 && (
+        <div className="mb-3">
+          <div className="text-[11px] font-extrabold text-[#A3A695] tracking-widest uppercase mb-1.5">
+            최근 사용
+          </div>
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {recentPhrases.map((p) => (
+              <button
+                key={p.id}
+                onClick={() => nextToCustomerDisplay(p)}
+                className="flex-shrink-0 max-w-[150px] truncate px-3 py-2 rounded-xl bg-[#EDF0E6] border-[1.5px] border-[#DCE2CF] text-[12px] font-semibold text-[#4C5940] whitespace-nowrap active:scale-95 transition"
+              >
+                {p.kr}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 카테고리 */}
       <div className="grid grid-cols-3 gap-2 mb-4">
         {CATEGORIES.map((c) => (
           <button
@@ -101,7 +128,7 @@ function PhraseHome({
         ))}
       </div>
 
-      {/* ── 문구 목록 ── */}
+      {/* 문구 목록 */}
       <div className="text-[11px] font-extrabold text-[#A3A695] tracking-widest uppercase mb-2">
         {currentLabel}
       </div>
