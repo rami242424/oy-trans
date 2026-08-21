@@ -41,6 +41,8 @@ function App() {
   const [search, setSearch] = useState("");
   const [recentIds, setRecentIds] = useState<string[]>(() => loadIds(RECENT_KEY));
   const [favoriteIds, setFavoriteIds] = useState<string[]>(() => loadIds(FAVORITE_KEY));
+  // 고객 화면에서 나갈 때 돌아갈 곳
+  const [displayFrom, setDisplayFrom] = useState<Screen>("phrases");
 
   const nextPageWithLangs = (lang: Langs) => {
     setLanguage(lang);
@@ -49,6 +51,7 @@ function App() {
 
   const nextToCustomerDisplay = (phrase: Phrase) => {
     setSelectedPhrase(phrase);
+    setDisplayFrom("phrases");
     setScreen("display");
     setRecentIds((prev) => {
       const next = [phrase.id, ...prev.filter((id) => id !== phrase.id)].slice(0, 4);
@@ -57,10 +60,28 @@ function App() {
     });
   };
 
-  // 직접 입력 번역 결과 — 최근 목록에 남기지 않음
   const showCustomPhrase = (phrase: Phrase) => {
     setSelectedPhrase(phrase);
+    setDisplayFrom("input");
     setScreen("display");
+  };
+
+  const closeDisplay = () => {
+    setScreen(displayFrom);
+    setSelectedPhrase(null);
+  };
+
+  const removeRecent = (id: string) => {
+    setRecentIds((prev) => {
+      const next = prev.filter((recentId) => recentId !== id);
+      localStorage.setItem(RECENT_KEY, JSON.stringify(next));
+      return next;
+    });
+  };
+
+  const clearRecent = () => {
+    setRecentIds([]);
+    localStorage.setItem(RECENT_KEY, JSON.stringify([]));
   };
 
   const toggleFavorite = (id: string) => {
@@ -83,8 +104,13 @@ function App() {
     setCategory("payment");
     setLanguage(null);
     setSelectedPhrase(null);
+    setDisplayFrom("phrases");
     setScreen("lang");
   };
+
+  // 번역 화면은 고객 화면이 덮고 있을 때도 유지 (입력 내용 보존)
+  const keepFreeInputMounted =
+    screen === "input" || (screen === "display" && displayFrom === "input");
 
   return (
     <>
@@ -99,12 +125,14 @@ function App() {
           setSearch={setSearch}
           resetToLang={resetToLang}
           recentIds={recentIds}
+          removeRecent={removeRecent}
+          clearRecent={clearRecent}
           favoriteIds={favoriteIds}
           toggleFavorite={toggleFavorite}
           goToFreeInput={goToFreeInput}
         />
       )}
-      {screen === "input" && (
+      {keepFreeInputMounted && (
         <FreeInput
           language={language}
           backToPhrases={backToPhrases}
@@ -115,7 +143,7 @@ function App() {
         <CustomerDisplay
           language={language}
           selectedPhrase={selectedPhrase}
-          backToPhrases={backToPhrases}
+          closeDisplay={closeDisplay}
           nextToCustomerDisplay={nextToCustomerDisplay}
           favoriteIds={favoriteIds}
           toggleFavorite={toggleFavorite}

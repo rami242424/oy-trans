@@ -11,6 +11,8 @@ interface IPhraseHomeProps {
   setSearch: (e: string) => void;
   resetToLang: () => void;
   recentIds: string[];
+  removeRecent: (id: string) => void;
+  clearRecent: () => void;
   favoriteIds: string[];
   toggleFavorite: (id: string) => void;
   goToFreeInput: () => void;
@@ -52,6 +54,8 @@ function PhraseHome({
   setSearch,
   resetToLang,
   recentIds,
+  removeRecent,
+  clearRecent,
   favoriteIds,
   toggleFavorite,
   goToFreeInput,
@@ -87,9 +91,13 @@ function PhraseHome({
           <span className="flex items-center gap-1.5">
             <button
               onClick={goToFreeInput}
-              className="text-[11.5px] font-extrabold text-white bg-[#191B17] px-3 py-1.5 rounded-full transition-transform active:scale-95"
+              className="flex items-center gap-1 text-[11.5px] font-extrabold text-[#16250B] bg-[#8ED320] pl-2.5 pr-3 py-1.5 rounded-full transition-transform active:scale-95 shadow-[0_2px_8px_rgba(142,211,32,0.4)]"
             >
-              직접 입력
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                <path d="M4 5h9M8.5 5v2.5c0 3.5-2 6-4.5 7.5M6 10.5c1.5 2.5 3.5 4 6 4.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M13.5 20l4-10 4 10M15 17h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              번역하기
             </button>
             <span className="text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
               {currentLang?.badge}
@@ -120,26 +128,47 @@ function PhraseHome({
       </div>
 
       <div className="px-5 pb-24">
+        {/* 최근 사용 */}
         {recentPhrases.length > 0 && (
           <div className="pt-4">
-            <div className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase mb-2">
-              최근 사용
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase">
+                최근 사용
+              </span>
+              <button
+                onClick={clearRecent}
+                className="text-[11px] font-bold text-[#A9ACA1] px-1 transition-opacity active:opacity-50"
+              >
+                전체 삭제
+              </button>
             </div>
             <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
               {recentPhrases.map((p, i) => (
-                <button
+                <span
                   key={p.id}
                   style={{ animationDelay: `${i * 35}ms` }}
-                  onClick={() => nextToCustomerDisplay(p)}
-                  className="a-chip flex-shrink-0 max-w-[160px] truncate px-3 py-[7px] rounded-full bg-[#F2F4EC] text-[12px] font-semibold text-[#3E4636] whitespace-nowrap transition-transform duration-150 active:scale-95"
+                  className="a-chip flex-shrink-0 flex items-center gap-1 pl-3 pr-1.5 py-[6px] rounded-full bg-[#F2F4EC]"
                 >
-                  {p.kr}
-                </button>
+                  <button
+                    onClick={() => nextToCustomerDisplay(p)}
+                    className="max-w-[150px] truncate text-[12px] font-semibold text-[#3E4636] whitespace-nowrap transition-opacity active:opacity-50"
+                  >
+                    {p.kr}
+                  </button>
+                  <button
+                    onClick={() => removeRecent(p.id)}
+                    aria-label="최근 사용에서 삭제"
+                    className="w-[17px] h-[17px] flex-shrink-0 flex items-center justify-center rounded-full bg-[#D9DCD2] text-white text-[9px] transition-transform active:scale-75"
+                  >
+                    ✕
+                  </button>
+                </span>
               ))}
             </div>
           </div>
         )}
 
+        {/* 카테고리 */}
         <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 pt-4 pb-1 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
           {CATEGORIES.map((c) => (
             <button

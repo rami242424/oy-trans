@@ -8,7 +8,6 @@ interface IFreeInputProps {
   showCustomPhrase: (phrase: Phrase) => void;
 }
 
-// 우리 언어 코드 → MyMemory API 코드
 const API_CODE: Record<string, string> = {
   en: "en", "zh-Hans": "zh-CN", ja: "ja", vi: "vi", th: "th", ru: "ru",
   uz: "uz", fr: "fr", it: "it", es: "es", id: "id", ms: "ms", tr: "tr", mn: "mn",
@@ -59,23 +58,41 @@ function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProp
     });
   };
 
+  const clearAll = () => {
+    setText("");
+    setResult("");
+    setError("");
+  };
+
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-2xl mx-auto px-5 pt-4 pb-24">
-      <div className="flex items-center justify-between mb-5">
+      {/* 헤더 */}
+      <div className="relative flex items-center justify-center mb-6 h-11">
         <button
           onClick={backToPhrases}
-          className="flex items-center gap-1.5 text-[13px] font-bold text-[#191B17] transition-opacity active:opacity-50"
+          aria-label="뒤로"
+          className="absolute left-0 w-11 h-11 flex items-center justify-center rounded-full bg-[#F5F6F2] text-[#191B17] text-[20px] transition-transform active:scale-90"
         >
-          <span className="text-[16px] leading-none">←</span>
-          <span className="font-black tracking-tight">직접 입력</span>
+          ←
         </button>
-        <span className="text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
+        <span className="text-[15.5px] font-extrabold text-[#191B17]">번역하기</span>
+        <span className="absolute right-0 text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
           {currentLang?.badge}
         </span>
       </div>
 
-      <div className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase mb-2">
-        한국어 입력
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase">
+          한국어 입력
+        </span>
+        {text !== "" && (
+          <button
+            onClick={clearAll}
+            className="text-[11px] font-bold text-[#A9ACA1] px-1 transition-opacity active:opacity-50"
+          >
+            지우기
+          </button>
+        )}
       </div>
       <textarea
         value={text}
@@ -109,7 +126,7 @@ function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProp
           </div>
           <button
             onClick={showToCustomer}
-            className="w-full mt-3 py-3.5 rounded-xl bg-[#8DC72E] text-[#16250B] text-[15px] font-extrabold transition-all duration-150 active:scale-[0.98]"
+            className="w-full mt-3 py-3.5 rounded-xl bg-[#8ED320] text-[#16250B] text-[15px] font-extrabold transition-all duration-150 active:scale-[0.98] shadow-[0_4px_14px_rgba(142,211,32,0.35)]"
           >
             고객에게 크게 보여주기
           </button>
