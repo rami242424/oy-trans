@@ -118,6 +118,7 @@ function App() {
       {screen === "phrases" && (
         <PhraseHome
           language={language}
+          setLanguage={setLanguage}
           nextToCustomerDisplay={nextToCustomerDisplay}
           category={category}
           setCategory={setCategory}
