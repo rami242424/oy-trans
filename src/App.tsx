@@ -4,7 +4,14 @@ import PhraseHome from "./pages/PhraseHome";
 import CustomerDisplay from "./pages/CustomerDisplay";
 
 export type Screen = "lang" | "phrases" | "display" | "input" | "map";
-export type Category = "payment" | "tax-refund" | "exchange-carryIn" | "stock" | "recommendation" | "etc";
+export type Category =
+  | "favorite"
+  | "payment"
+  | "tax-refund"
+  | "exchange-carryIn"
+  | "stock"
+  | "recommendation"
+  | "etc";
 export type Langs = "en" | "zh-Hans" | "ja" | "vi" | "th" | "ru" | "uz" | "fr" | "it" | "es" | "id" | "ms" | "tr" | "mn" | null;
 export interface Phrase {
   id: string;
@@ -19,9 +26,11 @@ export interface Phrase {
 }
 
 const RECENT_KEY = "oy-trans-recent";
-const loadRecent = (): string[] => {
+const FAVORITE_KEY = "oy-trans-favorites";
+
+const loadIds = (key: string): string[] => {
   try {
-    const saved = localStorage.getItem(RECENT_KEY);
+    const saved = localStorage.getItem(key);
     return saved ? JSON.parse(saved) : [];
   } catch {
     return [];
@@ -34,7 +43,8 @@ function App() {
   const [selectedPhrase, setSelectedPhrase] = useState<Phrase | null>(null);
   const [category, setCategory] = useState<Category>("payment");
   const [search, setSearch] = useState("");
-  const [recentIds, setRecentIds] = useState<string[]>(loadRecent);
+  const [recentIds, setRecentIds] = useState<string[]>(() => loadIds(RECENT_KEY));
+  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => loadIds(FAVORITE_KEY));
 
   const nextPageWithLangs = (lang: Langs) => {
     setLanguage(lang);
@@ -47,6 +57,16 @@ function App() {
     setRecentIds((prev) => {
       const next = [phrase.id, ...prev.filter((id) => id !== phrase.id)].slice(0, 4);
       localStorage.setItem(RECENT_KEY, JSON.stringify(next));
+      return next;
+    });
+  };
+
+  const toggleFavorite = (id: string) => {
+    setFavoriteIds((prev) => {
+      const next = prev.includes(id)
+        ? prev.filter((favId) => favId !== id)
+        : [...prev, id];
+      localStorage.setItem(FAVORITE_KEY, JSON.stringify(next));
       return next;
     });
   };
@@ -77,6 +97,8 @@ function App() {
           setSearch={setSearch}
           resetToLang={resetToLang}
           recentIds={recentIds}
+          favoriteIds={favoriteIds}
+          toggleFavorite={toggleFavorite}
         />
       )}
       {screen === "display" && (
@@ -85,6 +107,8 @@ function App() {
           selectedPhrase={selectedPhrase}
           backToPhrases={backToPhrases}
           nextToCustomerDisplay={nextToCustomerDisplay}
+          favoriteIds={favoriteIds}
+          toggleFavorite={toggleFavorite}
         />
       )}
     </>

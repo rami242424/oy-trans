@@ -11,9 +11,12 @@ interface IPhraseHomeProps {
   setSearch: (e: string) => void;
   resetToLang: () => void;
   recentIds: string[];
+  favoriteIds: string[];
+  toggleFavorite: (id: string) => void;
 }
 
 const CATEGORIES: { value: Category; label: string }[] = [
+  { value: "favorite", label: "★ 즐겨찾기" },
   { value: "payment", label: "결제" },
   { value: "tax-refund", label: "택스리펀" },
   { value: "exchange-carryIn", label: "교환·수하물" },
@@ -25,6 +28,20 @@ const CATEGORIES: { value: Category; label: string }[] = [
 const allPhrases = Object.values(phrases).flat() as Phrase[];
 const findPhrase = (id: string) => allPhrases.find((p) => p.id === id);
 
+function StarIcon({ filled }: { filled: boolean }) {
+  return (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M12 3.6l2.6 5.3 5.8.85-4.2 4.1.99 5.8L12 16.9l-5.2 2.75.99-5.8-4.2-4.1 5.8-.85L12 3.6z"
+        fill={filled ? "#F5B301" : "none"}
+        stroke={filled ? "#F5B301" : "#C9CDBF"}
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function PhraseHome({
   language,
   nextToCustomerDisplay,
@@ -34,15 +51,21 @@ function PhraseHome({
   setSearch,
   resetToLang,
   recentIds,
+  favoriteIds,
+  toggleFavorite,
 }: IPhraseHomeProps) {
   if (language === null) return null;
 
   const currentLang = LANGS.find((l) => l.code === language);
 
-  const visiblePhrases =
-    search === ""
-      ? (phrases[category] as Phrase[])
-      : allPhrases.filter((data) => data.kr.includes(search));
+  const visiblePhrases: Phrase[] =
+    search !== ""
+      ? allPhrases.filter((data) => data.kr.includes(search))
+      : category === "favorite"
+      ? favoriteIds
+          .map((id) => findPhrase(id))
+          .filter((p): p is Phrase => p !== undefined)
+      : (phrases[category] as Phrase[]);
 
   const currentLabel =
     search === ""
@@ -115,7 +138,7 @@ function PhraseHome({
           </div>
         )}
 
-        {/* 카테고리 — 모바일: 가로 스크롤 / 데스크톱: 줄바꿈 */}
+        {/* 카테고리 */}
         <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 pt-4 pb-1 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
           {CATEGORIES.map((c) => (
             <button
@@ -142,27 +165,43 @@ function PhraseHome({
           )}
         </div>
 
-        {/* 문구 리스트 — 구분선 강화 */}
+        {/* 문구 리스트 */}
         <div key={category + search}>
+          {visiblePhrases.length === 0 && category === "favorite" && search === "" && (
+            <div className="py-14 text-center">
+              <div className="text-[13.5px] font-semibold text-[#8A8D83] leading-relaxed">
+                아직 즐겨찾기한 문구가 없어요
+                <br />
+                자주 쓰는 문구의 별을 눌러 추가해 보세요
+              </div>
+            </div>
+          )}
+
           {visiblePhrases.map((data, i) => (
-            <button
+            <div
               key={data.id}
               style={{ animationDelay: `${Math.min(i, 8) * 28}ms` }}
-              onClick={() => nextToCustomerDisplay(data)}
-              className="a-item w-full py-[15px] text-left border-b border-[#E9EBE1] transition-colors duration-150 active:bg-[#F7F8F5]"
+              className="a-item flex items-start gap-2 border-b border-[#E9EBE1]"
             >
-              <span className="flex items-start justify-between gap-3">
-                <span className="min-w-0">
-                  <span className="block text-[15.5px] font-bold text-[#191B17] leading-[1.4]">
-                    {data.translations[language]}
-                  </span>
-                  <span className="block text-[12.5px] text-[#8A8D83] mt-[5px] leading-relaxed">
-                    {data.kr}
-                  </span>
+              <button
+                onClick={() => nextToCustomerDisplay(data)}
+                className="flex-1 min-w-0 py-[15px] text-left transition-colors duration-150 active:bg-[#F7F8F5]"
+              >
+                <span className="block text-[15.5px] font-bold text-[#191B17] leading-[1.4]">
+                  {data.translations[language]}
                 </span>
-                <span className="flex-shrink-0 mt-1 text-[#C9CDBF] text-[13px]">›</span>
-              </span>
-            </button>
+                <span className="block text-[12.5px] text-[#8A8D83] mt-[5px] leading-relaxed">
+                  {data.kr}
+                </span>
+              </button>
+              <button
+                onClick={() => toggleFavorite(data.id)}
+                aria-label="즐겨찾기"
+                className="flex-shrink-0 mt-[15px] p-1.5 transition-transform duration-150 active:scale-75"
+              >
+                <StarIcon filled={favoriteIds.includes(data.id)} />
+              </button>
+            </div>
           ))}
         </div>
       </div>

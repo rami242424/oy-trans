@@ -6,12 +6,13 @@ interface ICustomerDisplayProps {
   selectedPhrase: Phrase | null;
   backToPhrases: () => void;
   nextToCustomerDisplay: (phrase: Phrase) => void;
+  favoriteIds: string[];
+  toggleFavorite: (id: string) => void;
 }
 
 const allPhrases = Object.values(phrases).flat() as Phrase[];
 const findPhrase = (id: string) => allPhrases.find((p) => p.id === id);
 
-// 괄호 구간을 새 줄로 분리 (뒤따르는 구두점은 괄호에 붙여서 고아 방지)
 const renderWithParens = (text: string) => {
   const parts = text
     .split(/((?:\([^)]*\)|（[^）]*）)[.。!?！？]?)/g)
@@ -32,8 +33,12 @@ function CustomerDisplay({
   language,
   backToPhrases,
   nextToCustomerDisplay,
+  favoriteIds,
+  toggleFavorite,
 }: ICustomerDisplayProps) {
   if (!selectedPhrase || !language) return null;
+
+  const isFavorite = favoriteIds.includes(selectedPhrase.id);
 
   return (
     <div
@@ -50,21 +55,40 @@ function CustomerDisplay({
             {language}
           </span>
         </span>
-        <button
-          onClick={backToPhrases}
-          className="w-9 h-9 flex items-center justify-center rounded-full bg-[#16250B]/10 text-[#16250B]/70 text-[15px] transition-all duration-150 active:scale-90 active:bg-[#16250B]/20"
-        >
-          ✕
-        </button>
+
+        <span className="flex items-center gap-1.5">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleFavorite(selectedPhrase.id);
+            }}
+            aria-label="즐겨찾기"
+            className="w-9 h-9 flex items-center justify-center rounded-full transition-all duration-150 active:scale-90 active:bg-[#16250B]/15"
+          >
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 3.6l2.6 5.3 5.8.85-4.2 4.1.99 5.8L12 16.9l-5.2 2.75.99-5.8-4.2-4.1 5.8-.85L12 3.6z"
+                fill={isFavorite ? "#FFFFFF" : "none"}
+                stroke={isFavorite ? "#FFFFFF" : "rgba(22,37,11,0.35)"}
+                strokeWidth="1.7"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={backToPhrases}
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-[#16250B]/10 text-[#16250B]/70 text-[15px] transition-all duration-150 active:scale-90 active:bg-[#16250B]/20"
+          >
+            ✕
+          </button>
+        </span>
       </div>
 
       <div
         key={selectedPhrase.id}
         className="flex-1 min-h-0 w-full flex flex-col items-center justify-center px-6 text-center overflow-y-auto"
       >
-        <h2
-          className="a-item w-full max-w-[640px] text-[clamp(23px,6vw,34px)] font-black leading-[1.4] tracking-[-0.02em] text-white [text-wrap:balance] [overflow-wrap:break-word] [text-shadow:0_1px_2px_rgba(22,37,11,0.12)]"
-        >
+        <h2 className="a-item w-full max-w-[640px] text-[clamp(23px,6vw,34px)] font-black leading-[1.4] tracking-[-0.02em] text-white [text-wrap:balance] [overflow-wrap:break-word] [text-shadow:0_1px_2px_rgba(22,37,11,0.12)]">
           {renderWithParens(selectedPhrase.translations[language])}
         </h2>
 
