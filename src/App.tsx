@@ -2,16 +2,12 @@ import { useState } from "react";
 import LanguageSelect from "./pages/LanguageSelect";
 import PhraseHome from "./pages/PhraseHome";
 import CustomerDisplay from "./pages/CustomerDisplay";
+import FreeInput from "./pages/FreeInput";
 
 export type Screen = "lang" | "phrases" | "display" | "input" | "map";
 export type Category =
-  | "favorite"
-  | "payment"
-  | "tax-refund"
-  | "exchange-carryIn"
-  | "stock"
-  | "recommendation"
-  | "etc";
+  | "favorite" | "payment" | "tax-refund" | "exchange-carryIn"
+  | "stock" | "recommendation" | "etc";
 export type Langs = "en" | "zh-Hans" | "ja" | "vi" | "th" | "ru" | "uz" | "fr" | "it" | "es" | "id" | "ms" | "tr" | "mn" | null;
 export interface Phrase {
   id: string;
@@ -61,11 +57,15 @@ function App() {
     });
   };
 
+  // 직접 입력 번역 결과 — 최근 목록에 남기지 않음
+  const showCustomPhrase = (phrase: Phrase) => {
+    setSelectedPhrase(phrase);
+    setScreen("display");
+  };
+
   const toggleFavorite = (id: string) => {
     setFavoriteIds((prev) => {
-      const next = prev.includes(id)
-        ? prev.filter((favId) => favId !== id)
-        : [...prev, id];
+      const next = prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id];
       localStorage.setItem(FAVORITE_KEY, JSON.stringify(next));
       return next;
     });
@@ -75,6 +75,8 @@ function App() {
     setScreen("phrases");
     setSelectedPhrase(null);
   };
+
+  const goToFreeInput = () => setScreen("input");
 
   const resetToLang = () => {
     setSearch("");
@@ -99,6 +101,14 @@ function App() {
           recentIds={recentIds}
           favoriteIds={favoriteIds}
           toggleFavorite={toggleFavorite}
+          goToFreeInput={goToFreeInput}
+        />
+      )}
+      {screen === "input" && (
+        <FreeInput
+          language={language}
+          backToPhrases={backToPhrases}
+          showCustomPhrase={showCustomPhrase}
         />
       )}
       {screen === "display" && (

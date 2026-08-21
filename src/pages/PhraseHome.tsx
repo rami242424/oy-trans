@@ -13,10 +13,11 @@ interface IPhraseHomeProps {
   recentIds: string[];
   favoriteIds: string[];
   toggleFavorite: (id: string) => void;
+  goToFreeInput: () => void;
 }
 
-const CATEGORIES: { value: Category; label: string }[] = [
-  { value: "favorite", label: "★ 즐겨찾기" },
+const CATEGORIES: { value: Category; label: string; star?: boolean }[] = [
+  { value: "favorite", label: "즐겨찾기", star: true },
   { value: "payment", label: "결제" },
   { value: "tax-refund", label: "택스리펀" },
   { value: "exchange-carryIn", label: "교환·수하물" },
@@ -28,9 +29,9 @@ const CATEGORIES: { value: Category; label: string }[] = [
 const allPhrases = Object.values(phrases).flat() as Phrase[];
 const findPhrase = (id: string) => allPhrases.find((p) => p.id === id);
 
-function StarIcon({ filled }: { filled: boolean }) {
+function StarIcon({ filled, size = 19 }: { filled: boolean; size?: number }) {
   return (
-    <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path
         d="M12 3.6l2.6 5.3 5.8.85-4.2 4.1.99 5.8L12 16.9l-5.2 2.75.99-5.8-4.2-4.1 5.8-.85L12 3.6z"
         fill={filled ? "#F5B301" : "none"}
@@ -53,6 +54,7 @@ function PhraseHome({
   recentIds,
   favoriteIds,
   toggleFavorite,
+  goToFreeInput,
 }: IPhraseHomeProps) {
   if (language === null) return null;
 
@@ -62,23 +64,16 @@ function PhraseHome({
     search !== ""
       ? allPhrases.filter((data) => data.kr.includes(search))
       : category === "favorite"
-      ? favoriteIds
-          .map((id) => findPhrase(id))
-          .filter((p): p is Phrase => p !== undefined)
+      ? favoriteIds.map((id) => findPhrase(id)).filter((p): p is Phrase => p !== undefined)
       : (phrases[category] as Phrase[]);
 
-  const currentLabel =
-    search === ""
-      ? CATEGORIES.find((c) => c.value === category)?.label
-      : `검색 결과 ${visiblePhrases.length}`;
-
+  const currentCategory = CATEGORIES.find((c) => c.value === category);
   const recentPhrases = recentIds
     .map((id) => findPhrase(id))
     .filter((p): p is Phrase => p !== undefined);
 
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-2xl mx-auto">
-      {/* 상단바 */}
       <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm px-5 pt-4 pb-3 border-b border-[#E9EBE1]">
         <div className="flex items-center justify-between mb-3">
           <button
@@ -89,8 +84,16 @@ function PhraseHome({
             <span className="font-black tracking-tight">OY-trans</span>
             <span className="w-1 h-1 rounded-full bg-[#9BCB33]" />
           </button>
-          <span className="text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
-            {currentLang?.badge}
+          <span className="flex items-center gap-1.5">
+            <button
+              onClick={goToFreeInput}
+              className="text-[11.5px] font-extrabold text-white bg-[#191B17] px-3 py-1.5 rounded-full transition-transform active:scale-95"
+            >
+              직접 입력
+            </button>
+            <span className="text-[11px] font-extrabold tracking-widest text-[#4C5940] bg-[#F2F4EC] px-2.5 py-1 rounded-md">
+              {currentLang?.badge}
+            </span>
           </span>
         </div>
 
@@ -117,7 +120,6 @@ function PhraseHome({
       </div>
 
       <div className="px-5 pb-24">
-        {/* 최근 사용 */}
         {recentPhrases.length > 0 && (
           <div className="pt-4">
             <div className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase mb-2">
@@ -138,7 +140,6 @@ function PhraseHome({
           </div>
         )}
 
-        {/* 카테고리 */}
         <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 pt-4 pb-1 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
           {CATEGORIES.map((c) => (
             <button
@@ -148,16 +149,22 @@ function PhraseHome({
                 (category === c.value
                   ? "bg-[#191B17] text-white "
                   : "bg-white text-[#5A5D53] shadow-[inset_0_0_0_1.2px_#DDE0D5] ") +
-                "flex-shrink-0 px-4 py-[9px] rounded-full text-[13px] font-bold transition-all duration-200 active:scale-95"
+                "flex-shrink-0 flex items-center gap-1 px-4 py-[9px] rounded-full text-[13px] font-bold transition-all duration-200 active:scale-95"
               }
             >
+              {c.star && <span className="text-[#F5B301] text-[13px] leading-none">★</span>}
               {c.label}
             </button>
           ))}
         </div>
 
         <div className="a-fade flex items-baseline gap-1.5 pt-5 pb-1">
-          <span className="text-[17px] font-extrabold text-[#191B17]">{currentLabel}</span>
+          {currentCategory?.star && search === "" && (
+            <span className="text-[#F5B301] text-[16px] leading-none">★</span>
+          )}
+          <span className="text-[17px] font-extrabold text-[#191B17]">
+            {search === "" ? currentCategory?.label : `검색 결과 ${visiblePhrases.length}`}
+          </span>
           {search === "" && (
             <span className="text-[12px] font-bold text-[#9BCB33]">
               {visiblePhrases.length}
@@ -165,7 +172,6 @@ function PhraseHome({
           )}
         </div>
 
-        {/* 문구 리스트 */}
         <div key={category + search}>
           {visiblePhrases.length === 0 && category === "favorite" && search === "" && (
             <div className="py-14 text-center">
