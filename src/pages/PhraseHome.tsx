@@ -78,24 +78,44 @@ function PhraseHome({
 
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-2xl mx-auto">
+      {/* 상단바 */}
       <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm px-5 pt-4 pb-3 border-b border-[#E9EBE1]">
         <div className="flex items-center justify-between mb-3">
-          <button
-            onClick={resetToLang}
-            className="flex items-center gap-1.5 text-[13px] font-bold text-[#191B17] transition-opacity active:opacity-50"
-          >
-            <span className="text-[16px] leading-none">←</span>
-            <span className="font-black tracking-tight">OY-trans</span>
-            <span className="w-1 h-1 rounded-full bg-[#9BCB33]" />
-          </button>
+          <span className="flex items-center gap-2">
+            <button
+              onClick={resetToLang}
+              aria-label="언어 다시 선택"
+              className="w-11 h-11 flex items-center justify-center rounded-full bg-[#F5F6F2] text-[#191B17] text-[20px] transition-transform active:scale-90"
+            >
+              ←
+            </button>
+            <span className="flex items-center gap-1.5">
+              <span className="text-[13px] font-black tracking-tight text-[#191B17]">
+                OY-trans
+              </span>
+              <span className="w-1 h-1 rounded-full bg-[#9BCB33]" />
+            </span>
+          </span>
+
           <span className="flex items-center gap-1.5">
             <button
               onClick={goToFreeInput}
               className="flex items-center gap-1 text-[11.5px] font-extrabold text-[#16250B] bg-[#8ED320] pl-2.5 pr-3 py-1.5 rounded-full transition-transform active:scale-95 shadow-[0_2px_8px_rgba(142,211,32,0.4)]"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                <path d="M4 5h9M8.5 5v2.5c0 3.5-2 6-4.5 7.5M6 10.5c1.5 2.5 3.5 4 6 4.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                <path d="M13.5 20l4-10 4 10M15 17h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M4 5h9M8.5 5v2.5c0 3.5-2 6-4.5 7.5M6 10.5c1.5 2.5 3.5 4 6 4.8"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M13.5 20l4-10 4 10M15 17h5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
               번역하기
             </button>
@@ -105,10 +125,22 @@ function PhraseHome({
           </span>
         </div>
 
+        {/* 검색 */}
         <div className="flex items-center gap-2 bg-[#F5F6F2] rounded-xl px-3.5 py-2.5 transition-shadow duration-200 focus-within:shadow-[inset_0_0_0_1.5px_#4C5940]">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-[#8A8D83] flex-shrink-0">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="text-[#8A8D83] flex-shrink-0"
+          >
             <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.4" />
-            <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+            <path
+              d="M20 20l-3.5-3.5"
+              stroke="currentColor"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+            />
           </svg>
           <input
             value={search}
@@ -181,12 +213,15 @@ function PhraseHome({
                 "flex-shrink-0 flex items-center gap-1 px-4 py-[9px] rounded-full text-[13px] font-bold transition-all duration-200 active:scale-95"
               }
             >
-              {c.star && <span className="text-[#F5B301] text-[13px] leading-none">★</span>}
+              {c.star && (
+                <span className="text-[#F5B301] text-[13px] leading-none">★</span>
+              )}
               {c.label}
             </button>
           ))}
         </div>
 
+        {/* 섹션 라벨 */}
         <div className="a-fade flex items-baseline gap-1.5 pt-5 pb-1">
           {currentCategory?.star && search === "" && (
             <span className="text-[#F5B301] text-[16px] leading-none">★</span>
@@ -201,6 +236,7 @@ function PhraseHome({
           )}
         </div>
 
+        {/* 문구 리스트 */}
         <div key={category + search}>
           {visiblePhrases.length === 0 && category === "favorite" && search === "" && (
             <div className="py-14 text-center">
