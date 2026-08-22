@@ -15,6 +15,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
   const [pinMode, setPinMode] = useState(false);
 
   if (language === null) return null;
+
   const currentLang = LANGS.find((l) => l.code === language);
   const zone = ZONES.find((z) => z.id === selectedZone);
 
@@ -30,6 +31,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
 
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-3xl mx-auto px-5 pt-4 pb-28">
+      {/* 헤더 */}
       <div className="relative flex items-center justify-center mb-5 h-11">
         <button
           onClick={backToPhrases}
@@ -44,6 +46,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
         </span>
       </div>
 
+      {/* 현위치 버튼 */}
       <div className="flex items-center gap-2 mb-3">
         <button
           onClick={() => setPinMode((prev) => !prev)}
@@ -66,6 +69,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
         )}
       </div>
 
+      {/* 지도 */}
       <div className="-mx-5 px-5 overflow-x-auto no-scrollbar">
         <svg
           viewBox="0 0 680 300"
@@ -100,8 +104,26 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
             );
           })}
 
-          <text x={ENTRANCE.x} y={ENTRANCE.y + 8} textAnchor="middle" fontSize="11" fontWeight="700" fill="#8A8D83">IN</text>
-          <text x={EXIT.x} y={EXIT.y + 8} textAnchor="middle" fontSize="11" fontWeight="700" fill="#8A8D83">OUT</text>
+          <text
+            x={ENTRANCE.x}
+            y={ENTRANCE.y + 8}
+            textAnchor="middle"
+            fontSize="11"
+            fontWeight="700"
+            fill="#8A8D83"
+          >
+            IN
+          </text>
+          <text
+            x={EXIT.x}
+            y={EXIT.y + 8}
+            textAnchor="middle"
+            fontSize="11"
+            fontWeight="700"
+            fill="#8A8D83"
+          >
+            OUT
+          </text>
 
           {/* 선택 구역 라벨 */}
           {zone && (
@@ -117,17 +139,47 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
             </text>
           )}
 
-          {/* 현위치 — 빨간 깃발 핀 */}
+          {/* 현위치 — 빨간 깃발 */}
           {here && (
             <g>
-              <line x1={here.x} y1={here.y} x2={here.x} y2={here.y - 26} stroke="#E23B2E" strokeWidth="2.5" strokeLinecap="round" />
-              <path d={`M${here.x} ${here.y - 26} L${here.x + 20} ${here.y - 20} L${here.x} ${here.y - 14} Z`} fill="#E23B2E" />
+              <line
+                x1={here.x}
+                y1={here.y}
+                x2={here.x}
+                y2={here.y - 26}
+                stroke="#E23B2E"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+              <path
+                d={`M${here.x} ${here.y - 26} L${here.x + 20} ${here.y - 20} L${here.x} ${here.y - 14} Z`}
+                fill="#E23B2E"
+              />
               <circle cx={here.x} cy={here.y} r="4" fill="#E23B2E" />
             </g>
           )}
         </svg>
       </div>
 
+      {/* 범례 */}
+      {(here || zone) && (
+        <div className="a-fade flex flex-wrap gap-x-5 gap-y-1.5 mt-3 text-[12px] font-bold text-[#5A5D53]">
+          {here && (
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-full bg-[#E23B2E]" />
+              You are here
+            </span>
+          )}
+          {zone && (
+            <span className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-full bg-[#FF8A00] border-2 border-[#B35F00]" />
+              {zone.labels[language]}
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* 구역 칩 */}
       <div className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase mt-5 mb-2">
         구역 선택
       </div>
@@ -156,6 +208,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
         ))}
       </div>
 
+      {/* 고객에게 보여주기 */}
       <button
         onClick={() => showMapToCustomer(selectedZone, here)}
         disabled={!selectedZone && !here}
