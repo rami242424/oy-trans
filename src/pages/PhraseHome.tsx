@@ -18,6 +18,7 @@ interface IPhraseHomeProps {
   favoriteIds: string[];
   toggleFavorite: (id: string) => void;
   goToFreeInput: () => void;
+  goToStoreMap: () => void;
 }
 
 const CATEGORIES: { value: Category; label: string; star?: boolean }[] = [
@@ -62,6 +63,7 @@ function PhraseHome({
   favoriteIds,
   toggleFavorite,
   goToFreeInput,
+  goToStoreMap,
 }: IPhraseHomeProps) {
   const [langOpen, setLangOpen] = useState(false);
 
@@ -104,6 +106,27 @@ function PhraseHome({
 
           <span className="flex items-center gap-1.5">
             <button
+              onClick={goToStoreMap}
+              aria-label="매장 지도"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-[#F2F4EC] text-[#4C5940] transition-transform active:scale-90"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M9 4L3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M9 4v13M15 6.5v13"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button
               onClick={goToFreeInput}
               className="flex items-center gap-1 text-[11.5px] font-extrabold text-[#16250B] bg-[#8ED320] pl-2.5 pr-3 py-1.5 rounded-full transition-transform active:scale-95 shadow-[0_2px_8px_rgba(142,211,32,0.4)]"
             >
@@ -137,7 +160,9 @@ function PhraseHome({
                 height="10"
                 viewBox="0 0 24 24"
                 fill="none"
-                className={"transition-transform duration-200 " + (langOpen ? "rotate-180" : "")}
+                className={
+                  "transition-transform duration-200 " + (langOpen ? "rotate-180" : "")
+                }
               >
                 <path
                   d="M6 9l6 6 6-6"

@@ -3,8 +3,10 @@ import LanguageSelect from "./pages/LanguageSelect";
 import PhraseHome from "./pages/PhraseHome";
 import CustomerDisplay from "./pages/CustomerDisplay";
 import FreeInput from "./pages/FreeInput";
+import StoreMap from "./pages/StoreMap";
+import CustomerMap from "./pages/CustomerMap";
 
-export type Screen = "lang" | "phrases" | "display" | "input" | "map";
+export type Screen = "lang" | "phrases" | "display" | "input" | "map" | "mapDisplay";
 export type Category =
   | "favorite" | "payment" | "tax-refund" | "exchange-carryIn"
   | "stock" | "recommendation" | "etc";
@@ -41,8 +43,9 @@ function App() {
   const [search, setSearch] = useState("");
   const [recentIds, setRecentIds] = useState<string[]>(() => loadIds(RECENT_KEY));
   const [favoriteIds, setFavoriteIds] = useState<string[]>(() => loadIds(FAVORITE_KEY));
-  // 고객 화면에서 나갈 때 돌아갈 곳
   const [displayFrom, setDisplayFrom] = useState<Screen>("phrases");
+  const [mapZone, setMapZone] = useState<string | null>(null);
+  const [mapHere, setMapHere] = useState<{ x: number; y: number } | null>(null);
 
   const nextPageWithLangs = (lang: Langs) => {
     setLanguage(lang);
@@ -66,10 +69,18 @@ function App() {
     setScreen("display");
   };
 
+  const showMapToCustomer = (zoneId: string | null, here: { x: number; y: number } | null) => {
+    setMapZone(zoneId);
+    setMapHere(here);
+    setScreen("mapDisplay");
+  };
+
   const closeDisplay = () => {
     setScreen(displayFrom);
     setSelectedPhrase(null);
   };
+
+  const closeMapDisplay = () => setScreen("map");
 
   const removeRecent = (id: string) => {
     setRecentIds((prev) => {
@@ -98,6 +109,7 @@ function App() {
   };
 
   const goToFreeInput = () => setScreen("input");
+  const goToStoreMap = () => setScreen("map");
 
   const resetToLang = () => {
     setSearch("");
@@ -108,9 +120,9 @@ function App() {
     setScreen("lang");
   };
 
-  // 번역 화면은 고객 화면이 덮고 있을 때도 유지 (입력 내용 보존)
   const keepFreeInputMounted =
     screen === "input" || (screen === "display" && displayFrom === "input");
+  const keepStoreMapMounted = screen === "map" || screen === "mapDisplay";
 
   return (
     <>
@@ -131,6 +143,7 @@ function App() {
           favoriteIds={favoriteIds}
           toggleFavorite={toggleFavorite}
           goToFreeInput={goToFreeInput}
+          goToStoreMap={goToStoreMap}
         />
       )}
       {keepFreeInputMounted && (
@@ -138,6 +151,13 @@ function App() {
           language={language}
           backToPhrases={backToPhrases}
           showCustomPhrase={showCustomPhrase}
+        />
+      )}
+      {keepStoreMapMounted && (
+        <StoreMap
+          language={language}
+          backToPhrases={backToPhrases}
+          showMapToCustomer={showMapToCustomer}
         />
       )}
       {screen === "display" && (
@@ -148,6 +168,14 @@ function App() {
           nextToCustomerDisplay={nextToCustomerDisplay}
           favoriteIds={favoriteIds}
           toggleFavorite={toggleFavorite}
+        />
+      )}
+      {screen === "mapDisplay" && (
+        <CustomerMap
+          language={language}
+          zoneId={mapZone}
+          here={mapHere}
+          closeDisplay={closeMapDisplay}
         />
       )}
     </>
