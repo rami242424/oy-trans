@@ -10,7 +10,6 @@ interface ICustomerMapProps {
 
 function CustomerMap({ language, zoneId, here, closeDisplay }: ICustomerMapProps) {
   if (!language) return null;
-
   const zone = ZONES.find((z) => z.id === zoneId);
 
   return (
@@ -36,13 +35,13 @@ function CustomerMap({ language, zoneId, here, closeDisplay }: ICustomerMapProps
 
       <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-4">
         {zone && (
-          <h2 className="a-item text-[clamp(22px,6vw,34px)] font-black text-white text-center mb-5 [text-shadow:0_1px_2px_rgba(22,37,11,0.14)]">
-            {zone.en}
+          <h2 className="a-item text-[clamp(24px,6.5vw,38px)] font-black text-white text-center mb-5 [text-shadow:0_1px_3px_rgba(22,37,11,0.2)]">
+            {zone.labels[language]}
           </h2>
         )}
 
-        <svg viewBox="0 0 680 300" className="a-item w-full max-w-[820px]">
-          <path d={STORE_PATH} fill="none" stroke="rgba(22,37,11,0.3)" strokeWidth="2" />
+        <svg viewBox="0 0 680 300" className="a-item w-full max-w-[860px]">
+          <path d={STORE_PATH} fill="none" stroke="rgba(22,37,11,0.35)" strokeWidth="2" />
 
           {ZONES.map((z) => {
             const active = z.id === zoneId;
@@ -54,54 +53,53 @@ function CustomerMap({ language, zoneId, here, closeDisplay }: ICustomerMapProps
                 width={z.w}
                 height={z.h}
                 rx="4"
-                fill={active ? "#16250B" : "rgba(255,255,255,0.45)"}
-                stroke={active ? "#16250B" : "rgba(22,37,11,0.15)"}
-                strokeWidth="1"
+                fill={active ? "#FF8A00" : "rgba(255,255,255,0.5)"}
+                stroke={active ? "#8A3D00" : "rgba(22,37,11,0.12)"}
+                strokeWidth={active ? 2.5 : 1}
               />
             );
           })}
 
-          <text x={ENTRANCE.x} y={ENTRANCE.y + 8} textAnchor="middle" fontSize="12" fontWeight="800" fill="rgba(22,37,11,0.55)">
-            IN
-          </text>
-          <text x={EXIT.x} y={EXIT.y + 8} textAnchor="middle" fontSize="12" fontWeight="800" fill="rgba(22,37,11,0.55)">
-            OUT
-          </text>
+          <text x={ENTRANCE.x} y={ENTRANCE.y + 8} textAnchor="middle" fontSize="12" fontWeight="800" fill="rgba(22,37,11,0.55)">IN</text>
+          <text x={EXIT.x} y={EXIT.y + 8} textAnchor="middle" fontSize="12" fontWeight="800" fill="rgba(22,37,11,0.55)">OUT</text>
 
-          {/* 목적지 핀 */}
+          {/* 목적지 — 주황 파동 + 아래 화살표 */}
           {zone && (
             <g>
-              <circle cx={zone.x + zone.w / 2} cy={zone.y + zone.h / 2} r="16" fill="#16250B" opacity="0.18">
-                <animate attributeName="r" values="14;22;14" dur="1.8s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.25;0;0.25" dur="1.8s" repeatCount="indefinite" />
+              <circle cx={zone.x + zone.w / 2} cy={zone.y + zone.h / 2} r="14" fill="#FF8A00" opacity="0.35">
+                <animate attributeName="r" values="14;30;14" dur="1.8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="1.8s" repeatCount="indefinite" />
               </circle>
-              <circle cx={zone.x + zone.w / 2} cy={zone.y + zone.h / 2} r="7" fill="#FFFFFF" stroke="#16250B" strokeWidth="2.5" />
+              <path
+                d={`M${zone.x + zone.w / 2} ${zone.y - 6} l-9 -13 h18 Z`}
+                fill="#8A3D00"
+              >
+                <animateTransform attributeName="transform" type="translate" values="0 0; 0 -5; 0 0" dur="1.2s" repeatCount="indefinite" />
+              </path>
             </g>
           )}
 
-          {/* 현위치 핀 */}
+          {/* 현위치 — 빨간 깃발 */}
           {here && (
             <g>
-              <circle cx={here.x} cy={here.y} r="11" fill="#16250B" opacity="0.2" />
-              <circle cx={here.x} cy={here.y} r="6" fill="#16250B" />
-              <text x={here.x} y={here.y - 16} textAnchor="middle" fontSize="13" fontWeight="800" fill="#16250B">
-                YOU
-              </text>
+              <line x1={here.x} y1={here.y} x2={here.x} y2={here.y - 30} stroke="#E23B2E" strokeWidth="3" strokeLinecap="round" />
+              <path d={`M${here.x} ${here.y - 30} L${here.x + 24} ${here.y - 23} L${here.x} ${here.y - 16} Z`} fill="#E23B2E" />
+              <circle cx={here.x} cy={here.y} r="5" fill="#E23B2E" />
             </g>
           )}
         </svg>
 
-        <div className="a-item flex gap-5 mt-6 text-[12.5px] font-bold text-[#16250B]/70">
+        <div className="a-item flex flex-wrap gap-x-6 gap-y-2 justify-center mt-6 text-[13px] font-bold text-[#16250B]/75">
           {here && (
             <span className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-full bg-[#16250B]" />
+              <span className="w-3.5 h-3.5 rounded-full bg-[#E23B2E]" />
               You are here
             </span>
           )}
           {zone && (
             <span className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-full bg-white border-2 border-[#16250B]" />
-              {zone.en}
+              <span className="w-3.5 h-3.5 rounded-full bg-[#FF8A00] border-2 border-[#8A3D00]" />
+              {zone.labels[language]}
             </span>
           )}
         </div>
