@@ -12,9 +12,10 @@ interface IPhraseHomeProps {
   search: string;
   setSearch: (e: string) => void;
   resetToLang: () => void;
-  recentIds: string[];
-  removeRecent: (id: string) => void;
-  clearRecent: () => void;
+  recentSearches: string[];
+  addRecentSearch: (keyword: string) => void;
+  removeRecentSearch: (keyword: string) => void;
+  clearRecentSearches: () => void;
   favoriteIds: string[];
   toggleFavorite: (phrase: Phrase) => void;
   goToFreeInput: () => void;
@@ -57,9 +58,10 @@ function PhraseHome({
   search,
   setSearch,
   resetToLang,
-  recentIds,
-  removeRecent,
-  clearRecent,
+  recentSearches,
+  addRecentSearch,
+  removeRecentSearch,
+  clearRecentSearches,
   favoriteIds,
   toggleFavorite,
   goToFreeInput,
@@ -70,22 +72,30 @@ function PhraseHome({
   if (language === null) return null;
 
   const currentLang = LANGS.find((l) => l.code === language);
-  const isSearching = search.trim() !== "";
+  const keyword = search.trim();
+  const isSearching = keyword !== "";
 
   const visiblePhrases: Phrase[] = isSearching
-    ? allPhrases.filter((data) => data.kr.includes(search.trim()))
+    ? allPhrases.filter((data) => data.kr.includes(keyword))
     : category === "favorite"
     ? favoriteIds.map((id) => findPhrase(id)).filter((p): p is Phrase => p !== undefined)
     : (phrases[category] as Phrase[]);
 
   const currentCategory = CATEGORIES.find((c) => c.value === category);
-  const recentPhrases = recentIds
-    .map((id) => findPhrase(id))
-    .filter((p): p is Phrase => p !== undefined);
+
+  // 검색이 유효했을 때만 기록 (엔터 또는 결과 문구 사용)
+  const commitSearch = () => {
+    if (isSearching && visiblePhrases.length > 0) addRecentSearch(keyword);
+  };
+
+  const openPhrase = (phrase: Phrase) => {
+    commitSearch();
+    nextToCustomerDisplay(phrase);
+  };
 
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-2xl mx-auto">
-      {/* 상단 고정 영역 — 상단바 + 검색 + 카테고리 */}
+      {/* 상단 고정 영역 */}
       <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-[#E9EBE1]">
         <div className="px-5 pt-4 pb-3">
           <div className="flex items-center justify-between mb-3">
@@ -196,6 +206,12 @@ function PhraseHome({
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  commitSearch();
+                  e.currentTarget.blur();
+                }
+              }}
               placeholder="문구 검색"
               className="flex-1 bg-transparent outline-none text-[14.5px] font-medium text-[#191B17] placeholder-[#A9ACA1]"
             />
@@ -209,9 +225,45 @@ function PhraseHome({
               </button>
             )}
           </div>
+
+          {/* 최근 검색어 */}
+          {recentSearches.length > 0 && (
+            <div className="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar">
+              <span className="flex-shrink-0 text-[10.5px] font-extrabold text-[#C9CDBF] tracking-wider">
+                최근 검색
+              </span>
+              {recentSearches.map((k, i) => (
+                <span
+                  key={k}
+                  style={{ animationDelay: `${i * 30}ms` }}
+                  className="a-chip flex-shrink-0 flex items-center gap-1 pl-2.5 pr-1 py-[5px] rounded-full bg-[#F2F4EC]"
+                >
+                  <button
+                    onClick={() => setSearch(k)}
+                    className="max-w-[110px] truncate text-[11.5px] font-semibold text-[#3E4636] whitespace-nowrap transition-opacity active:opacity-50"
+                  >
+                    {k}
+                  </button>
+                  <button
+                    onClick={() => removeRecentSearch(k)}
+                    aria-label={`${k} 검색어 삭제`}
+                    className="w-[15px] h-[15px] flex-shrink-0 flex items-center justify-center rounded-full bg-[#D9DCD2] text-white text-[8px] transition-transform active:scale-75"
+                  >
+                    ✕
+                  </button>
+                </span>
+              ))}
+              <button
+                onClick={clearRecentSearches}
+                className="flex-shrink-0 text-[10.5px] font-bold text-[#C9CDBF] px-1 transition-opacity active:opacity-50"
+              >
+                전체 삭제
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* 카테고리 — 함께 고정 */}
+        {/* 카테고리 */}
         <div className="flex gap-1.5 overflow-x-auto no-scrollbar px-5 pb-3 sm:flex-wrap sm:overflow-visible">
           {CATEGORIES.map((c) => (
             <button
@@ -313,7 +365,7 @@ function PhraseHome({
               className="a-item flex items-start gap-2 border-b border-[#E9EBE1]"
             >
               <button
-                onClick={() => nextToCustomerDisplay(data)}
+                onClick={() => openPhrase(data)}
                 className="flex-1 min-w-0 py-[15px] text-left transition-colors duration-150 active:bg-[#F7F8F5]"
               >
                 <span className="block text-[15.5px] font-bold text-[#191B17] leading-[1.4]">
@@ -333,46 +385,6 @@ function PhraseHome({
             </div>
           ))}
         </div>
-
-        {/* 최근 사용 — 목록 아래로 이동 */}
-        {recentPhrases.length > 0 && !isSearching && (
-          <div className="pt-7">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase">
-                최근 보여준 문구
-              </span>
-              <button
-                onClick={clearRecent}
-                className="text-[11px] font-bold text-[#A9ACA1] px-1 transition-opacity active:opacity-50"
-              >
-                전체 삭제
-              </button>
-            </div>
-            <div className="flex gap-1.5 overflow-x-auto no-scrollbar -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
-              {recentPhrases.map((p, i) => (
-                <span
-                  key={p.id}
-                  style={{ animationDelay: `${i * 35}ms` }}
-                  className="a-chip flex-shrink-0 flex items-center gap-1 pl-3 pr-1.5 py-[6px] rounded-full bg-[#F2F4EC]"
-                >
-                  <button
-                    onClick={() => nextToCustomerDisplay(p)}
-                    className="max-w-[150px] truncate text-[12px] font-semibold text-[#3E4636] whitespace-nowrap transition-opacity active:opacity-50"
-                  >
-                    {p.kr}
-                  </button>
-                  <button
-                    onClick={() => removeRecent(p.id)}
-                    aria-label="최근 목록에서 삭제"
-                    className="w-[17px] h-[17px] flex-shrink-0 flex items-center justify-center rounded-full bg-[#D9DCD2] text-white text-[9px] transition-transform active:scale-75"
-                  >
-                    ✕
-                  </button>
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
