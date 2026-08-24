@@ -1,5 +1,6 @@
 import type { Langs, Phrase } from "../App";
 import phrases from "../data/phrases.json";
+import { LANGS } from "../data/langs";
 
 interface ICustomerDisplayProps {
   language: Langs;
@@ -7,7 +8,7 @@ interface ICustomerDisplayProps {
   closeDisplay: () => void;
   nextToCustomerDisplay: (phrase: Phrase) => void;
   favoriteIds: string[];
-  toggleFavorite: (id: string) => void;
+  toggleFavorite: (phrase: Phrase) => void;
 }
 
 const allPhrases = Object.values(phrases).flat() as Phrase[];
@@ -40,6 +41,7 @@ function CustomerDisplay({
 
   const isCustom = selectedPhrase.id === "custom";
   const isFavorite = favoriteIds.includes(selectedPhrase.id);
+  const currentLang = LANGS.find((l) => l.code === language);
 
   return (
     <div
@@ -52,8 +54,9 @@ function CustomerDisplay({
             OY-trans
           </span>
           <span className="w-1 h-1 rounded-full bg-white" />
-          <span className="text-[10.5px] font-extrabold tracking-[0.18em] uppercase text-[#16250B]/50">
-            {language}
+          {/* 고객이 읽는 화면 — 언어 코드가 아닌 해당 언어 표기 */}
+          <span className="text-[12px] font-bold text-[#16250B]/55">
+            {currentLang?.label}
           </span>
         </span>
 
@@ -62,7 +65,7 @@ function CustomerDisplay({
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                toggleFavorite(selectedPhrase.id);
+                toggleFavorite(selectedPhrase);
               }}
               aria-label="즐겨찾기"
               className="w-10 h-10 flex items-center justify-center rounded-full transition-all duration-150 active:scale-90 active:bg-[#16250B]/15"
@@ -80,6 +83,7 @@ function CustomerDisplay({
           )}
           <button
             onClick={closeDisplay}
+            aria-label="닫기"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-[#16250B]/10 text-[#16250B]/70 text-[16px] transition-all duration-150 active:scale-90 active:bg-[#16250B]/20"
           >
             ✕
