@@ -2,6 +2,7 @@ export interface Zone {
   id: string;
   kr: string;
   labels: { [key: string]: string };
+  group?: string;
   x: number;
   y: number;
   w: number;
@@ -13,16 +14,17 @@ export const STORE_PATH = "M260 50 H640 V260 H40 V130 H260 Z";
 const Z = (
   id: string, kr: string, x: number, y: number, w: number, h: number,
   en: string, zh: string, ja: string, vi: string, th: string, ru: string, uz: string,
-  fr: string, it: string, es: string, idn: string, ms: string, tr: string, mn: string
+  fr: string, it: string, es: string, idn: string, ms: string, tr: string, mn: string,
+  group?: string
 ): Zone => ({
-  id, kr, x, y, w, h,
+  id, kr, x, y, w, h, group,
   labels: { en, "zh-Hans": zh, ja, vi, th, ru, uz, fr, it, es, id: idn, ms, tr, mn },
 });
 
 export const ZONES: Zone[] = [
-  Z("skincare-side", "스킨케어", 46, 136, 36, 80, "Skincare", "护肤", "スキンケア", "Chăm sóc da", "สกินแคร์", "Уход за кожей", "Teri parvarishi", "Soin visage", "Skincare", "Cuidado facial", "Perawatan kulit", "Penjagaan kulit", "Cilt bakımı", "Арьс арчилгаа"),
+  Z("skincare-side", "스킨케어", 46, 136, 36, 80, "Skincare", "护肤", "スキンケア", "Chăm sóc da", "สกินแคร์", "Уход за кожей", "Teri parvarishi", "Soin visage", "Skincare", "Cuidado facial", "Perawatan kulit", "Penjagaan kulit", "Cilt bakımı", "Арьс арчилгаа", "skincare"),
   Z("maskpack", "마스크팩", 90, 136, 164, 26, "Mask Pack", "面膜", "マスクパック", "Mặt nạ", "มาส์ก", "Маски", "Niqoblar", "Masques", "Maschere", "Mascarillas", "Masker", "Mask muka", "Maske", "Маск"),
-  Z("skincare", "스킨케어", 46, 228, 140, 26, "Skincare", "护肤", "スキンケア", "Chăm sóc da", "สกินแคร์", "Уход за кожей", "Teri parvarishi", "Soin visage", "Skincare", "Cuidado facial", "Perawatan kulit", "Penjagaan kulit", "Cilt bakımı", "Арьс арчилгаа"),
+  Z("skincare", "스킨케어", 46, 228, 140, 26, "Skincare", "护肤", "スキンケア", "Chăm sóc da", "สกินแคร์", "Уход за кожей", "Teri parvarishi", "Soin visage", "Skincare", "Cuidado facial", "Perawatan kulit", "Penjagaan kulit", "Cilt bakımı", "Арьс арчилгаа", "skincare"),
   Z("cleansing", "클렌징", 190, 228, 64, 26, "Cleansing", "洁面", "クレンジング", "Tẩy trang", "คลีนซิ่ง", "Очищение", "Tozalash", "Nettoyage", "Detersione", "Limpieza", "Pembersih", "Pembersih", "Temizleme", "Цэвэрлэгээ"),
   Z("suncare", "썬케어", 264, 56, 30, 68, "Suncare", "防晒", "日焼け止め", "Chống nắng", "กันแดด", "Санскрин", "Quyoshdan himoya", "Solaire", "Solari", "Protección solar", "Tabir surya", "Pelindung matahari", "Güneş ürünleri", "Нарнаас хамгаалах"),
   Z("special", "스페셜케어", 302, 56, 27, 30, "Special Care", "特护", "スペシャルケア", "Chăm sóc đặc biệt", "สเปเชียลแคร์", "Спец. уход", "Maxsus parvarish", "Soin spécial", "Cura speciale", "Cuidado especial", "Perawatan khusus", "Penjagaan khas", "Özel bakım", "Тусгай арчилгаа"),
@@ -49,7 +51,17 @@ export const ZONES: Zone[] = [
   Z("hair", "헤어", 510, 228, 80, 26, "Hair Care", "美发", "ヘアケア", "Chăm sóc tóc", "ดูแลเส้นผม", "Уход за волосами", "Soch parvarishi", "Soin cheveux", "Capelli", "Cuidado capilar", "Perawatan rambut", "Penjagaan rambut", "Saç bakımı", "Үс арчилгаа"),
 ];
 
+// 칩 목록 — 같은 group은 하나만 노출
 export const ZONE_CHIPS = ZONES.filter((z) => z.id !== "skincare-side");
+
+// 선택된 구역과 함께 하이라이트할 구역 id 목록 (같은 group 전부)
+export const getHighlightIds = (zoneId: string | null): string[] => {
+  if (!zoneId) return [];
+  const zone = ZONES.find((z) => z.id === zoneId);
+  if (!zone) return [];
+  if (!zone.group) return [zone.id];
+  return ZONES.filter((z) => z.group === zone.group).map((z) => z.id);
+};
 
 export const ENTRANCE = { x: 298, y: 272 };
 export const EXIT = { x: 612, y: 272 };

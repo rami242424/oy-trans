@@ -5,6 +5,7 @@ import CustomerDisplay from "./pages/CustomerDisplay";
 import FreeInput from "./pages/FreeInput";
 import StoreMap from "./pages/StoreMap";
 import CustomerMap from "./pages/CustomerMap";
+import phrases from "./data/phrases.json";
 
 export type Screen = "lang" | "phrases" | "display" | "input" | "map" | "mapDisplay";
 export type Category =
@@ -26,14 +27,44 @@ export interface Phrase {
 const RECENT_KEY = "oy-trans-recent";
 const FAVORITE_KEY = "oy-trans-favorites";
 
-const loadIds = (key: string): string[] => {
+// 저장 스키마 { id, kr } — id 재부여 시 잘못된 문구를 가리키는 것 방지
+interface SavedRef {
+  id: string;
+  kr: string;
+}
+
+const allPhrases = Object.values(phrases).flat() as Phrase[];
+
+const loadRefs = (key: string): SavedRef[] => {
   try {
     const saved = localStorage.getItem(key);
-    return saved ? JSON.parse(saved) : [];
+    if (!saved) return [];
+    const parsed = JSON.parse(saved);
+    if (!Array.isArray(parsed)) return [];
+    // 구버전(문자열 배열) 호환 — id로 찾아 kr을 채워 넣음
+    const refs: SavedRef[] = parsed.map((item: unknown) =>
+      typeof item === "string"
+        ? { id: item, kr: allPhrases.find((p) => p.id === item)?.kr ?? "" }
+        : (item as SavedRef)
+    );
+    // id와 kr이 모두 일치하는 것만 유효
+    return refs.filter((ref) =>
+      allPhrases.some((p) => p.id === ref.id && p.kr === ref.kr)
+    );
   } catch {
     return [];
   }
 };
+
+const saveRefs = (key: string, refs: SavedRef[]) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(refs));
+  } catch {
+    // 저장 실패해도 앱은 계속 동작
+  }
+};
+
+const toRef = (phrase: Phrase): SavedRef => ({ id: phrase.id, kr: phrase.kr });
 
 function App() {
   const [language, setLanguage] = useState<Langs>(null);
@@ -41,8 +72,8 @@ function App() {
   const [selectedPhrase, setSelectedPhrase] = useState<Phrase | null>(null);
   const [category, setCategory] = useState<Category>("payment");
   const [search, setSearch] = useState("");
-  const [recentIds, setRecentIds] = useState<string[]>(() => loadIds(RECENT_KEY));
-  const [favoriteIds, setFavoriteIds] = useState<string[]>(() => loadIds(FAVORITE_KEY));
+  const [recentRefs, setRecentRefs] = useState<SavedRef[]>(() => loadRefs(RECENT_KEY));
+  const [favoriteRefs, setFavoriteRefs] = useState<SavedRef[]>(() => loadRefs(FAVORITE_KEY));
   const [displayFrom, setDisplayFrom] = useState<Screen>("phrases");
   const [mapZone, setMapZone] = useState<string | null>(null);
   const [mapHere, setMapHere] = useState<{ x: number; y: number } | null>(null);
@@ -56,9 +87,9 @@ function App() {
     setSelectedPhrase(phrase);
     setDisplayFrom("phrases");
     setScreen("display");
-    setRecentIds((prev) => {
-      const next = [phrase.id, ...prev.filter((id) => id !== phrase.id)].slice(0, 4);
-      localStorage.setItem(RECENT_KEY, JSON.stringify(next));
+    setRecentRefs((prev) => {
+      const next = [toRef(phrase), ...prev.filter((r) => r.id !== phrase.id)].slice(0, 4);
+      saveRefs(RECENT_KEY, next);
       return next;
     });
   };
@@ -83,22 +114,25 @@ function App() {
   const closeMapDisplay = () => setScreen("map");
 
   const removeRecent = (id: string) => {
-    setRecentIds((prev) => {
-      const next = prev.filter((recentId) => recentId !== id);
-      localStorage.setItem(RECENT_KEY, JSON.stringify(next));
+    setRecentRefs((prev) => {
+      const next = prev.filter((r) => r.id !== id);
+      saveRefs(RECENT_KEY, next);
       return next;
     });
   };
 
   const clearRecent = () => {
-    setRecentIds([]);
-    localStorage.setItem(RECENT_KEY, JSON.stringify([]));
+    setRecentRefs([]);
+    saveRefs(RECENT_KEY, []);
   };
 
-  const toggleFavorite = (id: string) => {
-    setFavoriteIds((prev) => {
-      const next = prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id];
-      localStorage.setItem(FAVORITE_KEY, JSON.stringify(next));
+  const toggleFavorite = (phrase: Phrase) => {
+    setFavoriteRefs((prev) => {
+      const exists = prev.some((r) => r.id === phrase.id);
+      const next = exists
+        ? prev.filter((r) => r.id !== phrase.id)
+        : [...prev, toRef(phrase)];
+      saveRefs(FAVORITE_KEY, next);
       return next;
     });
   };
@@ -106,6 +140,12 @@ function App() {
   const backToPhrases = () => {
     setScreen("phrases");
     setSelectedPhrase(null);
+  };
+
+  // 검색 중 카테고리를 누르면 검색을 종료하고 해당 카테고리로 이동
+  const selectCategory = (next: Category) => {
+    setCategory(next);
+    setSearch("");
   };
 
   const goToFreeInput = () => setScreen("input");
@@ -124,6 +164,9 @@ function App() {
     screen === "input" || (screen === "display" && displayFrom === "input");
   const keepStoreMapMounted = screen === "map" || screen === "mapDisplay";
 
+  const recentIds = recentRefs.map((r) => r.id);
+  const favoriteIds = favoriteRefs.map((r) => r.id);
+
   return (
     <>
       {screen === "lang" && <LanguageSelect nextPageWithLangs={nextPageWithLangs} />}
@@ -133,7 +176,7 @@ function App() {
           setLanguage={setLanguage}
           nextToCustomerDisplay={nextToCustomerDisplay}
           category={category}
-          setCategory={setCategory}
+          selectCategory={selectCategory}
           search={search}
           setSearch={setSearch}
           resetToLang={resetToLang}
