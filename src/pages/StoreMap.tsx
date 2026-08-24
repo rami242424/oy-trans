@@ -20,18 +20,13 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
   const zone = ZONES.find((z) => z.id === selectedZone);
   const highlightIds = getHighlightIds(selectedZone);
 
-  // 화면 좌표 → SVG 좌표 (마우스·터치 공통)
-  const toSvgPoint = (clientX: number, clientY: number, el: SVGSVGElement) => {
-    const rect = el.getBoundingClientRect();
-    return {
-      x: ((clientX - rect.left) / rect.width) * 680,
-      y: ((clientY - rect.top) / rect.height) * 300,
-    };
-  };
-
   const handleMapClick = (e: React.MouseEvent<SVGSVGElement>) => {
     if (!pinMode) return;
-    setHere(toSvgPoint(e.clientX, e.clientY, e.currentTarget));
+    const rect = e.currentTarget.getBoundingClientRect();
+    setHere({
+      x: ((e.clientX - rect.left) / rect.width) * 680,
+      y: ((e.clientY - rect.top) / rect.height) * 300,
+    });
     setPinMode(false);
   };
 
@@ -42,7 +37,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
 
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-3xl landscape:max-w-none mx-auto px-5 pt-4 pb-24">
-      {/* 헤더 — 가로 모드에서는 높이를 줄여 지도 공간 확보 */}
+      {/* 헤더 */}
       <div className="relative flex items-center justify-center mb-4 h-11 landscape:h-9 landscape:mb-2">
         <button
           onClick={backToPhrases}
@@ -61,6 +56,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
       <div className="flex items-center gap-2 mb-3 landscape:mb-2">
         <button
           onClick={() => setPinMode((prev) => !prev)}
+          aria-pressed={pinMode}
           className={
             (pinMode
               ? "bg-[#E23B2E] text-white shadow-[0_2px_10px_rgba(226,59,46,0.4)] "
@@ -85,44 +81,71 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
         <svg
           viewBox="0 0 680 300"
           onClick={handleMapClick}
+          role="img"
+          aria-label={
+            zone
+              ? `매장 지도. 현재 선택된 구역은 ${zone.kr}입니다.`
+              : "매장 지도. 구역을 선택하면 위치가 표시됩니다."
+          }
           className={
             (pinMode ? "cursor-crosshair " : "") +
             "min-w-[600px] landscape:min-w-0 w-full bg-[#FBFCF9] rounded-2xl shadow-[inset_0_0_0_1.2px_#E9EBE1]"
           }
         >
+          <title>올리브영 인천공항점 매장 구역 지도</title>
+          <desc>
+            매장을 27개 상품 구역으로 나눈 평면도입니다. 구역을 선택하면 주황색으로
+            표시되고, 현위치를 지정하면 빨간 깃발이 나타납니다.
+          </desc>
+
           <path d={STORE_PATH} fill="none" stroke="#C9CDBF" strokeWidth="1.6" />
 
           {ZONES.map((z) => {
             const active = highlightIds.includes(z.id);
             return (
-              <rect
-                key={z.id}
-                x={z.x}
-                y={z.y}
-                width={z.w}
-                height={z.h}
-                rx="4"
-                onClick={(e) => {
-                  if (pinMode) return;
-                  e.stopPropagation();
-                  selectZone(z.id);
-                }}
-                fill={active ? "#FF8A00" : "#EFF1EA"}
-                stroke={active ? "#B35F00" : "#DDE0D5"}
-                strokeWidth={active ? 2 : 1}
-                className="cursor-pointer transition-all duration-200"
-              />
+              <g key={z.id} role="button" aria-label={`${z.kr} 구역`}>
+                <rect
+                  x={z.x}
+                  y={z.y}
+                  width={z.w}
+                  height={z.h}
+                  rx="4"
+                  onClick={(e) => {
+                    if (pinMode) return;
+                    e.stopPropagation();
+                    selectZone(z.id);
+                  }}
+                  fill={active ? "#FF8A00" : "#EFF1EA"}
+                  stroke={active ? "#B35F00" : "#DDE0D5"}
+                  strokeWidth={active ? 2 : 1}
+                  className="cursor-pointer transition-all duration-200"
+                />
+              </g>
             );
           })}
 
-          <text x={ENTRANCE.x} y={ENTRANCE.y + 8} textAnchor="middle" fontSize="11" fontWeight="700" fill="#8A8D83">
+          <text
+            x={ENTRANCE.x}
+            y={ENTRANCE.y + 8}
+            textAnchor="middle"
+            fontSize="11"
+            fontWeight="700"
+            fill="#8A8D83"
+          >
             IN
           </text>
-          <text x={EXIT.x} y={EXIT.y + 8} textAnchor="middle" fontSize="11" fontWeight="700" fill="#8A8D83">
+          <text
+            x={EXIT.x}
+            y={EXIT.y + 8}
+            textAnchor="middle"
+            fontSize="11"
+            fontWeight="700"
+            fill="#8A8D83"
+          >
             OUT
           </text>
 
-          {/* 선택 구역 라벨 — 대표 구역 하나에만 표시 */}
+          {/* 선택 구역 라벨 */}
           {zone && (
             <text
               x={zone.x + zone.w / 2}
@@ -138,7 +161,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
 
           {/* 현위치 깃발 */}
           {here && (
-            <g>
+            <g aria-label="현위치">
               <line
                 x1={here.x}
                 y1={here.y}
@@ -185,6 +208,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
           <button
             key={z.id}
             onClick={() => selectZone(z.id)}
+            aria-pressed={highlightIds.includes(z.id)}
             className={
               (highlightIds.includes(z.id)
                 ? "bg-[#FF8A00] text-white "
@@ -205,7 +229,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
         ))}
       </div>
 
-      {/* 고객에게 보여주기 — 구역 선택이 반드시 필요 */}
+      {/* 고객에게 보여주기 */}
       <button
         onClick={() => showMapToCustomer(selectedZone, here)}
         disabled={!selectedZone}

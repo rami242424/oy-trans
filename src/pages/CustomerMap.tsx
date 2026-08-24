@@ -47,7 +47,21 @@ function CustomerMap({ language, zoneId, here, closeDisplay }: ICustomerMapProps
           </h2>
         )}
 
-        <svg viewBox="0 0 680 300" className="a-item w-full max-w-[860px] landscape:max-h-[58vh]">
+        <svg
+          viewBox="0 0 680 300"
+          role="img"
+          aria-label={
+            zone ? `Store map. ${zone.labels[language]} location.` : "Store map"
+          }
+          className="a-item w-full max-w-[860px] landscape:max-h-[58vh]"
+        >
+          <title>{zone ? zone.labels[language] : "Store map"}</title>
+          <desc>
+            {zone
+              ? `${zone.labels[language]} is highlighted in orange. Your current position is marked with a red flag.`
+              : "Store map"}
+          </desc>
+
           <path d={STORE_PATH} fill="none" stroke="rgba(22,37,11,0.35)" strokeWidth="2" />
 
           {ZONES.map((z) => {
@@ -67,19 +81,44 @@ function CustomerMap({ language, zoneId, here, closeDisplay }: ICustomerMapProps
             );
           })}
 
-          <text x={ENTRANCE.x} y={ENTRANCE.y + 8} textAnchor="middle" fontSize="12" fontWeight="800" fill="rgba(22,37,11,0.55)">
+          <text
+            x={ENTRANCE.x}
+            y={ENTRANCE.y + 8}
+            textAnchor="middle"
+            fontSize="12"
+            fontWeight="800"
+            fill="rgba(22,37,11,0.55)"
+          >
             IN
           </text>
-          <text x={EXIT.x} y={EXIT.y + 8} textAnchor="middle" fontSize="12" fontWeight="800" fill="rgba(22,37,11,0.55)">
+          <text
+            x={EXIT.x}
+            y={EXIT.y + 8}
+            textAnchor="middle"
+            fontSize="12"
+            fontWeight="800"
+            fill="rgba(22,37,11,0.55)"
+          >
             OUT
           </text>
 
-          {/* 목적지 — 대표 구역 위에 파동 + 화살표 */}
+          {/* 목적지 — 파동 + 화살표 */}
           {zone && (
             <g>
-              <circle cx={zone.x + zone.w / 2} cy={zone.y + zone.h / 2} r="14" fill="#FF8A00" opacity="0.35">
+              <circle
+                cx={zone.x + zone.w / 2}
+                cy={zone.y + zone.h / 2}
+                r="14"
+                fill="#FF8A00"
+                opacity="0.35"
+              >
                 <animate attributeName="r" values="14;30;14" dur="1.8s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.4;0;0.4" dur="1.8s" repeatCount="indefinite" />
+                <animate
+                  attributeName="opacity"
+                  values="0.4;0;0.4"
+                  dur="1.8s"
+                  repeatCount="indefinite"
+                />
               </circle>
               <path d={`M${zone.x + zone.w / 2} ${zone.y - 6} l-9 -13 h18 Z`} fill="#8A3D00">
                 <animateTransform
