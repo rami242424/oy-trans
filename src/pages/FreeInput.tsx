@@ -18,6 +18,9 @@ const EMPTY_TRANSLATIONS = {
   fr: "", it: "", es: "", id: "", ms: "", tr: "", mn: "",
 };
 
+const MAX_LENGTH = 300;
+const TIMEOUT_MS = 10000;
+
 function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProps) {
   const [text, setText] = useState("");
   const [result, setResult] = useState("");
@@ -29,23 +32,40 @@ function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProp
 
   const translate = async () => {
     const trimmed = text.trim();
-    if (trimmed === "") return;
+    if (trimmed === "" || loading) return;
+
     setLoading(true);
     setError("");
     setResult("");
+
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+
     try {
       const res = await fetch(
         `https://api.mymemory.translated.net/get?q=${encodeURIComponent(
           trimmed
-        )}&langpair=ko|${API_CODE[language]}`
+        )}&langpair=ko|${API_CODE[language]}`,
+        { signal: controller.signal }
       );
+      if (!res.ok) throw new Error("http error");
       const data = await res.json();
       const translated = data?.responseData?.translatedText;
-      if (!translated) throw new Error("no result");
+      if (!translated || typeof translated !== "string") throw new Error("no result");
+      // API가 에러 메시지를 번역문 자리에 담아 보내는 경우 방어
+      if (translated.toUpperCase().includes("MYMEMORY WARNING")) {
+        throw new Error("quota");
+      }
       setResult(translated);
-    } catch {
-      setError("번역에 실패했어요. 잠시 후 다시 시도해 주세요.");
+    } catch (e) {
+      const aborted = e instanceof DOMException && e.name === "AbortError";
+      setError(
+        aborted
+          ? "응답이 늦어 중단했어요. 네트워크를 확인하고 다시 시도해 주세요."
+          : "번역에 실패했어요. 잠시 후 다시 시도해 주세요."
+      );
     } finally {
+      clearTimeout(timer);
       setLoading(false);
     }
   };
@@ -66,7 +86,6 @@ function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProp
 
   return (
     <div className="a-screen min-h-screen bg-white max-w-md sm:max-w-2xl mx-auto px-5 pt-4 pb-24">
-      {/* 헤더 */}
       <div className="relative flex items-center justify-center mb-6 h-11">
         <button
           onClick={backToPhrases}
@@ -85,18 +104,24 @@ function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProp
         <span className="text-[10.5px] font-extrabold text-[#A9ACA1] tracking-[0.14em] uppercase">
           한국어 입력
         </span>
-        {text !== "" && (
-          <button
-            onClick={clearAll}
-            className="text-[11px] font-bold text-[#A9ACA1] px-1 transition-opacity active:opacity-50"
-          >
-            지우기
-          </button>
-        )}
+        <span className="flex items-center gap-2">
+          <span className="text-[11px] font-semibold text-[#C9CDBF]">
+            {text.length}/{MAX_LENGTH}
+          </span>
+          {text !== "" && (
+            <button
+              onClick={clearAll}
+              className="text-[11px] font-bold text-[#A9ACA1] px-1 transition-opacity active:opacity-50"
+            >
+              지우기
+            </button>
+          )}
+        </span>
       </div>
+
       <textarea
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value.slice(0, MAX_LENGTH))}
         placeholder="정형 문구에 없는 내용을 입력하세요"
         rows={3}
         className="w-full bg-[#F5F6F2] rounded-xl px-4 py-3 outline-none text-[15px] font-medium text-[#191B17] placeholder-[#A9ACA1] leading-relaxed resize-none transition-shadow duration-200 focus:shadow-[inset_0_0_0_1.5px_#4C5940]"
@@ -111,7 +136,7 @@ function FreeInput({ language, backToPhrases, showCustomPhrase }: IFreeInputProp
       </button>
 
       {error !== "" && (
-        <div className="a-fade mt-4 text-[13px] font-semibold text-[#C0503F] text-center">
+        <div className="a-fade mt-4 text-[13px] font-semibold text-[#C0503F] text-center leading-relaxed">
           {error}
         </div>
       )}
