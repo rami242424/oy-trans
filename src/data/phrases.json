@@ -46,10 +46,92 @@
         "ms": "Beg kertas 100 won, beg zip 3,000 won.",
         "tr": "Kağıt poşet 100 won, fermuarlı çanta 3.000 won.",
         "mn": "Цаасан уут 100 вон, цахилгаантай уут 3,000 вон."
-      }
+      },
+      "next": [
+        {
+          "to": "pay-3",
+          "label": {
+            "kr": "페이퍼백 100원",
+            "en": "Paper ₩100",
+            "zh-Hans": "纸袋 100韩元",
+            "ja": "紙袋 100W",
+            "vi": "Túi giấy 100W",
+            "th": "ถุงกระดาษ 100W",
+            "ru": "Бумажный 100₩",
+            "uz": "Qog'oz 100₩",
+            "fr": "Papier 100₩",
+            "it": "Carta 100₩",
+            "es": "Papel 100₩",
+            "id": "Kertas 100W",
+            "ms": "Kertas 100W",
+            "tr": "Kağıt 100₩",
+            "mn": "Цаасан 100₩"
+          }
+        },
+        {
+          "to": "pay-4",
+          "label": {
+            "kr": "리유저블백 3,000원",
+            "en": "Reusable ₩3,000",
+            "zh-Hans": "环保袋 3,000韩元",
+            "ja": "リユーザブル 3,000W",
+            "vi": "Túi dùng lại 3.000W",
+            "th": "ถุงใช้ซ้ำ 3,000W",
+            "ru": "Многоразовая 3 000₩",
+            "uz": "Qayta ishlatiladigan 3 000₩",
+            "fr": "Réutilisable 3 000₩",
+            "it": "Riutilizzabile 3.000₩",
+            "es": "Reutilizable 3.000₩",
+            "id": "Reusable 3.000W",
+            "ms": "Boleh guna semula 3,000W",
+            "tr": "Çok kullanımlık 3.000₩",
+            "mn": "Дахин хэрэглэх 3,000₩"
+          }
+        }
+      ]
     },
     {
       "id": "pay-3",
+      "kr": "네, 페이퍼백 100원 추가해드리겠습니다.",
+      "translations": {
+        "en": "Sure, I'll add a paper bag for 100 KRW.",
+        "zh-Hans": "好的，为您加一个纸袋，100韩元。",
+        "ja": "かしこまりました。紙袋を100ウォンで追加いたします。",
+        "vi": "Vâng, tôi sẽ thêm một túi giấy 100 won.",
+        "th": "ได้ค่ะ/ครับ จะเพิ่มถุงกระดาษ 100 วอนให้.",
+        "ru": "Хорошо, добавлю бумажный пакет за 100 вон.",
+        "uz": "Yaxshi, 100 vonlik qog'oz paket qo'shaman.",
+        "fr": "Très bien, j'ajoute un sac en papier à 100 wons.",
+        "it": "Certo, aggiungo una busta di carta da 100 won.",
+        "es": "De acuerdo, añado una bolsa de papel de 100 wones.",
+        "id": "Baik, saya tambahkan kantong kertas seharga 100 won.",
+        "ms": "Baik, saya tambah beg kertas berharga 100 won.",
+        "tr": "Tamam, 100 wonluk kağıt poşet ekliyorum.",
+        "mn": "За, 100 воны цаасан уут нэмж өгье."
+      }
+    },
+    {
+      "id": "pay-4",
+      "kr": "네, 지퍼가 달린 리유저블백 3,000원 추가해드리겠습니다.",
+      "translations": {
+        "en": "Sure, I'll add a reusable zipper bag for 3,000 KRW.",
+        "zh-Hans": "好的，为您加一个带拉链的环保袋，3,000韩元。",
+        "ja": "かしこまりました。ジッパー付きリユーザブルバッグを3,000ウォンで追加いたします。",
+        "vi": "Vâng, tôi sẽ thêm một túi khóa kéo dùng lại 3.000 won.",
+        "th": "ได้ค่ะ/ครับ จะเพิ่มถุงซิปใช้ซ้ำ 3,000 วอนให้.",
+        "ru": "Хорошо, добавлю многоразовую сумку на молнии за 3 000 вон.",
+        "uz": "Yaxshi, 3 000 vonlik zamokli qayta ishlatiladigan sumka qo'shaman.",
+        "fr": "Très bien, j'ajoute un sac réutilisable à fermeture éclair à 3 000 wons.",
+        "it": "Certo, aggiungo una borsa riutilizzabile con zip da 3.000 won.",
+        "es": "De acuerdo, añado una bolsa reutilizable con cremallera de 3.000 wones.",
+        "id": "Baik, saya tambahkan tas ritsleting yang bisa dipakai ulang seharga 3.000 won.",
+        "ms": "Baik, saya tambah beg zip boleh guna semula berharga 3,000 won.",
+        "tr": "Tamam, 3.000 wonluk fermuarlı çok kullanımlık çanta ekliyorum.",
+        "mn": "За, 3,000 воны цахилгаантай дахин хэрэглэх уут нэмж өгье."
+      }
+    },
+    {
+      "id": "pay-5",
       "kr": "쇼핑백은 구매하신 상품 수량만큼 구매할 수 있습니다 (상품 2개 구매 시 쇼핑백 2개)",
       "translations": {
         "en": "You can buy only as many shopping bags as items purchased (2 items = up to 2 bags)",
@@ -69,7 +151,7 @@
       }
     },
     {
-      "id": "pay-4",
+      "id": "pay-6",
       "kr": "쇼핑백은 우리 매장에서 상품을 구매하셨을 때 구매 가능합니다.",
       "translations": {
         "en": "Shopping bags can only be purchased with a purchase at this store.",
@@ -89,7 +171,7 @@
       }
     },
     {
-      "id": "pay-5",
+      "id": "pay-7",
       "kr": "2개 구매 시 1개 무료입니다. 상품을 더 가져와 주세요.",
       "translations": {
         "en": "Buy 2, get 1 free. Please bring one more item.",
@@ -109,7 +191,7 @@
       }
     },
     {
-      "id": "pay-6",
+      "id": "pay-8",
       "kr": "1개 구매 시 1개 무료입니다. 상품을 더 가져와 주세요.",
       "translations": {
         "en": "Buy 1, get 1 free. Please bring one more item.",
@@ -129,7 +211,7 @@
       }
     },
     {
-      "id": "pay-7",
+      "id": "pay-9",
       "kr": "2개 구매시 1개 무료입니다. 1개만 구매하시겠어요?",
       "translations": {
         "en": "Buy 2, get 1 free. Would you like just one?",
@@ -149,7 +231,7 @@
       }
     },
     {
-      "id": "pay-8",
+      "id": "pay-10",
       "kr": "결제는 카드로 하시겠어요, 현금으로 하시겠어요?",
       "translations": {
         "en": "Would you like to pay by card or cash?",
@@ -169,7 +251,7 @@
       }
     },
     {
-      "id": "pay-9",
+      "id": "pay-11",
       "kr": "현금과 카드로 분할 결제 가능합니다.",
       "translations": {
         "en": "You can split the payment between cash and card.",
@@ -189,7 +271,7 @@
       }
     },
     {
-      "id": "pay-10",
+      "id": "pay-12",
       "kr": "유니온페이는 실물 카드만 결제 가능합니다.",
       "translations": {
         "en": "UnionPay is accepted with a physical card only.",
@@ -209,7 +291,7 @@
       }
     },
     {
-      "id": "pay-11",
+      "id": "pay-13",
       "kr": "어플에서 카드 잔액을 확인해주시면 사용 도와드리겠습니다.",
       "translations": {
         "en": "If you check your card balance in the app, I'll help you use it.",
@@ -229,7 +311,7 @@
       }
     },
     {
-      "id": "pay-12",
+      "id": "pay-14",
       "kr": "교통카드는 대중교통과 일부 편의점 등에서만 사용가능 합니다.",
       "translations": {
         "en": "Transit cards can't be used here. They work on public transport and at some convenience stores.",
@@ -249,7 +331,7 @@
       }
     },
     {
-      "id": "pay-13",
+      "id": "pay-15",
       "kr": "부분취소가 불가능하여, 전체 결제 취소 후 재결제 도와 드리겠습니다. 결제하셨던 수단과 여권을 다시 보여주세요.",
       "translations": {
         "en": "Partial cancellation isn't possible, so I'll cancel the whole payment and process it again. Please show me the payment method you used and your passport again.",
