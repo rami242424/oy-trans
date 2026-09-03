@@ -1307,7 +1307,21 @@
         {
           "to": "rec-5",
           "label": {
-            "kr": "다음 →"
+            "kr": "다음",
+            "en": "Next",
+            "zh-Hans": "下一步",
+            "ja": "次へ",
+            "vi": "Tiếp theo",
+            "th": "ถัดไป",
+            "ru": "Далее",
+            "uz": "Keyingi",
+            "fr": "Suivant",
+            "it": "Avanti",
+            "es": "Siguiente",
+            "id": "Berikutnya",
+            "ms": "Seterusnya",
+            "tr": "İleri",
+            "mn": "Дараах"
           }
         }
       ]
@@ -1335,7 +1349,21 @@
         {
           "to": "rec-5",
           "label": {
-            "kr": "다음 →"
+            "kr": "다음",
+            "en": "Next",
+            "zh-Hans": "下一步",
+            "ja": "次へ",
+            "vi": "Tiếp theo",
+            "th": "ถัดไป",
+            "ru": "Далее",
+            "uz": "Keyingi",
+            "fr": "Suivant",
+            "it": "Avanti",
+            "es": "Siguiente",
+            "id": "Berikutnya",
+            "ms": "Seterusnya",
+            "tr": "İleri",
+            "mn": "Дараах"
           }
         }
       ]
@@ -1583,7 +1611,21 @@
         {
           "to": "rec-5",
           "label": {
-            "kr": "다음 →"
+            "kr": "다음",
+            "en": "Next",
+            "zh-Hans": "下一步",
+            "ja": "次へ",
+            "vi": "Tiếp theo",
+            "th": "ถัดไป",
+            "ru": "Далее",
+            "uz": "Keyingi",
+            "fr": "Suivant",
+            "it": "Avanti",
+            "es": "Siguiente",
+            "id": "Berikutnya",
+            "ms": "Seterusnya",
+            "tr": "İleri",
+            "mn": "Дараах"
           }
         }
       ]

@@ -43,7 +43,7 @@ function CustomerDisplay({
   const isFavorite = favoriteIds.includes(selectedPhrase.id);
   const currentLang = LANGS.find((l) => l.code === language);
 
-  // 체인 버튼 클릭 — "close"는 응대 종료를 뜻하는 예약 노드
+  // 체인 이동 — "close"는 응대 종료를 뜻하는 예약 노드
   const handleNext = (to: string) => {
     if (to === "close") {
       closeDisplay();
@@ -58,6 +58,7 @@ function CustomerDisplay({
       onClick={closeDisplay}
       className="a-display fixed inset-0 z-20 bg-[#8ED320] text-[#16250B] flex flex-col cursor-pointer overflow-hidden"
     >
+      {/* 상단 */}
       <div className="flex items-center justify-between px-6 pt-7">
         <span className="flex items-center gap-2">
           <span className="text-[13px] font-black tracking-tight text-[#16250B]">
@@ -100,6 +101,7 @@ function CustomerDisplay({
         </span>
       </div>
 
+      {/* 본문 */}
       <div
         key={selectedPhrase.id + selectedPhrase.kr}
         className="flex-1 min-h-0 w-full flex flex-col items-center justify-center px-6 text-center overflow-y-auto"
@@ -124,10 +126,13 @@ function CustomerDisplay({
           </span>
         )}
 
+        {/* 체인 버튼 — 고객 언어 크게 + 한글 작게 병기 */}
         {selectedPhrase.next && (
-          <div className="flex flex-wrap gap-2 justify-center mt-8">
+          <div className="flex flex-wrap gap-2.5 justify-center mt-8">
             {selectedPhrase.next.map((n, i) => {
               const isDecline = n.to === "close";
+              const main = n.label[language] ?? n.label.kr;
+              const sub = n.label.kr;
               return (
                 <button
                   key={n.to + i}
@@ -138,12 +143,24 @@ function CustomerDisplay({
                   }}
                   className={
                     (isDecline
-                      ? "bg-[#16250B]/10 text-[#16250B]/70 shadow-none "
+                      ? "bg-[#16250B]/12 text-[#16250B]/75 "
                       : "bg-[#16250B] text-white shadow-[0_4px_14px_rgba(22,37,11,0.3)] ") +
-                    "a-item px-6 py-3.5 rounded-full text-[15px] font-extrabold transition-all duration-150 active:scale-95"
+                    "a-item flex flex-col items-center px-6 py-3 rounded-2xl transition-all duration-150 active:scale-95"
                   }
                 >
-                  {n.label[language] ?? n.label.kr}
+                  <span className="text-[16px] font-extrabold leading-tight">
+                    {main}
+                  </span>
+                  {sub !== main && (
+                    <span
+                      className={
+                        (isDecline ? "text-[#16250B]/45 " : "text-white/55 ") +
+                        "text-[10.5px] font-semibold leading-tight mt-[3px]"
+                      }
+                    >
+                      {sub}
+                    </span>
+                  )}
                 </button>
               );
             })}
@@ -151,6 +168,7 @@ function CustomerDisplay({
         )}
       </div>
 
+      {/* 하단 힌트 */}
       <div className="pb-8 pt-2 text-center text-[11px] font-semibold tracking-wide text-[#16250B]/40">
         화면을 탭하면 돌아갑니다
       </div>
