@@ -43,6 +43,16 @@ function CustomerDisplay({
   const isFavorite = favoriteIds.includes(selectedPhrase.id);
   const currentLang = LANGS.find((l) => l.code === language);
 
+  // 체인 버튼 클릭 — "close"는 응대 종료를 뜻하는 예약 노드
+  const handleNext = (to: string) => {
+    if (to === "close") {
+      closeDisplay();
+      return;
+    }
+    const target = findPhrase(to);
+    if (target) nextToCustomerDisplay(target);
+  };
+
   return (
     <div
       onClick={closeDisplay}
@@ -54,7 +64,6 @@ function CustomerDisplay({
             OY-trans
           </span>
           <span className="w-1 h-1 rounded-full bg-white" />
-          {/* 고객이 읽는 화면 — 언어 코드가 아닌 해당 언어 표기 */}
           <span className="text-[12px] font-bold text-[#16250B]/55">
             {currentLang?.label}
           </span>
@@ -117,20 +126,27 @@ function CustomerDisplay({
 
         {selectedPhrase.next && (
           <div className="flex flex-wrap gap-2 justify-center mt-8">
-            {selectedPhrase.next.map((n, i) => (
-              <button
-                key={n.to}
-                style={{ animationDelay: `${150 + i * 45}ms` }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const target = findPhrase(n.to);
-                  if (target) nextToCustomerDisplay(target);
-                }}
-                className="a-item px-6 py-3.5 rounded-full bg-[#16250B] text-white text-[15px] font-extrabold transition-all duration-150 active:scale-95 shadow-[0_4px_14px_rgba(22,37,11,0.3)]"
-              >
-                {n.label[language] ?? n.label.kr}
-              </button>
-            ))}
+            {selectedPhrase.next.map((n, i) => {
+              const isDecline = n.to === "close";
+              return (
+                <button
+                  key={n.to + i}
+                  style={{ animationDelay: `${150 + i * 45}ms` }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleNext(n.to);
+                  }}
+                  className={
+                    (isDecline
+                      ? "bg-[#16250B]/10 text-[#16250B]/70 shadow-none "
+                      : "bg-[#16250B] text-white shadow-[0_4px_14px_rgba(22,37,11,0.3)] ") +
+                    "a-item px-6 py-3.5 rounded-full text-[15px] font-extrabold transition-all duration-150 active:scale-95"
+                  }
+                >
+                  {n.label[language] ?? n.label.kr}
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

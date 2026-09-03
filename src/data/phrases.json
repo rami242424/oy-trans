@@ -23,7 +23,41 @@
         {
           "to": "pay-2",
           "label": {
-            "kr": "다음 →"
+            "kr": "네",
+            "en": "Yes",
+            "zh-Hans": "好的",
+            "ja": "はい",
+            "vi": "Có",
+            "th": "ใช่",
+            "ru": "Да",
+            "uz": "Ha",
+            "fr": "Oui",
+            "it": "Sì",
+            "es": "Sí",
+            "id": "Ya",
+            "ms": "Ya",
+            "tr": "Evet",
+            "mn": "Тийм"
+          }
+        },
+        {
+          "to": "close",
+          "label": {
+            "kr": "아니오",
+            "en": "No",
+            "zh-Hans": "不用",
+            "ja": "いいえ",
+            "vi": "Không",
+            "th": "ไม่",
+            "ru": "Нет",
+            "uz": "Yo'q",
+            "fr": "Non",
+            "it": "No",
+            "es": "No",
+            "id": "Tidak",
+            "ms": "Tidak",
+            "tr": "Hayır",
+            "mn": "Үгүй"
           }
         }
       ]
@@ -395,7 +429,41 @@
         {
           "to": "tax-7",
           "label": {
-            "kr": "다음 →"
+            "kr": "네",
+            "en": "Yes",
+            "zh-Hans": "好的",
+            "ja": "はい",
+            "vi": "Có",
+            "th": "ใช่",
+            "ru": "Да",
+            "uz": "Ha",
+            "fr": "Oui",
+            "it": "Sì",
+            "es": "Sí",
+            "id": "Ya",
+            "ms": "Ya",
+            "tr": "Evet",
+            "mn": "Тийм"
+          }
+        },
+        {
+          "to": "close",
+          "label": {
+            "kr": "아니오",
+            "en": "No",
+            "zh-Hans": "不用",
+            "ja": "いいえ",
+            "vi": "Không",
+            "th": "ไม่",
+            "ru": "Нет",
+            "uz": "Yo'q",
+            "fr": "Non",
+            "it": "No",
+            "es": "No",
+            "id": "Tidak",
+            "ms": "Tidak",
+            "tr": "Hayır",
+            "mn": "Үгүй"
           }
         }
       ]
@@ -787,7 +855,41 @@
         {
           "to": "rec-4",
           "label": {
-            "kr": "다음 →"
+            "kr": "네",
+            "en": "Yes",
+            "zh-Hans": "好的",
+            "ja": "はい",
+            "vi": "Có",
+            "th": "ใช่",
+            "ru": "Да",
+            "uz": "Ha",
+            "fr": "Oui",
+            "it": "Sì",
+            "es": "Sí",
+            "id": "Ya",
+            "ms": "Ya",
+            "tr": "Evet",
+            "mn": "Тийм"
+          }
+        },
+        {
+          "to": "close",
+          "label": {
+            "kr": "아니오",
+            "en": "No",
+            "zh-Hans": "不用",
+            "ja": "いいえ",
+            "vi": "Không",
+            "th": "ไม่",
+            "ru": "Нет",
+            "uz": "Yo'q",
+            "fr": "Non",
+            "it": "No",
+            "es": "No",
+            "id": "Tidak",
+            "ms": "Tidak",
+            "tr": "Hayır",
+            "mn": "Үгүй"
           }
         }
       ]
@@ -835,7 +937,41 @@
         {
           "to": "rec-4",
           "label": {
-            "kr": "다음 →"
+            "kr": "네",
+            "en": "Yes",
+            "zh-Hans": "好的",
+            "ja": "はい",
+            "vi": "Có",
+            "th": "ใช่",
+            "ru": "Да",
+            "uz": "Ha",
+            "fr": "Oui",
+            "it": "Sì",
+            "es": "Sí",
+            "id": "Ya",
+            "ms": "Ya",
+            "tr": "Evet",
+            "mn": "Тийм"
+          }
+        },
+        {
+          "to": "close",
+          "label": {
+            "kr": "아니오",
+            "en": "No",
+            "zh-Hans": "不用",
+            "ja": "いいえ",
+            "vi": "Không",
+            "th": "ไม่",
+            "ru": "Нет",
+            "uz": "Yo'q",
+            "fr": "Non",
+            "it": "No",
+            "es": "No",
+            "id": "Tidak",
+            "ms": "Tidak",
+            "tr": "Hayır",
+            "mn": "Үгүй"
           }
         }
       ]
@@ -925,7 +1061,41 @@
         {
           "to": "rec-4",
           "label": {
-            "kr": "다음 →"
+            "kr": "네",
+            "en": "Yes",
+            "zh-Hans": "好的",
+            "ja": "はい",
+            "vi": "Có",
+            "th": "ใช่",
+            "ru": "Да",
+            "uz": "Ha",
+            "fr": "Oui",
+            "it": "Sì",
+            "es": "Sí",
+            "id": "Ya",
+            "ms": "Ya",
+            "tr": "Evet",
+            "mn": "Тийм"
+          }
+        },
+        {
+          "to": "close",
+          "label": {
+            "kr": "아니오",
+            "en": "No",
+            "zh-Hans": "不用",
+            "ja": "いいえ",
+            "vi": "Không",
+            "th": "ไม่",
+            "ru": "Нет",
+            "uz": "Yo'q",
+            "fr": "Non",
+            "it": "No",
+            "es": "No",
+            "id": "Tidak",
+            "ms": "Tidak",
+            "tr": "Hayır",
+            "mn": "Үгүй"
           }
         }
       ]
@@ -953,7 +1123,41 @@
         {
           "to": "rec-4",
           "label": {
-            "kr": "다음 →"
+            "kr": "네",
+            "en": "Yes",
+            "zh-Hans": "好的",
+            "ja": "はい",
+            "vi": "Có",
+            "th": "ใช่",
+            "ru": "Да",
+            "uz": "Ha",
+            "fr": "Oui",
+            "it": "Sì",
+            "es": "Sí",
+            "id": "Ya",
+            "ms": "Ya",
+            "tr": "Evet",
+            "mn": "Тийм"
+          }
+        },
+        {
+          "to": "close",
+          "label": {
+            "kr": "아니오",
+            "en": "No",
+            "zh-Hans": "不用",
+            "ja": "いいえ",
+            "vi": "Không",
+            "th": "ไม่",
+            "ru": "Нет",
+            "uz": "Yo'q",
+            "fr": "Non",
+            "it": "No",
+            "es": "No",
+            "id": "Tidak",
+            "ms": "Tidak",
+            "tr": "Hayır",
+            "mn": "Үгүй"
           }
         }
       ]
