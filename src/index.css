@@ -41,6 +41,5 @@ body {
   .a-screen, .a-display, .a-item, .a-chip, .a-fade { animation: none; }
 }
 
-/* 가로 스크롤 영역 스크롤바 숨김 */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
