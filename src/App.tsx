@@ -161,7 +161,6 @@ function App() {
     setSelectedPhrase(null);
   };
 
-  // 검색 중 카테고리를 누르면 검색을 종료하고 해당 카테고리로 이동
   const selectCategory = (next: Category) => {
     setCategory(next);
     setSearch("");
