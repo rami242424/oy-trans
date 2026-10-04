@@ -235,11 +235,11 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
         disabled={!selectedZone}
         className="w-full mt-6 landscape:mt-4 py-3.5 rounded-xl bg-[#8ED320] text-[#16250B] text-[15px] font-extrabold transition-all duration-150 active:scale-[0.98] disabled:opacity-30 shadow-[0_4px_14px_rgba(142,211,32,0.35)]"
       >
-        고객에게 크게 보여주기
+        고객에게 확대하여 보여주기
       </button>
       {!selectedZone && (
         <p className="mt-2 text-[11.5px] text-[#A9ACA1] text-center">
-          안내할 구역을 먼저 선택해 주세요
+          안내할 구역을 먼저 선택해 주세요.
         </p>
       )}
     </div>
