@@ -71,7 +71,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
             onClick={() => setHere(null)}
             className="text-[11.5px] font-bold text-[#A9ACA1] px-1 transition-opacity active:opacity-50"
           >
-            현위치 지우기
+            현위치 초기화
           </button>
         )}
       </div>
