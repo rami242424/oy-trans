@@ -92,7 +92,7 @@ function StoreMap({ language, backToPhrases, showMapToCustomer }: IStoreMapProps
             "min-w-[600px] landscape:min-w-0 w-full bg-[#FBFCF9] rounded-2xl shadow-[inset_0_0_0_1.2px_#E9EBE1]"
           }
         >
-          <title>올리브영 인천공항점 매장 구역 지도</title>
+          <title>올리브영 인천공항점 매장 지도</title>
           <desc>
             매장을 27개 상품 구역으로 나눈 평면도입니다. 구역을 선택하면 주황색으로
             표시되고, 현위치를 지정하면 빨간 깃발이 나타납니다.
