@@ -343,15 +343,15 @@ function PhraseHome({
               <div className="text-[13.5px] font-semibold text-[#8A8D83] leading-relaxed">
                 {isSearching ? (
                   <>
-                    검색 결과가 없어요
+                    검색 결과가 없어요.
                     <br />
-                    다른 단어로 검색해보세요
+                    다른 단어로 검색해보세요.
                   </>
                 ) : (
                   <>
-                    아직 즐겨찾기한 문구가 없어요
+                    아직 즐겨찾기한 문구가 없어요.
                     <br />
-                    자주 쓰는 문구의 별을 눌러 추가해 보세요
+                    자주 쓰는 문구의 별을 눌러 추가해 보세요.
                   </>
                 )}
               </div>
