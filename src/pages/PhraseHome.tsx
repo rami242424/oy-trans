@@ -78,8 +78,8 @@ function PhraseHome({
   const visiblePhrases: Phrase[] = isSearching
     ? allPhrases.filter((data) => data.kr.includes(keyword))
     : category === "favorite"
-    ? favoriteIds.map((id) => findPhrase(id)).filter((p): p is Phrase => p !== undefined)
-    : (phrases[category] as Phrase[]);
+      ? favoriteIds.map((id) => findPhrase(id)).filter((p): p is Phrase => p !== undefined)
+      : (phrases[category] as Phrase[]);
 
   const currentCategory = CATEGORIES.find((c) => c.value === category);
 
