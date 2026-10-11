@@ -170,7 +170,7 @@ function CustomerDisplay({
 
       {/* 하단 힌트 */}
       <div className="pb-8 pt-2 text-center text-[11px] font-semibold tracking-wide text-[#16250B]/40">
-        화면을 탭하면 돌아갑니다
+        화면을 탭하면 돌아갑니다.
       </div>
     </div>
   );
