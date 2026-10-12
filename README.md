@@ -200,7 +200,7 @@ npm install
 npm run dev      # 개발 서버
 npm run build    # 타입 체크 + 프로덕션 빌드
 npm run lint     # ESLint + 글 검사
-npm run lint:copy # 글 검사만
+npm run lint:copy # 글 검사
 ```
 
 ---
