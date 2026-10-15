@@ -1570,7 +1570,7 @@
     },
     {
       "id": "rec-18",
-      "kr": "고객님의 피부톤에 맞춰 추천해드리겠습니다.",
+      "kr": "고객님의 피부톤에 따라 추천해드리겠습니다.",
       "translations": {
         "en": "I'll recommend one based on your skin tone.",
         "zh-Hans": "我会根据您的肤色为您推荐。",
