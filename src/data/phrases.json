@@ -1432,18 +1432,18 @@
       "id": "rec-11",
       "kr": "잡티 개선 효과가 있습니다.",
       "translations": {
-        "en": "It helps improve blemishes and dark spots.",
+        "en": "It helps fade dark spots and blemishes.",
         "zh-Hans": "有改善瑕疵和色斑的效果。",
         "ja": "シミ改善効果があります。",
-        "vi": "Giúp cải thiện thâm nám, khuyết điểm.",
+        "vi": "Giúp làm mờ thâm nám, khuyết điểm.",
         "th": "ช่วยลดเลือนจุดด่างดำ.",
         "ru": "Помогает уменьшить пигментные пятна.",
         "uz": "Dog'larni kamaytirishga yordam beradi.",
         "fr": "Il aide à atténuer les taches.",
         "it": "Aiuta ad attenuare le macchie.",
-        "es": "Ayuda a mejorar las manchas.",
-        "id": "Membantu memperbaiki noda kulit.",
-        "ms": "Membantu memperbaiki tompok kulit.",
+        "es": "Ayuda a atenuar las manchas.",
+        "id": "Membantu menyamarkan noda hitam.",
+        "ms": "Membantu menyamarkan tompok hitam.",
         "tr": "Lekelerin görünümünü azaltmaya yardımcı olur.",
         "mn": "Толбо арилгахад тусалдаг."
       }
