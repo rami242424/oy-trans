@@ -1410,22 +1410,22 @@
     },
     {
       "id": "rec-10",
-      "kr": "브라이트닝 기능이 들어있습니다.",
+      "kr": "미백 기능이 있어 피부톤을 환하게 밝혀줍니다.",
       "translations": {
-        "en": "It has brightening properties.",
-        "zh-Hans": "含有提亮功效。",
-        "ja": "ブライトニング機能があります。",
-        "vi": "Có công dụng làm sáng da.",
-        "th": "ช่วยให้ผิวกระจ่างใส.",
-        "ru": "Обладает осветляющим эффектом.",
-        "uz": "Terini yorqinlashtirish xususiyati bor.",
-        "fr": "Il a un effet éclaircissant.",
-        "it": "Ha un effetto illuminante.",
-        "es": "Tiene efecto iluminador.",
-        "id": "Mengandung fungsi mencerahkan.",
-        "ms": "Mempunyai fungsi mencerahkan.",
-        "tr": "Aydınlatıcı etkisi vardır.",
-        "mn": "Арьс гэрэлтүүлэх үйлчилгээтэй."
+        "en": "It helps brighten and even out your skin tone.",
+        "zh-Hans": "具有美白功效，能提亮肤色。",
+        "ja": "美白機能があり、肌のトーンを明るくします。",
+        "vi": "Có công dụng làm trắng, giúp da sáng đều màu.",
+        "th": "มีคุณสมบัติช่วยให้ผิวกระจ่างใสและสม่ำเสมอขึ้น.",
+        "ru": "Обладает осветляющим действием и выравнивает тон кожи.",
+        "uz": "Terini oqartirib, rangini tekislaydi.",
+        "fr": "Il illumine le teint et l'unifie.",
+        "it": "Illumina e uniforma l'incarnato.",
+        "es": "Ilumina y unifica el tono de la piel.",
+        "id": "Mencerahkan dan meratakan warna kulit.",
+        "ms": "Mencerahkan dan meratakan warna kulit.",
+        "tr": "Cilt tonunu aydınlatır ve eşitler.",
+        "mn": "Арьсны өнгийг цайруулж, жигд болгоно."
       }
     },
     {
