@@ -1184,7 +1184,7 @@
     },
     {
       "id": "rec-4",
-      "kr": "피부타입에 따라 추천해드릴게요. 어떤 타입이세요?",
+      "kr": "피부타입에 따라 추천해드릴게요. 어떤 피부 타입이세요?",
       "translations": {
         "en": "I'll recommend based on your skin type. Which type are you?",
         "zh-Hans": "我根据您的肤质来推荐。请问您是哪种肤质？",
