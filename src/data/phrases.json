@@ -896,7 +896,7 @@
     },
     {
       "id": "stock-3",
-      "kr": "재고 확인해 보겠습니다. 잠시만 기다려주세요.",
+      "kr": "재고를 확인해 보겠습니다. 잠시만 기다려주세요.",
       "translations": {
         "en": "Let me check our stock. One moment, please.",
         "zh-Hans": "我帮您查一下库存，请稍等。",
