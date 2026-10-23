@@ -834,7 +834,7 @@
     },
     {
       "id": "stock-2",
-      "kr": "죄송합니다만, 이 제품은 현재 품절입니다. 비슷한 다른제품 안내해드릴까요?",
+      "kr": "죄송합니다만, 이 제품은 현재 품절입니다. 비슷한 다른제품으로 안내해드릴까요?",
       "translations": {
         "en": "I'm sorry, this item is currently sold out. Shall I show you a similar product?",
         "zh-Hans": "非常抱歉，这款产品目前缺货。要为您介绍类似的其他产品吗？",
