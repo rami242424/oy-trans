@@ -792,7 +792,7 @@
     },
     {
       "id": "ex-11",
-      "kr": "교환하시면 추후 교환이나 환불이 불가합니다.",
+      "kr": "교환하시면 추후 재교환이나 환불이 불가합니다.",
       "translations": {
         "en": "Once you exchange it, further exchanges or refunds won't be possible.",
         "zh-Hans": "换货之后，将无法再次换货或退款。",
