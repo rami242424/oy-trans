@@ -672,7 +672,7 @@
     },
     {
       "id": "ex-5",
-      "kr": "다른매장에서 구매한 제품은 같은 가격 또는 그 이상의 제품으로 \"교환\"만 가능합니다.",
+      "kr": "다른매장에서 구매한 제품은 같은 가격 또는 그 이상의 가격 제품으로 \"교환\"만 가능합니다.",
       "translations": {
         "en": "Items from other stores can't be refunded — only exchanged for a product of equal or higher price.",
         "zh-Hans": "其他门店购买的商品不能退款，只能换同价或更高价的商品。",
