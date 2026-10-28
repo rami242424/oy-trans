@@ -530,7 +530,7 @@
     },
     {
       "id": "tax-6",
-      "kr": "고객님의 여권이 스캔되지 않습니다. 택스리펀용 영수증을 뽑아드리겠습니다. 이 영수증으로 3층에서 환급받으실 수 있습니다.",
+      "kr": "고객님의 여권이 스캔되지 않습니다. 택스리펀을 위한 영수증을 뽑아드리겠습니다. 이 영수증으로 3층에서 직접 환급받으실 수 있습니다.",
       "translations": {
         "en": "Your passport isn't scanning. I'll print a tax refund receipt for you. You can claim your refund on the 3rd floor with it.",
         "zh-Hans": "您的护照无法扫描。我给您打印退税收据，凭这张收据可以在3楼办理退税。",
