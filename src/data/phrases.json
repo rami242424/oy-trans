@@ -2,7 +2,7 @@
   "payment": [
     {
       "id": "pay-1",
-      "kr": "쇼핑백 필요하세요? (유료예요)",
+      "kr": "쇼핑백 필요하세요? 유료입니다.",
       "translations": {
         "en": "Would you like a shopping bag? (There is a small charge)",
         "zh-Hans": "请问您需要购物袋吗？（需付费）",
