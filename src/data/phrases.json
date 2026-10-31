@@ -64,7 +64,7 @@
     },
     {
       "id": "pay-2",
-      "kr": "페이퍼백은 100원, 지퍼가 달린 리유저블백은 3,000원입니다.",
+      "kr": "종이가방은 100원, 지퍼가 달린 리유저블백은 3,000원입니다.",
       "translations": {
         "en": "Paper bags are 100 KRW, reusable zipper bags are 3,000 KRW.",
         "zh-Hans": "纸袋100韩元，带拉链的环保袋3,000韩元。",
@@ -146,7 +146,7 @@
     },
     {
       "id": "pay-4",
-      "kr": "네, 지퍼가 달린 리유저블백 3,000원 추가해드리겠습니다.",
+      "kr": "네, 지퍼가 달린 3,000원짜리 리유저블백 추가해드리겠습니다.",
       "translations": {
         "en": "Sure, I'll add a reusable zipper bag for 3,000 KRW.",
         "zh-Hans": "好的，为您加一个带拉链的环保袋，3,000韩元。",
